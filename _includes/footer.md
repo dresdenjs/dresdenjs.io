@@ -1,8 +1,5 @@
 
 
-Design by Tim O'Brien [t413.com](http://t413.com/)
+Betreut von der Zalari UG
 &mdash;
-[SinglePaged theme](https://github.com/t413/SinglePaged)
-&mdash;
-this site is [open source]({{ site.source_link }})
-
+[zalari.de](www.zalari.de)
