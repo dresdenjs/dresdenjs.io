@@ -1,6 +1,6 @@
 <?php
 //enable cors
-  header("Access-Control-Allow-Origin: *");
+  header("Access-Control-Allow-Origin: http://dresdenjs.io");
   header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
 
 //Access-Control headers are received during OPTIONS requests
@@ -14,7 +14,7 @@
             header("Access-Control-Allow-Headers: {$_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']}");
 
   }*/
-  if(isset($_POST['submit'])) {
+  if(isset($_POST['email7000'])) {
     //allow cors
     $to = "info@zalari.de";
     $subject = "DresdenJS.io attendee";
