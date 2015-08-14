@@ -91,13 +91,30 @@ $(document).ready(function (){
         }
 	});
 
-	$('#ddjs-distributor').on('click', function(event) {
+	$('#input-email').on('input',function(e){
+		console.log('change');
 		var emailInput = $('#input-email').val();
 		if(emailInput !== '') {
-			sendMail(emailInput);
+			$('.email-label').show();
+			//validateEmail(emailInput);
 		}
 		else {
-			console.log('no input');
+			$('.email-label').hide();
+			$('.error-message').hide();
+		}
+	});
+
+
+	$('#ddjs-distributor').on('click', function(e) {
+		var emailInput = $('#input-email').val();
+		if(emailInput !== '' && validateEmail(emailInput)) {
+			sendMail(emailInput);
+			$('.ok-message').show();
+			$('.error-message').hide();
+		}
+		else {
+			$('.error-message').show();
+			$('.ok-message').hide();
 		}
 	});
 
@@ -107,4 +124,9 @@ $(document).ready(function (){
 
 function sendMail(mail) {
 
+}
+
+function validateEmail(email) {
+	var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+	return re.test(email);
 }
