@@ -84,12 +84,49 @@ $(document).ready(function (){
         if ($(this).attr("href").charAt(0) == '#'){
             $(this).on('click', function(event) {
         		event.preventDefault();
-                var target = $(event.target).closest("a");
-                var targetHight =  $(target.attr("href")).offset().top
+              var target = $(event.target).closest("a");
+              var targetHight =  $(target.attr("href")).offset().top;
             	$('html,body').animate({scrollTop: targetHight - 170}, 800, "easeInOutExpo");
             });
         }
 	});
 
+	$('#input-email').on('input',function(e){
+		console.log('change');
+		var emailInput = $('#input-email').val();
+		if(emailInput !== '') {
+			$('.email-label').show();
+			//validateEmail(emailInput);
+		}
+		else {
+			$('.email-label').hide();
+			$('.error-message').hide();
+		}
+	});
+
+
+	$('#ddjs-distributor').on('click', function(e) {
+		var emailInput = $('#input-email').val();
+		if(emailInput !== '' && validateEmail(emailInput)) {
+			sendMail(emailInput);
+			$('.ok-message').show();
+			$('.error-message').hide();
+		}
+		else {
+			$('.error-message').show();
+			$('.ok-message').hide();
+		}
+	});
+
 });
 
+
+
+function sendMail(mail) {
+
+}
+
+function validateEmail(email) {
+	var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+	return re.test(email);
+}
