@@ -123,7 +123,7 @@ $(document).ready(function (){
 
 
 function sendMail(mail) {
-
+  $('#emailForm').submit();
 }
 
 function validateEmail(email) {
