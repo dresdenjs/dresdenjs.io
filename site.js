@@ -95,11 +95,11 @@ $(document).ready(function (){
 		console.log('change');
 		var emailInput = $('#input-email').val();
 		if(emailInput !== '') {
-			$('.email-label').show();
+			$('.email-label').animate({ opacity: 1 }, {duration: 'fast'});
 			//validateEmail(emailInput);
 		}
 		else {
-			$('.email-label').hide();
+			$('.email-label').animate({ opacity: 0 }, {duration: 'fast'});
 			$('.error-message').hide();
 		}
 	});
