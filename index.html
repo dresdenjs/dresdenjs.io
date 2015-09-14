@@ -19,15 +19,21 @@
 
     <nav><ul>
       {% for node in site.posts reversed %}
+      {% if node.hidden %}
+      {% else %}
         {% capture id %}{{ node.id | remove:'/' | downcase }}{% endcapture %}
         <li class="p-{{id}}"><a href="#{{id}}">{{node.title}}</a></li>
+      {% endif %}
       {% endfor %}
     </ul></nav>
 
 
     {% for page in site.posts reversed %}
       {% capture id %}{{ page.id | remove:'/' | downcase }}{% endcapture %}
-      <div id="{{id}}" class="section p-{{id}}">
+      <div id="{{id}}" class="section p-{{id}}{% if page.map %} has-map{% endif %}">
+        {% if page.map %}
+        <div id="m-{{id}}" class="map m-{{id}}" data-lat="{{page.map.lat}}" data-lng="{{page.map.lng}}" data-zoom="{{page.map.zoom}}"></div>
+        {% endif %}
         {% if page.icon %}
         <div class="subtlecircle sectiondivider imaged">
           <img src="{{page.icon}}" alt="section icon" />
@@ -60,5 +66,6 @@
 {% include analytics.html %}
 </body>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="//maps.googleapis.com/maps/api/js?sensor=false"></script>
 <script src="site.js"></script>
 </html>

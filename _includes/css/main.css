@@ -20,11 +20,22 @@ html { box-sizing: border-box; }
   {% capture bg %}{% if site.colors[node.bg] %}{{ site.colors[node.bg] }}{% else %}{{ node.bg }}{% endif %}{% endcapture %}
   {% capture fg %}{% if site.colors[node.color] %}{{ site.colors[node.color] }}{% else %}{{ node.color }}{% endif %}{% endcapture %}
   nav .p-{{id}} { border-color: {{ bg }}; }
-  #{{id}} { background-color: {{ bg }} !important; color: {{ fg }}; }
+  #{{id}} { background-color: {% if node.map %}transparent{% else %}{{ bg }}{% endif %} !important; color: {{ fg }}; }
   #{{id}} a { color: {{ fg }}; }
   #{{id}} .sectiondivider { color: {{ bg }}; }
 {% endfor %}
 
+/* ----- Google Maps ----- */
+.section.has-map {
+  padding: 0;
+}
+.map {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 500px;
+  z-index: -1;
+}
 
 /* ----- code, syntax highlighting, etc ----- */
 

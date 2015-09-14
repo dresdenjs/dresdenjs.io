@@ -41,7 +41,6 @@ $.extend($.easing,
 
         //populate lookup of clicable elements and destination sections
         populateDestinations(); //should also be run on browser resize, btw
-
         // setup scroll listener
         $(document).scroll(function(){
             if (disableScrollFn) { return; }
@@ -91,6 +90,40 @@ $(document).ready(function (){
         }
 	});
 
+
+    $('.map').each(function() {
+        var el = $(this),
+            pos, map, opt, dot,
+            lat = parseFloat(el.attr('data-lat')),
+            lng = parseFloat(el.attr('data-lng')),
+            zoom = parseFloat(el.attr('data-zoom')),
+            showMap = function() {
+                pos = new google.maps.LatLng(lat, lng);
+                opt = {
+                    center: pos,
+                    zoom: zoom,
+                    disableDefaultUI: true,
+                    disableDoubleClickZoom: true,
+                    draggable: false,
+                    scrollWheel: false,
+                    mapTypeID: google.maps.MapTypeId.ROADMAP
+                };
+                map = new google.maps.Map(el.get(0), opt);
+                dot = new google.maps.Marker({
+                    position: pos,
+                    map: map,
+                    draggable: false,
+                    animation: google.maps.Animation.DROP
+                });
+            },
+            centerMap = function() {
+                map.setCenter(pos);
+            };
+
+        google.maps.event.addDomListener(window, 'load', showMap);
+        google.maps.event.addDomListener(window, 'resize', centerMap);
+    });
+
 	$('#input-email').on('input',function(e){
 		console.log('change');
 		var emailInput = $('#input-email').val();
@@ -117,6 +150,7 @@ $(document).ready(function (){
 			$('.ok-message').hide();
 		}
 	});
+
 
 });
 
