@@ -34,7 +34,10 @@ html { box-sizing: border-box; }
   display: block;
   width: 100%;
   height: 500px;
-  z-index: -1;
+  z-index: 1;
+}
+.map img {
+  max-width: none !important;
 }
 
 /* ----- code, syntax highlighting, etc ----- */

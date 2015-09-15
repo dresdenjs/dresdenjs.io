@@ -105,7 +105,7 @@ $(document).ready(function (){
                     disableDefaultUI: true,
                     disableDoubleClickZoom: true,
                     draggable: false,
-                    scrollWheel: false,
+                    scrollwheel: false,
                     mapTypeID: google.maps.MapTypeId.ROADMAP
                 };
                 map = new google.maps.Map(el.get(0), opt);
