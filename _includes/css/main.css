@@ -177,6 +177,23 @@ nav ul li:hover, nav ul li.active {
 }
 
 
+nav.social {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: auto;
+  width: 220px;
+}
+nav.social ul li {
+  padding-top: 6px;
+  border-top: none;
+}
+nav.social ul li:hover,
+nav.social ul li.active {
+  padding-top: 6px;
+}
+
+
 /* ----- sections/articles ----- */
 
 .section {
@@ -328,11 +345,14 @@ nav ul li:hover, nav ul li.active {
     min-width:60px;
     line-height:40px;
   }
+  nav.social {
+    display: none;
+  }
 }
 
 /* tiny size (phones) */
 @media only screen and (max-width: 380px) {
-  nav ul li { min-width:90px; line-height:20px; }
+  nav ul li { width: 25%; line-height:20px; }
 }
 
 /* anything not desktop */
