@@ -17,7 +17,8 @@
 <body>
   <div id="main">
 
-    <nav><ul>
+    <nav>
+      <ul>
       {% for node in site.posts reversed %}
       {% if node.hidden %}
       {% else %}
@@ -25,7 +26,15 @@
         <li class="p-{{id}}"><a href="#{{id}}">{{node.title}}</a></li>
       {% endif %}
       {% endfor %}
-    </ul></nav>
+      </ul>
+    </nav>
+
+    <nav class="social">
+      <ul>
+        <li class="s-facebook"><a href="https://www.facebook.com/dresdenjs.io" target="_blank"><i class="fa fa-facebook"></i></a></li>
+        <li class="s-twitter"><a href="https://twitter.com/dresdenjs" target="_blank"><i class="fa fa-twitter"></i></a></li>
+      </ul>
+    </nav>
 
 
     {% for page in site.posts reversed %}
