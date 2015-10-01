@@ -124,41 +124,27 @@ $(document).ready(function (){
         google.maps.event.addDomListener(window, 'resize', centerMap);
     });
 
-	$('#input-email').on('input',function(e){
-		console.log('change');
-		var emailInput = $('#input-email').val();
-		if(emailInput !== '') {
-			$('.email-label').animate({ opacity: 1 }, {duration: 'fast'});
-			//validateEmail(emailInput);
-		}
-		else {
-			$('.email-label').animate({ opacity: 0 }, {duration: 'fast'});
-			$('.error-message').hide();
-		}
-	});
-
-
-	$('#ddjs-distributor').on('click', function(e) {
-		var emailInput = $('#input-email').val();
-		if(emailInput !== '' && validateEmail(emailInput)) {
-			sendMail(emailInput);
-			$('.ok-message').show();
-			$('.error-message').hide();
-		}
-		else {
-			$('.error-message').show();
-			$('.ok-message').hide();
-		}
-	});
-
+    $('#emailForm').on('submit', function(ev) {
+        ev.preventDefault();
+        var emailForm = $(this),
+            emailInput = $('#input-email').val();
+        if (emailInput !== '' && validateEmail(emailInput)) {
+            $('.ok-message').show();
+            $('.error-message').hide();
+            $.post(emailForm.attr('action'), emailForm.serialize(), function() {
+                $('.success-message').show();
+                $('.ok-message').hide();
+                $('.error-message').hide();
+                emailForm.hide();
+            });
+            console.log(emailForm.serialize());
+        } else {
+            $('.error-message').show();
+            $('.ok-message').hide();
+        }
+    })
 
 });
-
-
-
-function sendMail(mail) {
-  $('#emailForm').submit();
-}
 
 function validateEmail(email) {
 	var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
