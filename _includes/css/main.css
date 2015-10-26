@@ -3,6 +3,19 @@ html { box-sizing: border-box; }
 strong a {
   text-decoration: none;
 }
+ul {
+  list-style: none;
+}
+ul li {
+  position: relative;
+  padding-left: 2.5%;
+}
+ul li:before {
+  content: '-';
+  position: absolute;
+  top: 0;
+  left: 2px;
+}
 
 /* ---------------------------*/
 /* ----- Special Styles ----- */
@@ -93,7 +106,7 @@ hr {
   font-size: 17px;
   padding: 0 5%;
 }
-.container ol, .container ul { padding: 0 8%; }
+.container ol, .container ul { padding: 0 5%; }
 .container p:first-of-type {
     margin-top: 40px;
 }
@@ -393,4 +406,36 @@ nav.social ul li.active {
     -moz-column-count:    2;
     column-count:         2;
   }
+}
+
+
+.timeline,
+.timeline + ul {
+  position: relative;
+  padding-left: 10% !important;
+}
+.timeline:before,
+.timeline + ul:before {
+  content: '';
+  position: absolute;
+  left: 5%;
+  display: block;
+}
+.timeline:before {
+  top: 8px;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}
+.timeline + ul:before {
+  top: -26px;
+  bottom: -28px;
+  padding-left: 8px;
+  border-right: 4px dotted #fff;
+}
+.timeline.end + ul:before {
+  display: none;
 }
