@@ -1,5 +1,8 @@
 html { box-sizing: border-box; }
 *, *:before, *:after { box-sizing: inherit; }
+strong a {
+  text-decoration: none;
+}
 
 /* ---------------------------*/
 /* ----- Special Styles ----- */
@@ -84,8 +87,7 @@ hr {
 
 .container h1, .container h2, .container h3, .container h4 {
   margin-bottom: 20px;
-  text-align: center;
-  padding: 0 4%;
+  padding: 0 5%;
 }
 .container p, .container ol, .container ul, .container form {
   font-size: 17px;
