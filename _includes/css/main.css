@@ -182,9 +182,10 @@ nav.social {
   top: 0;
   right: 0;
   left: auto;
-  width: 220px;
+  width: 165px;
 }
 nav.social ul li {
+  min-width: 55px;
   padding-top: 6px;
   border-top: none;
 }
