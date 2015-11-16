@@ -44,7 +44,7 @@ body {
 }
 
 /* Header */
-header {
+#header {
     position: fixed;
     top: 0;
     left: 0;
@@ -52,13 +52,18 @@ header {
     z-index: 100;
 }
 
-md-tabs {
+md-tabs,
+md-pagination-wrapper {
     white-space: nowrap;
+}
+
+md-tabs {
     background: #2e2e2e;
 }
 
 md-tabs-canvas {
     height: 70px;
+    /*overflow-x: auto;*/
 }
 
 .md-tab {
@@ -200,7 +205,7 @@ section:first-of-type {
 }
 
 /* Footer */
-footer {
+#footer {
     padding: 8px 0;
     min-height: 0;
     text-align: center;
@@ -208,7 +213,7 @@ footer {
     background-image: none;
 }
 
-footer .container p {
+#footer .container p {
     font-size: 13px;
     margin: 0;
 }

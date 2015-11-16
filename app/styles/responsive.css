@@ -1,0 +1,76 @@
+/* mid size (tablets, landscapes) */
+@media only screen and (max-width: 679px) {
+    nav {
+        font-size: 11px;
+    }
+
+    nav ul li {
+        min-width: 60px;
+        line-height: 40px;
+    }
+
+    nav.social {
+        display: none;
+    }
+}
+
+/* tiny size (phones) */
+@media only screen and (max-width: 380px) {
+    nav ul li {
+        width: 25%;
+        line-height: 20px;
+    }
+}
+
+/* anything not desktop */
+@media only screen and (max-width: 767px) {
+    .container h1 {
+        font-size: 30px;
+    }
+
+    .container h2 {
+        font-size: 24px;
+    }
+
+    .container h3 {
+        font-size: 20px;
+    }
+
+    .container h4 {
+        font-size: 18px;
+    }
+
+    .section {
+        padding: 130px 0;
+    }
+
+    .sectiondivider {
+        width: 200px;
+        height: 200px;
+        padding: 15px;
+        top: -75px;
+        margin-left: -100px;
+    }
+
+    .sectiondivider img {
+        width: 150px;
+        height: 180px;
+    }
+
+    .sectiondivider .fa-stack {
+        font-size: 70px;
+        margin-top: -14px;
+    }
+
+    .sectiondivider h5 {
+        font-size: 15px;
+        bottom: 30px;
+        width: 170px
+    }
+
+    .columned {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+    }
+}

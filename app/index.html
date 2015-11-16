@@ -2,9 +2,9 @@
 <html lang="de" ng-app="dresdenjsApp" ng-controller="MainCtrl">
 <head>
     <meta charset="utf-8">
-    <title>{{ site.title }}</title>
-    <meta name="keywords" content="{{ site.keywords }}">
-    <meta name="description" content="{{ site.description }}">
+    <title>{{site.title}}</title>
+    <meta name="keywords" content="{{site.keywords}}">
+    <meta name="description" content="{{site.description}}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <link href="http://fonts.googleapis.com/css?family=Raleway:400,300,700" rel="stylesheet" type="text/css">
@@ -13,14 +13,20 @@
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.css"/>
     <!-- endbower -->
     <!-- endbuild -->
+    <!-- build:css(.tmp) styles/skeleton.css -->
+    <link rel="stylesheet" href="styles/skeleton.css">
+    <!-- endbuild -->
     <!-- build:css(.tmp) styles/base.css -->
     <link rel="stylesheet" href="styles/base.css">
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
-    <link ng-if="site.favicon" rel="shortcut icon" href="{{ site.favicon }}" type="image/x-icon">
-    <link ng-if="site.touch_icon" rel="apple-touch-icon" href="{{ site.touch_icon }}">
+    <!-- build:css(.tmp) styles/responsive.css -->
+    <link rel="stylesheet" href="styles/responsive.css">
+    <!-- endbuild -->
+    <link ng-if="site.favicon" rel="shortcut icon" href="{{site.favicon}}" type="image/x-icon">
+    <link ng-if="site.touch_icon" rel="apple-touch-icon" href="{{site.touch_icon}}">
 
     <style type="text/css">
         /**
@@ -40,20 +46,33 @@
 
 <!-- Add your site or application content here -->
 <div id="wrapper">
-    <header>
-        <md-tabs md-center-tabs scroll-update-tabs md-no-disconnect>
-            <md-tab ng-repeat="(name, view) in views" label="{{view.title}}"
+    <header id="header">
+        <md-tabs md-no-disconnect md-center-tabs scroll-update-tabs>
+            <md-tab ng-repeat="(name, view) in views | filter:{title:'!!'}" label="{{view.title}}"
                     ng-click="scrollTo(name, view.background)"></md-tab>
         </md-tabs>
     </header>
 
     <section ng-repeat="(name, view) in views"
-             ui-view="{{name}}"
-             layout="column" flex layout-align="center center"></section>
-
-    <footer>
              set-style-color="{{colors[view.color]}}" set-style-background-color="{{colors[view.background]}}">
+        <div class="subtlecircle sectiondivider faicon">
+            <span class="fa-stack">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-calendar-o fa-stack-1x"></i>
+            </span>
+            <h5 class="icon-title">{{view.title}}</h5>
+        </div>
+        <div btf-markdown ui-view="{{name}}" class="container" layout="column" flex layout-align="{{view.alignment}}"></div>
+    </section>
 
+    <footer id="footer">
+        <div class="container">
+            <p set-style-color="{{colors['white']}}">
+                Eine Idee von Achim Sperling und Christian Ulbrich — betreut von der
+                <a href="http://devid.net" target="_blank">DeviD GbR</a> &amp;
+                <a href="http://zalari.de" target="_blank">Zalari UG</a>.
+            </p>
+        </div>
     </footer>
 </div>
 
@@ -66,7 +85,7 @@
             r = n.getElementsByTagName(g)[0], a.src = u, r.parentNode.insertBefore(a, r)
     }(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-    ga('create', 'UA-XXXXX-X');
+    ga('create', '{{site.google_analytics_key}}');
     ga('send', 'pageview');
 </script>
 

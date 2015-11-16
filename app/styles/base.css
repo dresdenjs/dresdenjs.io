@@ -6,6 +6,10 @@ html {
     box-sizing: inherit;
 }
 
+a {
+    color: inherit;
+}
+
 strong a {
     text-decoration: none;
 }

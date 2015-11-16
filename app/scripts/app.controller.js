@@ -10,7 +10,7 @@
  */
 angular
     .module('dresdenjsApp')
-    .controller('MainCtrl', function ($rootScope, $scope, $mdMedia, $log, config, smoothScroll) {
+    .controller('MainCtrl', function ($rootScope, $scope, $mdMedia, $timeout, $log, config, smoothScroll) {
 
         var _setStyle = function (el, prop, val, force) {
             el.style.setProperty(prop, val, force ? 'important' : null);
@@ -23,7 +23,7 @@ angular
 
         var _scrollTo = function (name, background) {
             // get section by name
-            var target = document.querySelector('section[ui-view="' + name + '"]');
+            var target = document.querySelector('section > [ui-view="' + name + '"]');
 
             // set global var to pass by scroll directive
             $rootScope.scrolledByClick = true;
@@ -33,8 +33,13 @@ angular
 
             // initialize scroll animation
             smoothScroll(target, {
+                offset: 140,
+                duration: 375,
+                easing: 'easeInOutQuart',
                 callbackAfter: function () {
-                    $rootScope.scrolledByClick = false;
+                    $timeout(function () {
+                        $rootScope.scrolledByClick = false;
+                    });
                 }
             });
         };
@@ -43,7 +48,9 @@ angular
             $scope.$mdMedia = $mdMedia;
             $scope.colors = config.colors;
             $scope.site = config.content;
-            $scope.views = config.views;
+            $scope.views = Object.keys(config.views).map(function (k) {
+                return config.views[k];
+            });
             $scope.tintInkBarTo = _tintInkBarTo;
             $scope.scrollTo = _scrollTo;
 
