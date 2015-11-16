@@ -10,7 +10,7 @@
     <link href="http://fonts.googleapis.com/css?family=Raleway:400,300,700" rel="stylesheet" type="text/css">
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css"/>
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/skeleton.css -->
@@ -48,12 +48,13 @@
 <div id="wrapper">
     <header id="header">
         <md-tabs md-no-disconnect md-center-tabs scroll-update-tabs>
-            <md-tab ng-repeat="(name, view) in views | filter:{title:'!!'}" label="{{view.title}}"
-                    ng-click="scrollTo(name, view.background)"></md-tab>
+            <md-tab ng-repeat="(name, tab) in tabs" label="{{tab.title}}"
+                    ng-click="scrollTo(name, tab.background)"></md-tab>
         </md-tabs>
     </header>
 
     <section ng-repeat="(name, view) in views"
+             class="p-{{name}}" ng-class="{linked: view.title}"
              set-style-color="{{colors[view.color]}}" set-style-background-color="{{colors[view.background]}}">
         <div class="subtlecircle sectiondivider faicon">
             <span class="fa-stack">
@@ -62,7 +63,8 @@
             </span>
             <h5 class="icon-title">{{view.title}}</h5>
         </div>
-        <div btf-markdown ui-view="{{name}}" class="container" layout="column" flex layout-align="{{view.alignment}}"></div>
+        <div ng-if="view.markdown !== false" ui-view="{{name}}" class="container" layout="column" flex layout-align="{{view.alignment}}" btf-markdown></div>
+        <div ng-if="view.markdown === false" ui-view="{{name}}" class="container plain" layout="column" flex layout-align="{{view.alignment}}"></div>
     </section>
 
     <footer id="footer">
@@ -75,6 +77,9 @@
         </div>
     </footer>
 </div>
+
+<!-- Google Maps -->
+<script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
 <script>
@@ -100,6 +105,9 @@
 <script src="bower_components/showdown/src/showdown.js"></script>
 <script src="bower_components/angular-markdown-directive/markdown.js"></script>
 <script src="bower_components/ngSmoothScroll/lib/angular-smooth-scroll.js"></script>
+<script src="bower_components/angular-simple-logger/dist/angular-simple-logger.js"></script>
+<script src="bower_components/lodash/lodash.js"></script>
+<script src="bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 

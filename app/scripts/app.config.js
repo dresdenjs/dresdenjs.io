@@ -42,7 +42,8 @@ angular
                 templateUrl: 'views/home.md'
             },
             'map': {
-                templateUrl: 'views/karte.md'
+                markdown: false,
+                templateUrl: 'views/karte.html'
             },
             'termin': {
                 title: 'Termin',

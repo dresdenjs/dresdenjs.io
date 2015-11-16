@@ -31,10 +31,6 @@ ul li:before {
 }
 
 /* ----- Google Maps ----- */
-.section.has-map {
-    padding: 0;
-}
-
 .map {
     position: relative;
     display: block;

@@ -22,7 +22,7 @@ angular
                         var currentIndex = tabsCtrl.selectedIndex,
                             nextIndex = currentIndex,
                             offsetTop = $window.scrollY,
-                            sectionElements = document.querySelectorAll('section'),
+                            sectionElements = document.querySelectorAll('section.linked'),
                             offsets = [],
                             closest = 0;
 
@@ -42,7 +42,7 @@ angular
                         if (currentIndex != nextIndex) {
                             $timeout(function () {
                                 tabsCtrl.selectedIndex = nextIndex;
-                                scope.tintInkBarTo(scope.views[Object.keys(scope.views)[nextIndex]].background, true);
+                                scope.tintInkBarTo(scope.tabs[Object.keys(scope.tabs)[nextIndex]].background, true);
                             });
                         }
                     }

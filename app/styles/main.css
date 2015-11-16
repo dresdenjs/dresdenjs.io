@@ -96,13 +96,22 @@ section {
     display: block;
     width: 100%;
     min-height: 300px;
-    padding: 180px 0;
     background: url(../images/bgnoise.png);
     /* generated noise from noisetexturegenerator.com */
 }
 
-section:first-of-type {
+section .container {
+    padding: 180px 0;
+}
+
+section .container:first-of-type {
     padding-top: 140px;
+}
+
+section .container.plain {
+    padding: 0;
+    width: 100%;
+    min-height: 500px;
 }
 
 .subtlecircle {
@@ -160,6 +169,17 @@ section:first-of-type {
 .sectiondivider.imaged {
     text-shadow: 1px 1px 3px #333;
 }
+
+ui-gmap-google-map,
+ui-gmap-google-map .angular-google-map-container {
+    width: 100%;
+    height: 500px;
+    z-index: 1;
+}
+ui-gmap-google-map img {
+    max-width: none !important;
+}
+
 
 .longlist {
     font-size: 14px !important;

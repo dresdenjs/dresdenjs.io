@@ -48,14 +48,21 @@ angular
             $scope.$mdMedia = $mdMedia;
             $scope.colors = config.colors;
             $scope.site = config.content;
-            $scope.views = Object.keys(config.views).map(function (k) {
-                return config.views[k];
-            });
+            $scope.tabs = {};
+            $scope.views = config.views;
             $scope.tintInkBarTo = _tintInkBarTo;
             $scope.scrollTo = _scrollTo;
 
+            // set tabs
+            for (name in config.views) {
+                if (!config.views[name].title) {
+                    continue;
+                }
+                $scope.tabs[name] = config.views[name];
+            };
+
             // set first section color
-            _tintInkBarTo(config.views[Object.keys(config.views)[0]].background, true);
+            _tintInkBarTo($scope.tabs[Object.keys($scope.tabs)[0]].background, true);
         };
 
         _init();

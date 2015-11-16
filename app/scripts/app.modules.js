@@ -14,5 +14,6 @@ angular
         'ngSanitize',
         'ngMaterial',
         'smoothScroll',
-        'btford.markdown'
+        'btford.markdown',
+        'uiGmapgoogle-maps'
     ]);
