@@ -1,90 +1,93 @@
 <!doctype html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <!-- build:css(.) styles/vendor.css -->
-        <!-- bower:css -->
-        <!-- endbower -->
-        <!-- endbuild -->
-        <!-- build:css(.tmp) styles/main.css -->
-        <link rel="stylesheet" href="styles/main.css">
-        <!-- endbuild -->
-    </head>
+<html lang="de" ng-app="dresdenjsApp">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link href="http://fonts.googleapis.com/css?family=Raleway:400,300,700" rel="stylesheet" type="text/css">
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    <style type="text/css">
+        /**
+         * Hide when Angular is not yet loaded and initialized
+         */
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+            display: none !important;
+        }
+    </style>
+</head>
 
-    <body ng-app="dresdenjsApp">
-        <!--[if lte IE 8]>
-        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
-            your browser</a> to improve your experience.</p>
-        <![endif]-->
+<body ng-cloak ng-controller="MainCtrl">
+<!--[if lte IE 8]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
 
-        <!-- Add your site or application content here -->
-        <div class="header">
-            <div class="navbar navbar-default" role="navigation">
-                <div class="container">
-                    <div class="navbar-header">
+<!-- Add your site or application content here -->
+<div id="wrapper" layout="column" layout-align="center center">
+    <header>
+        <md-tabs md-center-tabs md-no-disconnect>
+            <md-tab label="Home" md-on-select="scrollTo('home')"></md-tab>
+            <md-tab label="Termin" md-on-select="scrollTo('termin')"></md-tab>
+            <md-tab label="Mitmachen" md-on-select="scrollTo('mitmachen')"></md-tab>
+            <md-tab label="Info" md-on-select="scrollTo('info')"></md-tab>
+        </md-tabs>
+    </header>
 
-                        <a class="navbar-brand" href="#/">dresdenjsio</a>
-                    </div>
+    <div class="main">
+        <section btf-markdown ui-view="home"></section>
+        <section btf-markdown ui-view="termin"></section>
+        <section btf-markdown ui-view="mitmachen"></section>
+        <section btf-markdown ui-view="info"></section>
+    </div>
 
-                    <div class="collapse">
+    <footer>
 
-                        <ul class="nav navbar-nav">
-                            <li class="active"><a ng-href="#/home">Home</a></li>
-                            <li><a ng-href="#/termin">Termin</a></li>
-                            <li><a ng-href="#/mitmachen">Mitmachen</a></li>
-                            <li><a ng-href="#/info">Info</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+    </footer>
+</div>
 
-        <div class="container">
-            <div ui-view="home"></div>
-            <div ui-view="termin"></div>
-            <div ui-view="mitmachen"></div>
-            <div ui-view="info"></div>
-        </div>
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+<script>
+    !function (A, n, g, u, l, a, r) {
+        A.GoogleAnalyticsObject = l, A[l] = A[l] || function () {
+                (A[l].q = A[l].q || []).push(arguments)
+            }, A[l].l = +new Date, a = n.createElement(g),
+            r = n.getElementsByTagName(g)[0], a.src = u, r.parentNode.insertBefore(a, r)
+    }(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-        <div class="footer">
-            <div class="container">
-                <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
-            </div>
-        </div>
+    ga('create', 'UA-XXXXX-X');
+    ga('send', 'pageview');
+</script>
 
+<!-- build:js(.) scripts/vendor.js -->
+<!-- bower:js -->
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/ui-router/release/angular-ui-router.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angular-aria/angular-aria.js"></script>
+<script src="bower_components/angular-material/angular-material.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="bower_components/showdown/src/showdown.js"></script>
+<script src="bower_components/angular-markdown-directive/markdown.js"></script>
+<script src="bower_components/ngSmoothScroll/lib/angular-smooth-scroll.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-        <script>
-            !function (A, n, g, u, l, a, r) {
-                A.GoogleAnalyticsObject = l, A[l] = A[l] || function () {
-                        (A[l].q = A[l].q || []).push(arguments)
-                    }, A[l].l = +new Date, a = n.createElement(g),
-                    r = n.getElementsByTagName(g)[0], a.src = u, r.parentNode.insertBefore(a, r)
-            }(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+<!-- build:js({.tmp,app}) scripts/scripts.js -->
+<script src="scripts/app.js"></script>
 
-            ga('create', 'UA-XXXXX-X');
-            ga('send', 'pageview');
-        </script>
-
-        <!-- build:js(.) scripts/vendor.js -->
-        <!-- bower:js -->
-        <script src="bower_components/angular/angular.js"></script>
-        <script src="bower_components/ui-router/release/angular-ui-router.js"></script>
-        <!-- endbower -->
-        <!-- endbuild -->
-
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-
-        <script src="views/home/home.controller.js"></script>
-        <script src="views/termin/termin.controller.js"></script>
-        <script src="views/mitmachen/mitmachen.controller.js"></script>
-        <script src="views/info/info.controller.js"></script>
-        <!-- endbuild -->
-    </body>
+<script src="views/home/home.controller.js"></script>
+<script src="views/termin/termin.controller.js"></script>
+<script src="views/mitmachen/mitmachen.controller.js"></script>
+<script src="views/info/info.controller.js"></script>
+<!-- endbuild -->
+</body>
 </html>
