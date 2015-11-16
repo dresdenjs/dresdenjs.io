@@ -78,12 +78,11 @@ md-ink-bar {
     top: 0;
     bottom: auto;
     height: 3px;
-    background: greenyellow !important;
-    -webkit-transition: background-color .3s ease;
-    -moz-transition: background-color .3s ease;
-    -ms-transition: background-color .3s ease;
-    -o-transition: background-color .3s ease;
-    transition: background-color .3s ease;
+    -webkit-transition-property: left, right, background-color !important;
+    -moz-transition-property: left, right, background-color !important;
+    -ms-transition-property: left, right, background-color !important;
+    -o-transition-property: left, right, background-color !important;
+    transition-property: left, right, background-color !important;
 }
 
 /* Content */

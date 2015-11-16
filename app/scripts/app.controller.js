@@ -12,16 +12,16 @@ angular
     .module('dresdenjsApp')
     .controller('MainCtrl', function ($scope, $mdMedia, $log, config, smoothScroll) {
 
-        var _colorTo = function (color) {
+        var _colorTo = function (color, force) {
             var el = document.querySelector('md-tabs md-ink-bar');
-            el.style.backgroundColor = config.colors[color];
+            el.style.setProperty('background-color', config.colors[color], force ? 'important' : null);
         };
 
         var _scrollTo = function (region, color) {
             $log.info('scrolling to "%s" with color "%s" (%s)', region, color, config.colors[color]);
             var target = document.querySelector('section[ui-view="' + region + '"]');
             smoothScroll(target);
-            _colorTo(color);
+            _colorTo(color, true);
         };
 
         var _init = function() {
