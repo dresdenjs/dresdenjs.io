@@ -10,28 +10,33 @@
  */
 angular
     .module('dresdenjsApp')
-    .controller('MainCtrl', function ($scope, $mdMedia, $log, config, smoothScroll) {
+    .controller('MainCtrl', function ($rootScope, $scope, $mdMedia, $log, config, smoothScroll) {
 
         var _setStyle = function (el, prop, val, force) {
             el.style.setProperty(prop, val, force ? 'important' : null);
         };
 
-        var _colorInkBar = function (background, force) {
+        var _tintInkBarTo = function (background, force) {
             var el = document.querySelector('md-tabs md-ink-bar');
             _setStyle(el, 'background-color', config.colors[background], force);
         };
 
-        var _setSectionStyles = function (name, background, color) {
-            var el = document.querySelector('section[ui-view="' + name + '"]');
-            $log.debug(arguments, el, 'section[ui-view="' + name + '"]');
-            //_setStyle(el, 'background-color', config.colors[background], force);
-        };
+        var _scrollTo = function (name, background) {
+            // get section by name
+            var target = document.querySelector('section[ui-view="' + name + '"]');
 
-        var _scrollTo = function (region, background) {
-            $log.info('scrolling to "%s" with color "%s" (%s)', region, background, config.colors[background]);
-            var target = document.querySelector('section[ui-view="' + region + '"]');
-            smoothScroll(target);
-            _colorInkBar(background, true);
+            // set global var to pass by scroll directive
+            $rootScope.scrolledByClick = true;
+
+            // set section color to ink bar
+            _tintInkBarTo(background, true);
+
+            // initialize scroll animation
+            smoothScroll(target, {
+                callbackAfter: function () {
+                    $rootScope.scrolledByClick = false;
+                }
+            });
         };
 
         var _init = function () {
@@ -39,7 +44,11 @@ angular
             $scope.colors = config.colors;
             $scope.site = config.content;
             $scope.views = config.views;
+            $scope.tintInkBarTo = _tintInkBarTo;
             $scope.scrollTo = _scrollTo;
+
+            // set first section color
+            _tintInkBarTo(config.views[Object.keys(config.views)[0]].background, true);
         };
 
         _init();

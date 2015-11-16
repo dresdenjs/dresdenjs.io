@@ -41,9 +41,9 @@
 <!-- Add your site or application content here -->
 <div id="wrapper">
     <header>
-        <md-tabs md-center-tabs md-no-disconnect>
+        <md-tabs md-center-tabs scroll-update-tabs md-no-disconnect>
             <md-tab ng-repeat="(name, view) in views" label="{{view.title}}"
-                    md-on-select="scrollTo(name, view.background)"></md-tab>
+                    ng-click="scrollTo(name, view.background)"></md-tab>
         </md-tabs>
     </header>
 
