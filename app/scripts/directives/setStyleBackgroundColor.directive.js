@@ -6,15 +6,15 @@
  * @description
  * # dresdenjsApp
  *
- * set elements background directive.
+ * set elements background color directive.
  */
 angular
     .module('dresdenjsApp')
-    .directive('setStyleBackground', function () {
+    .directive('setStyleBackgroundColor', function () {
         return {
             restrict: 'A',
             link: function(scope, element, attrs) {
-                element[0].style.setProperty('background', attrs['setStyleBackground']);
+                element[0].style.setProperty('background-color', attrs['setStyleBackgroundColor']);
             }
         };
     });

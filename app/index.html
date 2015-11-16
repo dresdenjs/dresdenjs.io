@@ -49,10 +49,10 @@
 
     <section ng-repeat="(name, view) in views"
              ui-view="{{name}}"
-             btf-markdown set-style-color="{{colors[view.color]}}" set-style-background="{{colors[view.background]}}"
              layout="column" flex layout-align="center center"></section>
 
     <footer>
+             set-style-color="{{colors[view.color]}}" set-style-background-color="{{colors[view.background]}}">
 
     </footer>
 </div>
@@ -92,7 +92,7 @@
 <script src="scripts/app.controller.js"></script>
 
 <script src="scripts/directives/scrollUpdateTabs.directive.js"></script>
-<script src="scripts/directives/setStyleBackground.directive.js"></script>
+<script src="scripts/directives/setStyleBackgroundColor.directive.js"></script>
 <script src="scripts/directives/setStyleColor.directive.js"></script>
 <!-- endbuild -->
 </body>
