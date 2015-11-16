@@ -33,22 +33,26 @@ angular
         views: {
             'home': {
                 title: 'Home',
-                color: 'white',
+                color: 'black',
+                background: 'white',
                 templateUrl: 'views/home.md'
             },
             'termin': {
                 title: 'Termin',
-                color: 'orange',
+                color: 'black',
+                background: 'orange',
                 templateUrl: 'views/termin.md'
             },
             'mitmachen': {
                 title: 'Mitmachen',
-                color: 'blue',
+                color: 'white',
+                background: 'blue',
                 templateUrl: 'views/mitmachen.md'
             },
             'info': {
                 title: 'Info',
-                color: 'green',
+                color: 'black',
+                background: 'green',
                 templateUrl: 'views/info.md'
             }
         }

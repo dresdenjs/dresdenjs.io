@@ -10,7 +10,7 @@
     <link href="http://fonts.googleapis.com/css?family=Raleway:400,300,700" rel="stylesheet" type="text/css">
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css"/>
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/base.css -->
@@ -42,13 +42,15 @@
 <div id="wrapper">
     <header>
         <md-tabs md-center-tabs md-no-disconnect>
-            <md-tab ng-repeat="(name, view) in views" label="{{view.title}}" md-on-select="scrollTo(name, view.color)"></md-tab>
+            <md-tab ng-repeat="(name, view) in views" label="{{view.title}}"
+                    md-on-select="scrollTo(name, view.background)"></md-tab>
         </md-tabs>
     </header>
 
-    <div class="main">
-        <section ng-repeat="(name, view) in views" btf-markdown ui-view="{{name}}" layout="column" flex layout-align="center center"></section>
-    </div>
+    <section ng-repeat="(name, view) in views"
+             ui-view="{{name}}"
+             btf-markdown set-style-color="{{colors[view.color]}}" set-style-background="{{colors[view.background]}}"
+             layout="column" flex layout-align="center center"></section>
 
     <footer>
 
