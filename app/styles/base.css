@@ -1,0 +1,118 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+strong a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    position: relative;
+    padding-left: 2.5%;
+}
+
+ul li:before {
+    content: '-';
+    position: absolute;
+    top: 0;
+    left: 2px;
+}
+
+/* ----- Google Maps ----- */
+.section.has-map {
+    padding: 0;
+}
+
+.map {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 500px;
+    z-index: 1;
+}
+
+.map img {
+    max-width: none !important;
+}
+
+/* ----- code, syntax highlighting, etc ----- */
+
+code, pre {
+    font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+}
+
+/* spesifically inline code */
+code {
+    background: rgba(255, 255, 255, 0.2);
+    display: inline;
+    word-wrap: break-word;
+}
+
+/* block code */
+pre code {
+    background: none;
+    display: block;
+}
+
+pre {
+    display: block;
+    margin: 20px 5%;
+    padding: 4px 8px;
+    background: rgba(255, 255, 255, 0.1);
+    word-wrap: break-word;
+}
+
+.highlighttable {
+    margin: 20px 5%;
+}
+
+/* ----- base elements ----- */
+
+img {
+    max-width: 100% !important;
+    height: auto;
+    vertical-align: middle;
+}
+
+hr {
+    margin: 60px auto;
+    width: 50%;
+}
+
+.container {
+    word-wrap: break-word;
+}
+
+.center {
+    text-align: center;
+}
+
+.left, .container .left {
+    text-align: left;
+}
+
+.container h1, .container h2, .container h3, .container h4 {
+    margin-bottom: 20px;
+    padding: 0 5%;
+}
+
+.container p, .container ol, .container ul, .container form {
+    font-size: 17px;
+    padding: 0 5%;
+}
+
+.container ol, .container ul {
+    padding: 0 5%;
+}
+
+.container p:first-of-type {
+    margin-top: 40px;
+}
