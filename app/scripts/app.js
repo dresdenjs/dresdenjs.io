@@ -27,16 +27,16 @@ angular
                 url: '/main',
                 views: {
                     'home': {
-                        templateUrl: '_posts/2000-01-01-intro.md'
+                        templateUrl: 'views/home.md'
                     },
                     'termin': {
-                        templateUrl: '_posts/2000-01-03-date.md'
+                        templateUrl: 'views/termin.md'
                     },
                     'mitmachen': {
-                        templateUrl: '_posts/2000-01-04-mail.md'
+                        templateUrl: 'views/mitmachen.md'
                     },
                     'info': {
-                        templateUrl: '_posts/2000-01-05-details.md'
+                        templateUrl: 'views/info.md'
                     }
                 }
             });
