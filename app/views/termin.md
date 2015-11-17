@@ -19,10 +19,19 @@ This presentation is about our long relationship with our common enemy - Angular
 ##Archiv##
 Die Vorträge vom letzten Mal gibt es immer auf unserer [GitHub Seite](https://github.com/dresdenjs/).
 
+<!--
+###10. Dezember 2015###
+{: .timeline}
+
+* **["WebRTC - Peer to Peer im Browser"](https://...)** von Stephan Thamm
+* **["Why we hate AngularJS and why we still keep using it"](https://...)** von [Christian Ulbrich](mailto:christian@dresdenjs.io)
+-->
+
 ###12. November 2015###
 {: .timeline}
 
-* **["Web RTC"](https://...)** von Stephan Thamm
+* **["WebRTC - Peer to Peer im Browser"](https://...)** von Stephan Thamm
+* **["Why we hate AngularJS and why we still keep using it"](https://...)** von [Christian Ulbrich](mailto:christian@dresdenjs.io)
 
 ###1. Oktober 2015###
 {: .timeline.end}

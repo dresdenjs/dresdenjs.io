@@ -116,3 +116,9 @@ hr {
 .container p:first-of-type {
     margin-top: 40px;
 }
+
+.container li p,
+.container li p:first-of-type {
+    margin: 0;
+    padding: 0;
+}

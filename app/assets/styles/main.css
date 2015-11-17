@@ -197,6 +197,10 @@ ui-gmap-google-map img {
     padding-left: 10% !important;
 }
 
+.timeline + ul {
+    padding-bottom: 20px;
+}
+
 .timeline:before,
 .timeline + ul:before {
     content: '';
