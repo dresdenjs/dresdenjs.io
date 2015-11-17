@@ -19,14 +19,14 @@ This presentation is about our long relationship with our common enemy - Angular
 ##Archiv##
 Die Vorträge vom letzten Mal gibt es immer auf unserer [GitHub Seite](https://github.com/dresdenjs/).
 
-<!--
 ###12. November 2015###
 {: .timeline}
+
 * **["Web RTC"](https://...)** von Stephan Thamm
--->
 
 ###1. Oktober 2015###
 {: .timeline.end}
+
 * **["Let is the new var"](https://github.com/dresdenjs/let-is-the-new-var)** von [Christian Ulbrich](mailto:christian@dresdenjs.io)
 * **["Prototypisierung von WebServices mit node.js"](https://github.com/dresdenjs/api-mock-using-nodejs)** von Achim Sperling
 
