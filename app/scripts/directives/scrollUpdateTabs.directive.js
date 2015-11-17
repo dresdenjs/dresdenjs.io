@@ -10,7 +10,7 @@
  */
 angular
     .module('dresdenjsApp')
-    .directive('scrollUpdateTabs', function ($rootScope, $window, $timeout, $log) {
+    .directive('scrollUpdateTabs', function ($rootScope, $window, $timeout) {
         return {
             restrict: 'A',
             require: '^mdTabs',
@@ -39,7 +39,7 @@ angular
                         nextIndex = offsets.indexOf(closest);
 
                         // update tabs and ink bar color
-                        if (currentIndex != nextIndex) {
+                        if (currentIndex !== nextIndex) {
                             $timeout(function () {
                                 tabsCtrl.selectedIndex = nextIndex;
                                 scope.tintInkBarTo(scope.tabs[Object.keys(scope.tabs)[nextIndex]].background, true);
