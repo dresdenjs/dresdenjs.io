@@ -10,7 +10,7 @@
  */
 angular
     .module('dresdenjsApp')
-    .controller('MainCtrl', function ($rootScope, $scope, $mdMedia, $timeout, $log, config, smoothScroll) {
+    .controller('MainCtrl', function ($rootScope, $scope, $mdMedia, $timeout, $anchorScroll, $log, config, smoothScroll) {
 
         var _setStyle = function (el, prop, val, force) {
             el.style.setProperty(prop, val, force ? 'important' : null);
@@ -21,7 +21,7 @@ angular
             _setStyle(el, 'background-color', config.colors[background], force);
         };
 
-        var _scrollTo = function (name, background) {
+        var _scrollToSection = function (name, background) {
             // get section by name
             var target = document.querySelector('section > [ui-view="' + name + '"]');
 
@@ -51,7 +51,7 @@ angular
             $scope.tabs = {};
             $scope.views = config.views;
             $scope.tintInkBarTo = _tintInkBarTo;
-            $scope.scrollTo = _scrollTo;
+            $scope.scrollToSection = _scrollToSection;
 
             // set tabs
             for (var name in config.views) {

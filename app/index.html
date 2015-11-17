@@ -49,7 +49,7 @@
     <header id="header">
         <md-tabs md-no-disconnect md-center-tabs scroll-update-tabs>
             <md-tab ng-repeat="(name, tab) in tabs" label="{{tab.title}}"
-                    ng-click="scrollTo(name, tab.background)"></md-tab>
+                    ng-click="scrollToSection(name, tab.background)"></md-tab>
         </md-tabs>
         <nav class="social">
             <ul>
