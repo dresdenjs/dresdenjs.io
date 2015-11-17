@@ -1,3 +1,11 @@
+/* tiny size (phones) */
+@media only screen and (max-width: 380px) {
+    nav ul li {
+        width: 25%;
+        line-height: 20px;
+    }
+}
+
 /* mid size (tablets, landscapes) */
 @media only screen and (max-width: 679px) {
     nav {
@@ -7,18 +15,6 @@
     nav ul li {
         min-width: 60px;
         line-height: 40px;
-    }
-
-    nav.social {
-        display: none;
-    }
-}
-
-/* tiny size (phones) */
-@media only screen and (max-width: 380px) {
-    nav ul li {
-        width: 25%;
-        line-height: 20px;
     }
 }
 
@@ -44,28 +40,8 @@
         padding: 130px 0;
     }
 
-    .sectiondivider {
-        width: 200px;
-        height: 200px;
-        padding: 15px;
-        top: -75px;
-        margin-left: -100px;
-    }
-
-    .sectiondivider img {
-        width: 150px;
-        height: 180px;
-    }
-
-    .sectiondivider .fa-stack {
-        font-size: 70px;
-        margin-top: -14px;
-    }
-
-    .sectiondivider h5 {
-        font-size: 15px;
-        bottom: 30px;
-        width: 170px
+    nav.social {
+        display: none;
     }
 
     .columned {

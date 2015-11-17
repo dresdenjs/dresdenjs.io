@@ -90,6 +90,35 @@ md-ink-bar {
     transition-property: left, right, background-color !important;
 }
 
+nav.social {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    font-size: 0;
+}
+
+nav.social li {
+    display: inline-block;
+    width: 55px;
+    height: 70px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    line-height: 70px;
+}
+
+nav.social li a {
+    display: inline-block;
+    opacity: .75;
+}
+nav.social li a md-icon {
+    color: #fff;
+}
+
+nav.social li a:hover {
+    opacity: 1;
+}
+
 /* Content */
 section {
     position: relative;
@@ -131,6 +160,7 @@ section .container.plain {
     -webkit-border-radius: 50%;
     z-index: 3;
 }
+
 .sectiondivider md-icon {
     width: 75px;
     height: auto;
@@ -143,10 +173,10 @@ ui-gmap-google-map .angular-google-map-container {
     height: 500px;
     z-index: 1;
 }
+
 ui-gmap-google-map img {
     max-width: none !important;
 }
-
 
 .longlist {
     font-size: 14px !important;
