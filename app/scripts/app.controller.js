@@ -54,12 +54,12 @@ angular
             $scope.scrollTo = _scrollTo;
 
             // set tabs
-            for (name in config.views) {
+            for (var name in config.views) {
                 if (!config.views[name].title) {
                     continue;
                 }
                 $scope.tabs[name] = config.views[name];
-            };
+            }
 
             // set first section color
             _tintInkBarTo($scope.tabs[Object.keys($scope.tabs)[0]].background, true);
