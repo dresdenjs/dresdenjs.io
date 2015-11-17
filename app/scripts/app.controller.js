@@ -33,7 +33,7 @@ angular
 
             // initialize scroll animation
             smoothScroll(target, {
-                offset: 140,
+                offset: 70,
                 duration: 375,
                 easing: 'easeInOutQuart',
                 callbackAfter: function () {
