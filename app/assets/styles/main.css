@@ -66,17 +66,27 @@ md-tabs-canvas {
     /*overflow-x: auto;*/
 }
 
+.md-tab,
+nav.social li a {
+    opacity: .75;
+    -webkit-transition: opacity .3s ease;
+    -moz-transition: opacity .3s ease;
+    -ms-transition: opacity .3s ease;
+    -o-transition: opacity .3s ease;
+    transition: opacity .3s ease;
+}
+
+.md-tab:hover,
+nav.social li a:hover {
+    opacity: 1;
+}
+
 .md-tab {
     padding-top: 23px;
     padding-bottom: 23px;
     font-size: 15px;
     font-weight: 600;
     color: #fff !important;
-    opacity: .75;
-}
-
-.md-tab:hover {
-    opacity: 1;
 }
 
 md-ink-bar {
@@ -109,14 +119,9 @@ nav.social li {
 
 nav.social li a {
     display: inline-block;
-    opacity: .75;
 }
 nav.social li a md-icon {
     color: #fff;
-}
-
-nav.social li a:hover {
-    opacity: 1;
 }
 
 /* Content */
