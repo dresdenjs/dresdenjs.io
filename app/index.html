@@ -63,15 +63,12 @@
     <section ng-repeat="(name, view) in views"
              class="p-{{name}}" ng-class="{linked: view.title}"
              set-style-color="{{colors[view.color]}}" set-style-background-color="{{colors[view.background]}}">
-        <div class="subtlecircle sectiondivider faicon">
-            <span class="fa-stack">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-calendar-o fa-stack-1x"></i>
-            </span>
-            <h5 class="icon-title">{{view.title}}</h5>
+        <div class="subtlecircle sectiondivider">
+            <md-icon md-svg-icon="editor:attach_file"></md-icon>
+            <md-icon md-svg-icon="{{view.icon}}"></md-icon>
         </div>
-        <div ng-if="view.markdown !== false" ui-view="{{name}}" class="container" layout="column" flex layout-align="{{view.alignment}}" btf-markdown></div>
-        <div ng-if="view.markdown === false" ui-view="{{name}}" class="container plain" layout="column" flex layout-align="{{view.alignment}}"></div>
+        <div ng-if="view.markdown !== false" ui-view="{{name}}" class="container {{view.alignment}}" btf-markdown></div>
+        <div ng-if="view.markdown === false" ui-view="{{name}}" class="container plain {{view.alignment}}"></div>
     </section>
 
     <footer id="footer">
@@ -122,6 +119,7 @@
 <script src="scripts/app.modules.js"></script>
 <script src="scripts/app.config.js"></script>
 <script src="scripts/app.route.js"></script>
+<script src="scripts/app.icons.js"></script>
 <script src="scripts/app.theme.js"></script>
 <script src="scripts/app.controller.js"></script>
 

@@ -38,32 +38,37 @@ angular
                 title: 'Home',
                 color: 'black',
                 background: 'white',
-                alignment: 'center center',
+                icon: 'content:add',
+                alignment: 'center',
                 templateUrl: 'views/home.md'
             },
             'map': {
                 markdown: false,
+                icon: 'content:add',
                 templateUrl: 'views/karte.html'
             },
             'termin': {
                 title: 'Termin',
                 color: 'black',
                 background: 'orange',
-                alignment: 'center start',
+                icon: 'content:add',
+                alignment: 'left',
                 templateUrl: 'views/termin.md'
             },
             'mitmachen': {
                 title: 'Mitmachen',
                 color: 'white',
                 background: 'blue',
-                alignment: 'center start',
+                icon: 'content:add',
+                alignment: 'left',
                 templateUrl: 'views/mitmachen.md'
             },
             'info': {
                 title: 'Info',
                 color: 'black',
                 background: 'green',
-                alignment: 'center start',
+                icon: 'content:add',
+                alignment: 'left',
                 templateUrl: 'views/info.md'
             }
         }
