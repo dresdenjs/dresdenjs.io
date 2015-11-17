@@ -14,7 +14,7 @@ angular
         return {
             restrict: 'A',
             link: function(scope, element, attrs) {
-                element[0].style.setProperty('color', attrs['setStyleColor']);
+                element[0].style.setProperty('color', attrs.setStyleColor);
             }
         };
     });
