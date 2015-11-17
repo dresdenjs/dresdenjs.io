@@ -28,4 +28,7 @@ angular
             .iconSet('notification', 'assets/svg/notification-icons.svg', 24)
             .iconSet('social', 'assets/svg/social-icons.svg', 24)
             .iconSet('toggle', 'assets/svg/toggle-icons.svg', 24)
+            .icon('social:github-alt', 'assets/svg/social-github-alt.svg')
+            .icon('social:facebook', 'assets/svg/social-facebook.svg')
+            .icon('social:twitter', 'assets/svg/social-twitter.svg');
     });

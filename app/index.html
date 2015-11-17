@@ -51,6 +51,13 @@
             <md-tab ng-repeat="(name, tab) in tabs" label="{{tab.title}}"
                     ng-click="scrollTo(name, tab.background)"></md-tab>
         </md-tabs>
+        <nav class="social">
+            <ul>
+                <li class="s-github"><a href="https://github.com/dresdenjs/dresdenjs.io" target="_blank"><md-icon md-svg-icon="social:github-alt"></md-icon></a></li>
+                <li class="s-facebook"><a href="https://www.facebook.com/dresdenjs.io" target="_blank"><md-icon md-svg-icon="social:facebook"></md-icon></a></li>
+                <li class="s-twitter"><a href="https://twitter.com/dresdenjs" target="_blank"><md-icon md-svg-icon="social:twitter"></md-icon></a></li>
+            </ul>
+        </nav>
     </header>
 
     <section ng-repeat="(name, view) in views"
