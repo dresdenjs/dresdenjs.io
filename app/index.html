@@ -64,8 +64,7 @@
              class="p-{{name}}" ng-class="{linked: view.title}"
              set-style-color="{{colors[view.color]}}" set-style-background-color="{{colors[view.background]}}">
         <div class="subtlecircle sectiondivider">
-            <md-icon md-svg-icon="editor:attach_file"></md-icon>
-            <md-icon md-svg-icon="{{view.icon}}"></md-icon>
+            <md-icon md-svg-icon="{{view.icon}}"set-style-color="{{colors[view.background]}}"></md-icon>
         </div>
         <div ng-if="view.markdown !== false" ui-view="{{name}}" class="container {{view.alignment}}" btf-markdown></div>
         <div ng-if="view.markdown === false" ui-view="{{name}}" class="container plain {{view.alignment}}"></div>

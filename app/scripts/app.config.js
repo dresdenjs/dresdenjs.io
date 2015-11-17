@@ -38,20 +38,21 @@ angular
                 title: 'Home',
                 color: 'black',
                 background: 'white',
-                icon: 'content:add',
+                icon: 'maps:place',
                 alignment: 'center',
                 templateUrl: 'views/home.md'
             },
             'map': {
                 markdown: false,
-                icon: 'content:add',
+                background: 'turquoise',
+                icon: 'maps:place',
                 templateUrl: 'views/karte.html'
             },
             'termin': {
                 title: 'Termin',
                 color: 'black',
                 background: 'orange',
-                icon: 'content:add',
+                icon: 'image:timer',
                 alignment: 'left',
                 templateUrl: 'views/termin.md'
             },
@@ -59,7 +60,7 @@ angular
                 title: 'Mitmachen',
                 color: 'white',
                 background: 'blue',
-                icon: 'content:add',
+                icon: 'navigation:check',
                 alignment: 'left',
                 templateUrl: 'views/mitmachen.md'
             },
@@ -67,7 +68,7 @@ angular
                 title: 'Info',
                 color: 'black',
                 background: 'green',
-                icon: 'content:add',
+                icon: 'action:info',
                 alignment: 'left',
                 templateUrl: 'views/info.md'
             }
