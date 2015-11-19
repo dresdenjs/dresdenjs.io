@@ -13,6 +13,8 @@ angular
         'ui.router',
         'ngSanitize',
         'ngMaterial',
+        'ngMessages',
+        'ngTouch',
         'smoothScroll',
         'btford.markdown',
         'uiGmapgoogle-maps'

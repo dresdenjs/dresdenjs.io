@@ -120,6 +120,7 @@ nav.social li {
 nav.social li a {
     display: inline-block;
 }
+
 nav.social li a md-icon {
     color: #fff;
 }
@@ -147,7 +148,16 @@ section .container:first-of-type {
 section .container.plain {
     padding: 0;
     width: 100%;
+}
+
+section.p-map {
     min-height: 500px;
+}
+
+section.p-verteiler {
+    min-height: 0;
+    margin-top: -180px;
+    padding-bottom: 180px;
 }
 
 .sectiondivider {
@@ -228,6 +238,20 @@ ui-gmap-google-map img {
 
 .timeline.end + ul:before {
     display: none;
+}
+
+form {
+    margin-bottom: 0;
+}
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea,
+select {
+    margin-bottom: 5px;
+}
+button {
+    margin-top: 15px;
 }
 
 /* Footer */

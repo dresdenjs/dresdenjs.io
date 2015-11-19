@@ -44,14 +44,22 @@ angular
             });
         };
 
+        var _submitDistribution = function (event, isValid) {
+            if (!isValid) {
+                event.preventDefault();
+            }
+        };
+
         var _init = function () {
             $scope.$mdMedia = $mdMedia;
             $scope.colors = config.colors;
             $scope.site = config.content;
             $scope.tabs = {};
+            $scope.mail = '';
             $scope.views = config.views;
             $scope.tintInkBarTo = _tintInkBarTo;
             $scope.scrollToSection = _scrollToSection;
+            $scope.submitDistribution = _submitDistribution;
 
             // set tabs
             for (var name in config.views) {

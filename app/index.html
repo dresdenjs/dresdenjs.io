@@ -1,30 +1,27 @@
 <!doctype html>
 <html lang="de" ng-app="dresdenjsApp" ng-controller="MainCtrl">
 <head>
-    <meta charset="utf-8">
+    <base href="/">
     <title>{{site.title}}</title>
+    <meta charset="utf-8">
     <meta name="keywords" content="{{site.keywords}}">
     <meta name="description" content="{{site.description}}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <link href="http://fonts.googleapis.com/css?family=Raleway:400,300,700" rel="stylesheet" type="text/css">
-    <!-- build:css(.) styles/vendor.css -->
+
+    <!-- build:css(.) assets/styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
     <!-- endbower -->
     <!-- endbuild -->
-    <!-- build:css(.tmp) styles/skeleton.css -->
+    <!-- build:css(.tmp) assets/styles/main.css -->
     <link rel="stylesheet" href="assets/styles/skeleton.css">
-    <!-- endbuild -->
-    <!-- build:css(.tmp) styles/base.css -->
     <link rel="stylesheet" href="assets/styles/base.css">
-    <!-- endbuild -->
-    <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="assets/styles/main.css">
-    <!-- endbuild -->
-    <!-- build:css(.tmp) styles/responsive.css -->
     <link rel="stylesheet" href="assets/styles/responsive.css">
     <!-- endbuild -->
+
     <link ng-if="site.favicon" rel="shortcut icon" href="{{site.favicon}}" type="image/x-icon">
     <link ng-if="site.touch_icon" rel="apple-touch-icon" href="{{site.touch_icon}}">
 
@@ -63,10 +60,10 @@
     <section ng-repeat="(name, view) in views"
              class="p-{{name}}" ng-class="{linked: view.title}"
              set-style-color="{{colors[view.color]}}" set-style-background-color="{{colors[view.background]}}">
-        <div class="subtlecircle sectiondivider">
-            <md-icon md-svg-icon="{{view.icon}}"set-style-color="{{colors[view.background]}}"></md-icon>
+        <div ng-if="view.icon" class="subtlecircle sectiondivider">
+            <md-icon md-svg-icon="{{view.icon}}" set-style-color="{{colors[view.background]}}"></md-icon>
         </div>
-        <div ng-if="view.markdown !== false" ui-view="{{name}}" class="container {{view.alignment}}" btf-markdown></div>
+        <div ng-if="view.markdown === undefined || view.markdown === true" ui-view="{{name}}" class="container {{view.alignment}}" btf-markdown></div>
         <div ng-if="view.markdown === false" ui-view="{{name}}" class="container plain {{view.alignment}}"></div>
     </section>
 
@@ -82,7 +79,7 @@
 </div>
 
 <!-- Google Maps -->
-<script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
+<script src="//maps.googleapis.com/maps/api/js?sensor=false"></script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
 <script>
@@ -111,6 +108,8 @@
 <script src="bower_components/angular-simple-logger/dist/angular-simple-logger.js"></script>
 <script src="bower_components/lodash/lodash.js"></script>
 <script src="bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
+<script src="bower_components/angular-messages/angular-messages.js"></script>
+<script src="bower_components/angular-touch/angular-touch.js"></script>
 <!-- endbower -->
 <script src="bower_components/showdown/src/extensions/github.js"></script>
 <script src="bower_components/showdown/src/extensions/table.js"></script>

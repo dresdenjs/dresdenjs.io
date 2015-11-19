@@ -30,6 +30,10 @@ ul li:before {
     left: 2px;
 }
 
+.hide {
+    display: none;
+}
+
 /* ----- Google Maps ----- */
 .map {
     position: relative;

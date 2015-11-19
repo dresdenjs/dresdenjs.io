@@ -126,7 +126,12 @@ img.scale-with-grid {
 button,
 input[type="submit"],
 input[type="reset"],
-input[type="button"] {
+input[type="button"],
+.button.disabled:hover,
+button[disabled]:hover,
+input[type="submit"][disabled]:hover,
+input[type="reset"][disabled]:hover,
+input[type="button"][disabled]:hover {
     background: #eee; /* Old browsers */
     background: #eee -moz-linear-gradient(top, rgba(255,255,255,.2) 0%, rgba(0,0,0,.2) 100%); /* FF3.6+ */
     background: #eee -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,.2)), color-stop(100%,rgba(0,0,0,.2))); /* Chrome,Safari4+ */
@@ -192,6 +197,21 @@ input[type="button"].full-width {
     padding-left: 0 !important;
     padding-right: 0 !important;
     text-align: center; }
+
+.button.disabled,
+button[disabled],
+input[type="submit"][disabled],
+input[type="reset"][disabled],
+input[type="button"][disabled] {
+    opacity: .75;
+    cursor: default; }
+
+.button.disabled:hover,
+button[disabled]:hover,
+input[type="submit"][disabled]:hover,
+input[type="reset"][disabled]:hover,
+input[type="button"][disabled]:hover {
+    cursor: default; }
 
 /* Fix for odd Mozilla border & padding issues */
 button::-moz-focus-inner,

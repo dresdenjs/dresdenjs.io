@@ -3,15 +3,3 @@
 # In E-Mailverteiler eintragen
 
 Falls Interesse besteht bei zukünftigen Veranstaltungen teilzunehmen, tragt euch in den *Verteiler* ein. **Sobald der Termin für das nächste MeetUp steht, versorgen wir euch mit Updates.** Wir schicken euch auch keinen Spam! Ehrenwort!
-
-<form id="emailForm" method="POST" action="http://tools.zalari.de/mailer/mailer.php" target="hidden_iframe">
-<label class="email-label" for="input-email" style="opacity:0">E-Mail</label>
-<input id="input-email" type="email" name="email7000" placeholder="E-Mail" autocomplete="email">
-
-
-<input type="submit" id="ddjs-distributor" class="btn btn-default" value="Vormerken">
-</form>
-
-<p class="error-message" style="display:none">Die E-Mail-Adresse ist ungültig.</p>
-<p class="ok-message" style="display:none">Anmeldung wird versendet.</p>
-<p class="success-message" style="display:none">Vielen Dank fürs Anmelden.</p>

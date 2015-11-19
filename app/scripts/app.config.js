@@ -43,10 +43,10 @@ angular
                 templateUrl: 'views/home.md'
             },
             'map': {
-                markdown: false,
                 background: 'turquoise',
                 icon: 'maps:place',
-                templateUrl: 'views/karte.html'
+                templateUrl: 'views/karte.html',
+                markdown: false
             },
             'termin': {
                 title: 'Termin',
@@ -63,6 +63,12 @@ angular
                 icon: 'navigation:check',
                 alignment: 'left',
                 templateUrl: 'views/mitmachen.md'
+            },
+            'verteiler': {
+                color: 'white',
+                background: 'blue',
+                templateUrl: 'views/verteiler.html',
+                markdown: false
             },
             'info': {
                 title: 'Info',
