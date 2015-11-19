@@ -17,8 +17,8 @@ angular
             keywords: 'JavaScript, AngularJS, REACT, user group, stammtisch, vorträge, netzwerken, austausch, web-technology, zalari, dresden',
             description: 'Eine JavaScript User Group in Dresden mit regelmäßigen Meetups für Vorträge, Wissenstransfer & Netzwerken',
             source_link: 'https://dresdenjs.io',
-            favicon: 'images/favicon.ico',
-            touch_icon: 'images/apple-touch-icon.png',
+            favicon: 'assets/images/favicon.ico',
+            touch_icon: 'assets/images/apple-touch-icon.png',
             google_analytics_key: '## put YOUR key here to enable tracking! (blank to disable)'
         },
 
