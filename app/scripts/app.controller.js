@@ -44,6 +44,12 @@ angular
             });
         };
 
+        var _resetDistributionResponses = function () {
+            $scope.distributionResponses.sent = false;
+            $scope.distributionResponses.success = false;
+            $scope.distributionResponses.error = false;
+        };
+
         var _submitDistribution = function (event, isValid) {
             event.preventDefault();
 
@@ -64,6 +70,9 @@ angular
                 .then(
                     function () {
                         $scope.distributionResponses.success = true;
+                        $scope.formdata.email = '';
+                        $scope.forms.distributionForm.email7000.$pristine = true;
+                        $scope.forms.distributionForm.email7000.$dirty = false;
                     },
                     function () {
                         $scope.distributionResponses.error = true;
@@ -82,13 +91,19 @@ angular
             $scope.site = config.content;
             $scope.views = config.views;
             $scope.tabs = {};
-            $scope.distributionResponses = {};
+            $scope.distributionResponses = {
+                'sent': false,
+                'success': false,
+                'error': false
+            };
+            $scope.forms = {};
             $scope.formdata = {
                 email: ''
             };
             $scope.tintInkBarTo = _tintInkBarTo;
             $scope.scrollToSection = _scrollToSection;
             $scope.submitDistribution = _submitDistribution;
+            $scope.resetDistributionResponses = _resetDistributionResponses;
 
             // set tabs
             for (var name in config.views) {

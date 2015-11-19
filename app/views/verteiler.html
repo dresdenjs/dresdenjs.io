@@ -1,23 +1,24 @@
 <form novalidate
-      name="distributionForm"
-      ng-submit="submitDistribution($event, distributionForm.$valid)">
+      name="forms.distributionForm"
+      ng-submit="submitDistribution($event, forms.distributionForm.$valid)">
     <label class="email-label">
         <span class="hide">E-Mail</span>
         <input ng-required="true"
                ng-model="formdata.email"
+               ng-change="resetDistributionResponses()"
                type="email"
                name="email7000"
                placeholder="E-Mail"
                autocomplete="email">
 
         <div role="alert"
-             ng-if="distributionForm.email7000.$dirty"
-             ng-messages="distributionForm.email7000.$error">
+             ng-if="forms.distributionForm.email7000.$dirty"
+             ng-messages="forms.distributionForm.email7000.$error">
             <div ng-message="required">Dies ist ein Pflichtfeld.</div>
             <div ng-message="email">Die E-Mail-Adresse ist ungültig.</div>
         </div>
         <div role="alert"
-             ng-if="distributionForm.$submitted"
+             ng-if="forms.distributionForm.$submitted"
              ng-messages="distributionResponses">
             <div ng-message="sent">Anmeldung wird versendet.</div>
             <div ng-message="success">Vielen Dank fürs Anmelden.</div>
@@ -26,7 +27,7 @@
     </label>
 
     <button type="submit"
-            ng-disabled="distributionForm.$invalid">Vormerken
+            ng-disabled="forms.distributionForm.$invalid">Vormerken
     </button>
 </form>
 
