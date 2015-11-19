@@ -10,7 +10,7 @@
  */
 angular
     .module('dresdenjsApp')
-    .controller('MainCtrl', function ($rootScope, $scope, $mdMedia, $timeout, $anchorScroll, $log, config, smoothScroll) {
+    .controller('MainCtrl', function ($rootScope, $scope, $mdMedia, $timeout, $anchorScroll, $log, config, smoothScroll, $http) {
 
         var _setStyle = function (el, prop, val, force) {
             el.style.setProperty(prop, val, force ? 'important' : null);
@@ -45,18 +45,47 @@ angular
         };
 
         var _submitDistribution = function (event, isValid) {
+            event.preventDefault();
+
             if (!isValid) {
-                event.preventDefault();
+                return isValid;
             }
+
+            $scope.distributionResponses.sent = true;
+
+            $http({
+                method: 'POST',
+                url: 'http://tools.zalari.de/mailer/mailer.php',
+                data: 'email7000=' + $scope.formdata.email,
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                }
+            })
+                .then(
+                    function () {
+                        $scope.distributionResponses.success = true;
+                    },
+                    function () {
+                        $scope.distributionResponses.error = true;
+                    }
+                )
+                .finally(
+                    function () {
+                        $scope.distributionResponses.sent = false;
+                    }
+                );
         };
 
         var _init = function () {
             $scope.$mdMedia = $mdMedia;
             $scope.colors = config.colors;
             $scope.site = config.content;
-            $scope.tabs = {};
-            $scope.mail = '';
             $scope.views = config.views;
+            $scope.tabs = {};
+            $scope.distributionResponses = {};
+            $scope.formdata = {
+                email: ''
+            };
             $scope.tintInkBarTo = _tintInkBarTo;
             $scope.scrollToSection = _scrollToSection;
             $scope.submitDistribution = _submitDistribution;

@@ -1,13 +1,10 @@
 <form novalidate
       name="distributionForm"
-      method="POST"
-      action="http://tools.zalari.de/mailer/mailer.php"
-      target="hidden_iframe"
       ng-submit="submitDistribution($event, distributionForm.$valid)">
     <label class="email-label">
         <span class="hide">E-Mail</span>
         <input ng-required="true"
-               ng-model="email"
+               ng-model="formdata.email"
                type="email"
                name="email7000"
                placeholder="E-Mail"
@@ -18,6 +15,13 @@
              ng-messages="distributionForm.email7000.$error">
             <div ng-message="required">Dies ist ein Pflichtfeld.</div>
             <div ng-message="email">Die E-Mail-Adresse ist ungültig.</div>
+        </div>
+        <div role="alert"
+             ng-if="distributionForm.$submitted"
+             ng-messages="distributionResponses">
+            <div ng-message="sent">Anmeldung wird versendet.</div>
+            <div ng-message="success">Vielen Dank fürs Anmelden.</div>
+            <div ng-message="error">Die E-Mail-Adresse ist ungültig.</div>
         </div>
     </label>
 
