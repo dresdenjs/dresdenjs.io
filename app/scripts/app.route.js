@@ -20,6 +20,12 @@ angular
         // Now set up the states
         $stateProvider
             .state('main', {
+                abstract: true,
+                controller: 'MainCtrl',
+                templateUrl: 'layouts/default.layout.html'
+            })
+            .state('views', {
+                parent: 'main',
                 url: '/main',
                 views: config.views
             });

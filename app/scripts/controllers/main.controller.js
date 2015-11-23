@@ -88,7 +88,7 @@ angular
         var _init = function () {
             $scope.$mdMedia = $mdMedia;
             $scope.colors = config.colors;
-            $scope.site = config.content;
+            $scope.site = config.site;
             $scope.views = config.views;
             $scope.tabs = {};
             $scope.distributionResponses = {

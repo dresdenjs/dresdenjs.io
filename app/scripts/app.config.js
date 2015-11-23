@@ -12,7 +12,7 @@ angular
     .module('dresdenjsApp')
     .constant('config', {
 
-        content: {
+        site: {
             title: 'DresdenJS User Group',
             keywords: 'JavaScript, AngularJS, REACT, user group, stammtisch, vorträge, netzwerken, austausch, web-technology, zalari, dresden',
             description: 'Eine JavaScript User Group in Dresden mit regelmäßigen Meetups für Vorträge, Wissenstransfer & Netzwerken',

@@ -1,0 +1,40 @@
+<header id="header">
+    <md-tabs md-no-disconnect md-center-tabs scroll-update-tabs>
+        <md-tab ng-repeat="(name, tab) in tabs" label="{{tab.title}}"
+                ng-click="scrollToSection(name, tab.background)"></md-tab>
+    </md-tabs>
+    <nav class="social">
+        <ul>
+            <li class="s-github"><a href="https://github.com/dresdenjs/dresdenjs.io" target="_blank">
+                <md-icon md-svg-icon="social:github-alt"></md-icon>
+            </a></li>
+            <li class="s-facebook"><a href="https://www.facebook.com/dresdenjs.io" target="_blank">
+                <md-icon md-svg-icon="social:facebook"></md-icon>
+            </a></li>
+            <li class="s-twitter"><a href="https://twitter.com/dresdenjs" target="_blank">
+                <md-icon md-svg-icon="social:twitter"></md-icon>
+            </a></li>
+        </ul>
+    </nav>
+</header>
+
+<section ng-repeat="(name, view) in views"
+         class="p-{{name}}" ng-class="{linked: view.title}"
+         set-style-color="{{colors[view.color]}}" set-style-background-color="{{colors[view.background]}}">
+    <div ng-if="view.icon" class="subtlecircle sectiondivider">
+        <md-icon md-svg-icon="{{view.icon}}" set-style-color="{{colors[view.background]}}"></md-icon>
+    </div>
+    <div ng-if="view.markdown === undefined || view.markdown === true" ui-view="{{name}}"
+         class="container {{view.alignment}}" btf-markdown></div>
+    <div ng-if="view.markdown === false" ui-view="{{name}}" class="container plain {{view.alignment}}"></div>
+</section>
+
+<footer id="footer">
+    <div class="container">
+        <p set-style-color="{{colors['white']}}">
+            Eine Idee von Achim Sperling und Christian Ulbrich — betreut von der
+            <a href="http://devid.net" target="_blank">DeviD GbR</a> &amp;
+            <a href="http://zalari.de" target="_blank">Zalari UG</a>.
+        </p>
+    </div>
+</footer>
