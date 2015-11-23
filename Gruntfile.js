@@ -252,7 +252,7 @@ module.exports = function (grunt) {
         flow: {
           html: {
             steps: {
-              js: ['concat', 'uglifyjs'],
+              js: ['concat'/*, 'uglifyjs'*/],
               css: ['cssmin']
             },
             post: {}
@@ -324,9 +324,9 @@ module.exports = function (grunt) {
       dist: {
         files: [{
           expand: true,
-            cwd: '<%= yeoman.app %>/assets/images',
+            cwd: '<%= yeoman.app %>/assets/svg',
             src: '{,*/}*.svg',
-            dest: '<%= yeoman.dist %>/assets/images'
+            dest: '<%= yeoman.dist %>/assets/svg'
         }]
       }
     },
@@ -393,9 +393,12 @@ module.exports = function (grunt) {
             '.htaccess',
             '*.{ico,png,txt}',
             '*.html',
+            'assets/presentations/{,*/}*.*',
             'assets/fonts/{,*/}*.*',
+            'views/{,*/}*.*',
+            'layouts/{,*/}*.*',
             'assets/images/{,*/}*.{webp}',
-            'assets/svg/{,*/}*.{svg}'
+            'assets/svg/{,*/}*.*'
           ]
         }, {
           expand: true,
@@ -423,7 +426,7 @@ module.exports = function (grunt) {
       dist: [
         'copy:styles',
         'imagemin',
-        'svgmin'
+        //'svgmin'
       ]
     },
 
@@ -472,16 +475,16 @@ module.exports = function (grunt) {
     'useminPrepare',
     'concurrent:dist',
     'postcss',
-    'ngtemplates',
+    //'ngtemplates',
     'concat',
     'ngAnnotate',
     'copy:dist',
-    'cdnify',
+    //'cdnify',
     'cssmin',
-    'uglify',
-    //'filerev',
+    //'uglify',
+    'filerev',
     'usemin',
-    'htmlmin'
+    //'htmlmin'
   ]);
 
   grunt.registerTask('default', [
