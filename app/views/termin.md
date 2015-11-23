@@ -1,4 +1,4 @@
-#2. Treffen der User Group
+#3. Treffen der User Group
 Am **10. Dezember 2015** um **19:00 Uhr** in der **Nikkifaktur**, Lößnitzstraße 14 in 01097 Dresden. Solange uns Marco lässt, wird das Treffen an gleicher Stelle, vorerst an jedem 2. Donnerstag im Monat stattfinden, das übernächste **wahrscheinlich** also am 14.01.**2016**
 Einfach auf das Gelände gehen und dann hinten rechts, findet ihr die Nikkifaktur. Es wird vor Ort auch Getränke geben.
 
@@ -17,15 +17,7 @@ Es ist bald Weihnachten und bei Glühwein wollen wir uns den mächtigen funktion
 &#160;
 
 ##Archiv##
-Die Vorträge vom letzten Mal gibt es immer auf unserer [GitHub Seite](https://github.com/dresdenjs/).
-
-<!--
-###10. Dezember 2015###
-{: .timeline}
-
-* **["WebRTC - Peer to Peer im Browser"](https://...)** von Stephan Thamm
-* **["Why we hate AngularJS and why we still keep using it"](https://...)** von [Christian Ulbrich](mailto:christian@dresdenjs.io)
--->
+Die Vorträge vom letzten Mal gibt es immer auf unserer [GitHub Seite](https://github.com/dresdenjs/) oder unten direkt verlinkt.
 
 ###12. November 2015###
 {: .timeline}
