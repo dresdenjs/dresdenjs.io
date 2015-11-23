@@ -20,7 +20,7 @@ build:
 
 deploy:
   steps:
-    - uetchy/gh-pages:
+    - zalari/gh-pages:
         token: $GITHUB_TOKEN
         repo: dresdenjs/dresdenjs.io
         path: dist
