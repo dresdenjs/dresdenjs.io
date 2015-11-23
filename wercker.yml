@@ -18,13 +18,13 @@ build:
         #tasks: test
         tasks: build
 
-  deploy:
-    steps:
-      - uetchy/gh-pages:
-              token: $GITHUB_TOKEN
-              repo: dresdenjs/dresdenjs.io
-              path: dist
-              domain: dresdenjs.io
+deploy:
+  steps:
+    - uetchy/gh-pages:
+        token: $GITHUB_TOKEN
+        repo: dresdenjs/dresdenjs.io
+        path: dist
+        domain: dresdenjs.io
 
   # Report the build status to HipChat
   #after-steps:
