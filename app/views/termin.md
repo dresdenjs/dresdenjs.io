@@ -23,7 +23,7 @@ Die Vorträge vom letzten Mal gibt es immer auf unserer [GitHub Seite](https://g
 {: .timeline}
 
 * **["WebRTC - Peer to Peer im Browser"](https://github.com/Innovailable/webrtc-security-talk/tree/no_security)** von Stephan Thamm
-* **["Why we hate AngularJS and why we still keep using it"](assets/presentations/presentation_why_hate.pdf)** von [Christian Ulbrich](mailto:christian@dresdenjs.io)
+* **["Why we hate AngularJS and why we still keep using it"](https://github.com/dresdenjs/dresdenjs.io/raw/gh-pages/assets/presentations/presentation_why_hate.pdf)** von [Christian Ulbrich](mailto:christian@dresdenjs.io)
 
 ###1. Oktober 2015###
 {: .timeline.end}
@@ -45,4 +45,3 @@ Wir suchen nach ein paar tollen Themen, bis jetzt haben wir folgende Vorschläge
 Die Würfel sind gefallen; es wird mit überwältigender Mehrheit: **AngularJS - a love and hate story**!
 
 Hier könnte auch dein Thema stehen; schreib' einfach eine Mail an <info@dresdenjs.io>
-
