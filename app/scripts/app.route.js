@@ -11,9 +11,7 @@
 angular
     .module('dresdenjsApp')
     .config(function ($locationProvider, $stateProvider, $urlRouterProvider, config) {
-        // Disable hash in url
-        $locationProvider.html5Mode(true);
-
+        
         // For any unmatched url, redirect to /main
         $urlRouterProvider.otherwise('/main');
 
