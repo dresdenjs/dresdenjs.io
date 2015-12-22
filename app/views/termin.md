@@ -1,23 +1,20 @@
-#3. Treffen der User Group
-Am **10. Dezember 2015** um **19:00 Uhr** in der **Nikkifaktur**, Lößnitzstraße 14 in 01097 Dresden. Solange uns Marco lässt, wird das Treffen an gleicher Stelle, vorerst an jedem 2. Donnerstag im Monat stattfinden, das übernächste **wahrscheinlich** also am 14.01.**2016**
+#4. Treffen der User Group
+Am **14. Januar 2016** um **19:00 Uhr** in der **Nikkifaktur**, Lößnitzstraße 14 in 01097 Dresden. Solange uns Marco lässt, wird das Treffen an gleicher Stelle, vorerst an jedem 2. Donnerstag im Monat stattfinden, das nächste **wahrscheinlich** also am 11.02.**2016**
 Einfach auf das Gelände gehen und dann hinten rechts, findet ihr die Nikkifaktur. Es wird vor Ort auch Getränke geben.
 
 ##Vorträge
 
-**"Boosting productivity with WebStorm"** 
-
-WebStorm ist eine IDE von JetBrains, die dem allgemeinen WebEntwickler unglaublich gut unterstützt. Wir zeigen, wie man mit WebStorm produktiver und schneller arbeiten kann und vielleicht macht JetBrains auch ein paar Lizenzen locker, die wir dann verteilen werden...
-
-&#160;
-
-**"Funktional Weihnachtssterne zeichnen mit Twitter"** (*Arbeitstitel*)
-
-Es ist bald Weihnachten und bei Glühwein wollen wir uns den mächtigen funktionalen Möglichkeiten von JavaScript widmen und funktional Weihnachtssterne zeichnen. Jeder kann mitmachen, indem er seinen Algorithmus twittert... ! (*Arbeitsbeschreibung*)
-
-&#160;
+Es spielt die bekannte Band **TBA** , will heißen wir sind noch in den Vertragsverhandlungen. JetBrains, scheint indes übrigens auch Erbarmen mit uns zu haben und will wohl diesmal Lizenzen heraushauen. Es werden also 2 Lizenzen unter allen *anwesenden* Leuten verlost.
 
 ##Archiv##
 Die Vorträge vom letzten Mal gibt es immer auf unserer [GitHub Seite](https://github.com/dresdenjs/) oder unten direkt verlinkt.
+
+###10. Dezember 2015###
+{: .timeline}
+
+* **["Funktional Weihnachtssterne zeichnen mit Twitter"](https://github.com/dresdenjs/xmas-star-twitterizer)** von [Christian Ulbrich](mailto:christian@dresdenjs.io)
+
+* **Boosting web productivity with Web Storm** von Thomas Moritz
 
 ###12. November 2015###
 {: .timeline}
