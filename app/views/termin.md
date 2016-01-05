@@ -3,8 +3,13 @@ Am **14. Januar 2016** um **19:00 Uhr** in der **Nikkifaktur**, Lößnitzstraße
 Einfach auf das Gelände gehen und dann hinten rechts, findet ihr die Nikkifaktur. Es wird vor Ort auch Getränke geben.
 
 ##Vorträge
+Beim letzten Mal kam der Wunsch auf, nach mehr Erfahrungen aus dem wirklichen Leben, so dass wir diesmal einen Vortrag zum guten alten AngularJS machen werden und welche Probleme wir in einem **großen** Enterprise-Projekt gemacht haben. Der Vortrag wird etwas länger sein und code-lastiger als bisherige Vorträge werden.
 
-Es spielt die bekannte Band **TBA** , will heißen wir sind noch in den Vertragsverhandlungen. JetBrains, scheint indes übrigens auch Erbarmen mit uns zu haben und will wohl diesmal Lizenzen heraushauen. Es werden also 2 Lizenzen unter allen *anwesenden* Leuten verlost.
+* **"Enterprise AngularJS"** (AngularJS-Erfahrungen aus dem Enterprise-Umfeld)
+
+Danach werden wir nicht nur noch ein bisschen kickern, sondern die Struktur etwas aufbrechen, um eine kleine Dr. Sommer - JavaScript - Session zu machen - jeder ist eingeladen, von seinen letzten kleinen JS-Problemchen zu erzählen und vielleicht finden wir gemeinsam eine Lösung.
+
+JetBrains, ist dann hoffentlich auch aus dem Winterschlaf erwacht und erlaubt uns dann hoffentlich 2 Lizenzen unter allen *anwesenden* Leuten zu verlosen.
 
 ##Archiv##
 Die Vorträge vom letzten Mal gibt es immer auf unserer [GitHub Seite](https://github.com/dresdenjs/) oder unten direkt verlinkt.
@@ -14,7 +19,7 @@ Die Vorträge vom letzten Mal gibt es immer auf unserer [GitHub Seite](https://g
 
 * **["Funktional Weihnachtssterne zeichnen mit Twitter"](https://github.com/dresdenjs/xmas-star-twitterizer)** von [Christian Ulbrich](mailto:christian@dresdenjs.io)
 
-* **Boosting web productivity with Web Storm** von Thomas Moritz
+* **[Boosting web productivity with Web Storm](https://github.com/dresdenjs/boosting-productivity-with-webstorm)** von Thomas Moritz
 
 ###12. November 2015###
 {: .timeline}
