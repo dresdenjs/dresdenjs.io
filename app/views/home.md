@@ -5,4 +5,4 @@
 
 …ein Treffpunkt für Entwickler die tiefer in die Welt von JavaScript einsteigen wollen!
 
-## [Das nächste Mal am 10. Dezember 2015 um 19 Uhr](#treffen-der-user-group)
+## [Das nächste Mal am 14. Januar **2016** um 19 Uhr](#treffen-der-user-group)
