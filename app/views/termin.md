@@ -16,7 +16,7 @@ Die Vorträge vom letzten Mal gibt es immer auf unserer [GitHub Seite](https://g
 ###14. Januar 2016###
 {: .timeline}
 
-* **["Enterprise AngularJS - Part 1"](https://github.com/dresdenjs/dresdenjs.io/raw/gh-pages/assets/presentations/presentation_angularjs_enterprise.pdf)** von [Christian Ulbrich](mailto:christian@dresdenjs.io) 
+* **["Enterprise AngularJS"](http://bit.ly/1SrPnCS)** von [Christian Ulbrich](mailto:christian@dresdenjs.io) 
 
 ###10. Dezember 2015###
 {: .timeline}
