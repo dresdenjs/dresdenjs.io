@@ -1,18 +1,22 @@
-#4. Treffen der User Group
-Am **14. Januar 2016** um **19:00 Uhr** in der **Nikkifaktur**, Lößnitzstraße 14 in 01097 Dresden. Solange uns Marco lässt, wird das Treffen an gleicher Stelle, vorerst an jedem 2. Donnerstag im Monat stattfinden, das nächste **wahrscheinlich** also am 11.02.**2016**
-Einfach auf das Gelände gehen und dann hinten rechts, findet ihr die Nikkifaktur. Es wird vor Ort auch Getränke geben.
+#5. Treffen der User Group
+Das nächste geplante Treffen ist am **11. Februar 2016**, dabei soll Gregor Biswanger uns bei seiner ["Community Roadshow"](http://intel.ly/1PBd8Cj) die schönen Dinge zeigen, die Microsoft für JavaScript tut. Termin und Ort stehen aber noch nicht endgültig fest - wir halten euch auf dem Laufenden.
+
+Auf jeden Fall steht aber der übernächste Termin am **10. März 2016** um **19:00 Uhr** in der **Nikkifaktur**, Lößnitzstraße 14 in 01097 Dresden schon fest bei dem wir uns unter anderem WebPack widmen werden!
+
+Einfach auf das Gelände gehen und dann hinten rechts, findet ihr die Nikkifaktur. Es wird vor Ort auch Getränke geben. Vielleicht auch mal ein Schild.
 
 ##Vorträge
-Beim letzten Mal kam der Wunsch auf, nach mehr Erfahrungen aus dem wirklichen Leben, so dass wir diesmal einen Vortrag zum guten alten AngularJS machen werden und welche Probleme wir in einem **großen** Enterprise-Projekt gemacht haben. Der Vortrag wird etwas länger sein und code-lastiger als bisherige Vorträge werden.
+Dank unserem Sponsor JetBrains werden wir auch beim nächsten Termin wieder 2 Lizenzen für zwei *beliebige* JetBrains-Produkte unter allen *anwesenden* Leuten verlosen. Wir gratulieren **Simone** und **Veit** die beim letzten Mal zwei Lizenzen abgestaubt haben!
 
-* **"Enterprise AngularJS"** (AngularJS-Erfahrungen aus dem Enterprise-Umfeld)
-
-Danach werden wir nicht nur noch ein bisschen kickern, sondern die Struktur etwas aufbrechen, um eine kleine Dr. Sommer - JavaScript - Session zu machen - jeder ist eingeladen, von seinen letzten kleinen JS-Problemchen zu erzählen und vielleicht finden wir gemeinsam eine Lösung.
-
-JetBrains, ist dann hoffentlich auch aus dem Winterschlaf erwacht und erlaubt uns dann hoffentlich 2 Lizenzen unter allen *anwesenden* Leuten zu verlosen.
+Let us hope, that Nemanja spreads the word and that we have more non-German speaking visitors next time, to keep up the good tradition and present in English again. Everyone is welcome!
 
 ##Archiv##
 Die Vorträge vom letzten Mal gibt es immer auf unserer [GitHub Seite](https://github.com/dresdenjs/) oder unten direkt verlinkt.
+
+###14. Januar 2016###
+{: .timeline}
+
+* **["Enterprise AngularJS - Part 1"] (https://github.com/dresdenjs/dresdenjs.io/raw/gh-pages/assets/presentations/presentation_angularjs_enterprise.pdf)** von [Christian Ulbrich](mailto:christian@dresdenjs.io) 
 
 ###10. Dezember 2015###
 {: .timeline}
