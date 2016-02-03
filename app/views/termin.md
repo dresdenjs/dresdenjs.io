@@ -7,7 +7,7 @@ Das nächste geplante Treffen ist am **11. Februar 2016** um **19:30 Uhr** in de
 
 Video gibt es auch noch -> [ich kann nicht lesen](https://www.youtube.com/watch?v=_jr_dEDvncI)
 
-Wir freuen uns das zusammen mit dem WDCMDresden und .NET-Dresden präsentieren zu können und die Zalari UG wird Club Mate sponsorrrrrrn, damit es nicht zu trocken wird.
+Wir freuen uns das zusammen mit dem WDCMDresden und .NET-Dresden präsentieren zu können und die Zalari UG wird Club Mate sponsorrrrrrn, damit es nicht zu trocken wird. Und für alle mit M$-Allergie: Apple + Google sind das neue Böse und Visual Studio Code läuft ja auch unter OS X und Linux und wurde vom Eclipse-Erfinder Erich Gamma initiiert. 
 
 Der übernächste Termin am **10. März 2016** um **19:00 Uhr** in der **Nikkifaktur**, Lößnitzstraße 14 in 01097 Dresden steht auch fest bei dem wir uns unter anderem WebPack widmen werden!
 
