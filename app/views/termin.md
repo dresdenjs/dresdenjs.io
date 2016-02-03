@@ -1,7 +1,15 @@
 #5. Treffen der User Group
-Das nächste geplante Treffen ist am **11. Februar 2016**, dabei soll Gregor Biswanger uns bei seiner ["Community Roadshow"](http://intel.ly/1PBd8Cj) die schönen Dinge zeigen, die Microsoft für JavaScript tut. Termin und Ort stehen aber noch nicht endgültig fest - wir halten euch auf dem Laufenden.
+Das nächste geplante Treffen ist am **11. Februar 2016** um **19:30 Uhr** in der **SLUB** (Zellescher Weg 18, 1. OG) dabei zeigt uns Gregor Biswanger bei seiner ["Community Roadshow"](http://intel.ly/1PBd8Cj):
 
-Auf jeden Fall steht aber der übernächste Termin am **10. März 2016** um **19:00 Uhr** in der **Nikkifaktur**, Lößnitzstraße 14 in 01097 Dresden schon fest bei dem wir uns unter anderem WebPack widmen werden!
+**Top 5 JavaScript Tools und Best Practices – mit Microsoft, aber ohne Internet Explorer**
+
+*Heutzutage sind eine hohe Anzahl an professionellen und leistungsfähigen JavaScript-Frameworks, -Tools und –Klassenbibliotheken erhältlich. Das zeigt uns, dass die JavaScript Entwicklung immer mehr an Bedeutung gewinnt. Bei diesem Vortrag, stellt Gregor Biswanger seine Top 5 Hilfsmittel vor. Dazu zählt zum Beispiel TypeScript für mehr Kontrolle bei der Entwicklung im Team und der Planung der Architektur, RxJS für eine performante asynchrone Programmierung, Visual Studio Code als Alternative zum Node Inspector, die ein effektiveres Debuggen von NodeJS-Anwendungen ermöglicht und vieles mehr.*
+
+Video gibt es auch noch -> [ich kann nicht lesen](https://www.youtube.com/watch?v=_jr_dEDvncI)
+
+Wir freuen uns das zusammen mit dem WDCMDresden und .NET-Dresden präsentieren zu können und die Zalari UG wird Club Mate sponsorrrrrrn, damit es nicht zu trocken wird.
+
+Der übernächste Termin am **10. März 2016** um **19:00 Uhr** in der **Nikkifaktur**, Lößnitzstraße 14 in 01097 Dresden steht auch fest bei dem wir uns unter anderem WebPack widmen werden!
 
 Einfach auf das Gelände gehen und dann hinten rechts, findet ihr die Nikkifaktur. Es wird vor Ort auch Getränke geben. Vielleicht auch mal ein Schild.
 
