@@ -14,7 +14,6 @@ angular
         'ngSanitize',
         'ngMaterial',
         'ngMessages',
-        'ngTouch',
         'ngResource',
         'smoothScroll',
         'cg.mailchimp',

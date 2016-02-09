@@ -8,7 +8,6 @@
     "angular-resource": "1.4.9",
     "angular-sanitize": "1.4.9",
     "angular-messages": "1.4.9",
-    "angular-touch": "1.4.9",
     "ui-router": "0.2.18",
     "angular-material": "1.0.5",
     "angular-markdown-directive": "0.3.1",
