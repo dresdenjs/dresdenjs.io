@@ -10,7 +10,7 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <link href="http://fonts.googleapis.com/css?family=Raleway:400,300,700" rel="stylesheet" type="text/css">
 
-    <!-- build:css(app) assets/styles/vendor.css -->
+    <!-- build:css(.) assets/styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
     <!-- endbower -->
@@ -18,7 +18,7 @@
     <!-- build:css(.tmp) assets/styles/main.css -->
     <link rel="stylesheet" href="assets/styles/skeleton.css">
     <link rel="stylesheet" href="assets/styles/base.css">
-    <link rel="stylesheet" href="assets/styles/_main.css">
+    <link rel="stylesheet" href="assets/styles/main.css">
     <link rel="stylesheet" href="assets/styles/responsive.css">
     <!-- endbuild -->
 
@@ -44,11 +44,12 @@
 <!-- Add your site or application content here -->
 <div id="wrapper" ui-view></div>
 
-<!-- Google Maps -->
-<script src="//maps.googleapis.com/maps/api/js?sensor=false"></script>
+<!-- External resources -->
+<script src="//maps.googleapis.com/maps/api/js"></script>
+<!-- <script src="//slackin-dresdenjs.herokuapp.com/slackin.js"></script> -->
 
 <!-- Google Analytics: change UA-XXXXX-X to be your sites ID -->
-<!--<script>
+<script>
     !function (A, n, g, u, l, a, r) {
         A.GoogleAnalyticsObject = l, A[l] = A[l] || function () {
                 (A[l].q = A[l].q || []).push(arguments)
@@ -58,41 +59,38 @@
 
     ga('create', '{{site.google_analytics_key}}');
     ga('send', 'pageview');
-</script>-->
+</script>
 
-
-<!-- build:js({.tmp,app}) scripts/vendor.js -->
+<!-- build:js(.) scripts/vendor.js -->
 <!-- bower:js -->
 <script src="bower_components/angular/angular.js"></script>
-<script src="bower_components/ui-router/release/angular-ui-router.js"></script>
 <script src="bower_components/angular-animate/angular-animate.js"></script>
 <script src="bower_components/angular-aria/angular-aria.js"></script>
-<script src="bower_components/angular-material/angular-material.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
 <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="bower_components/angular-messages/angular-messages.js"></script>
+<script src="bower_components/angular-touch/angular-touch.js"></script>
+<script src="bower_components/ui-router/release/angular-ui-router.js"></script>
+<script src="bower_components/angular-material/angular-material.js"></script>
 <script src="bower_components/showdown/src/showdown.js"></script>
 <script src="bower_components/angular-markdown-directive/markdown.js"></script>
 <script src="bower_components/ngSmoothScroll/lib/angular-smooth-scroll.js"></script>
 <script src="bower_components/angular-simple-logger/dist/angular-simple-logger.js"></script>
 <script src="bower_components/lodash/lodash.js"></script>
 <script src="bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
-<script src="bower_components/angular-messages/angular-messages.js"></script>
-<script src="bower_components/angular-touch/angular-touch.js"></script>
+<script src="bower_components/angular-mailchimp-subscribe/mailchimp.js"></script>
 <!-- endbower -->
-<!-- endbuild -->
-
-<!-- build:js({.tmp,app}) scripts/vendor_additional.js -->
-<!-- private extensions -->
-<script src="scripts/extensions/classname.showdown.js"></script>
-<script src="bower_components/showdown/src/extensions/table.js"></script>
 <script src="bower_components/showdown/src/extensions/github.js"></script>
-<!-- endprivate -->
+<script src="bower_components/showdown/src/extensions/table.js"></script>
+<script src="scripts/extensions/classname.showdown.js"></script>
 <!-- endbuild -->
 
 <!-- build:js({.tmp,app}) scripts/scripts.js -->
 <script src="scripts/app.modules.js"></script>
 <script src="scripts/app.config.js"></script>
 <script src="scripts/app.route.js"></script>
-<script src="scripts/app.markdown.js"></script>
+<script src="scripts/app.mailchimp.config.js"></script>
+<script src="scripts/app.markdown.config.js"></script>
 <script src="scripts/app.icons.js"></script>
 <script src="scripts/app.theme.js"></script>
 
@@ -102,7 +100,6 @@
 <script src="scripts/directives/scrollUpdateTabs.directive.js"></script>
 <script src="scripts/directives/setStyleBackgroundColor.directive.js"></script>
 <script src="scripts/directives/setStyleColor.directive.js"></script>
-
 <!-- endbuild -->
 </body>
 </html>

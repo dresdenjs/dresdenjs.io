@@ -15,7 +15,9 @@ angular
         'ngMaterial',
         'ngMessages',
         'ngTouch',
+        'ngResource',
         'smoothScroll',
+        'cg.mailchimp',
         'btford.markdown',
         'uiGmapgoogle-maps'
     ]);

@@ -10,7 +10,7 @@
  */
 angular
     .module('dresdenjsApp')
-    .controller('MainCtrl', function ($rootScope, $scope, $mdMedia, $timeout, $anchorScroll, $log, config, smoothScroll, $http) {
+    .controller('MainCtrl', function ($rootScope, $scope, $mdMedia, $timeout, $anchorScroll, $log, config, smoothScroll, CgMailChimpService) {
 
         var _setStyle = function (el, prop, val, force) {
             el.style.setProperty(prop, val, force ? 'important' : null);
@@ -59,30 +59,27 @@ angular
 
             $scope.distributionResponses.sent = true;
 
-            $http({
-                method: 'POST',
-                url: 'http://tools.zalari.de/mailer/mailer.php',
-                data: 'email7000=' + $scope.formdata.email,
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded'
-                }
-            })
-                .then(
-                    function () {
-                        $scope.distributionResponses.success = true;
-                        $scope.formdata.email = '';
-                        $scope.forms.distributionForm.email7000.$pristine = true;
-                        $scope.forms.distributionForm.email7000.$dirty = false;
-                    },
-                    function () {
-                        $scope.distributionResponses.error = true;
+            CgMailChimpService
+                .subscribe($scope.chimp)
+                .then(function () {
+                    $scope.distributionResponses.success = true;
+                    $scope.chimp = {
+                        EMAIL: '',
+                        FNAME: '',
+                        LNAME: ''
+                    };
+                    $scope.DistributionForm.email.$pristine = true;
+                    $scope.DistributionForm.email.$dirty = false;
+                })
+                .catch(function (error) {
+                    if (error.result) {
+                        $scope.errorMessage = error.msg;
                     }
-                )
-                .finally(
-                    function () {
-                        $scope.distributionResponses.sent = false;
-                    }
-                );
+                    $scope.distributionResponses.error = true;
+                })
+                .finally(function () {
+                    $scope.distributionResponses.sent = false;
+                });
         };
 
         var _init = function () {
@@ -96,9 +93,10 @@ angular
                 'success': false,
                 'error': false
             };
-            $scope.forms = {};
-            $scope.formdata = {
-                email: ''
+            $scope.chimp = {
+                EMAIL: '',
+                FNAME: '',
+                LNAME: ''
             };
             $scope.tintInkBarTo = _tintInkBarTo;
             $scope.scrollToSection = _scrollToSection;

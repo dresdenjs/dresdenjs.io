@@ -64,7 +64,6 @@ module.exports = function (grunt) {
         },
         files: [
           '<%= yeoman.app %>/{,*/}*.html',
-          '<%= yeoman.app %>/views/{,*/}*.md',
           '.tmp/assets/styles/{,*/}*.css',
           '<%= yeoman.app %>/assets/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
         ]
@@ -324,9 +323,9 @@ module.exports = function (grunt) {
       dist: {
         files: [{
           expand: true,
-            cwd: '<%= yeoman.app %>/assets/svg',
+            cwd: '<%= yeoman.app %>/assets/images',
             src: '{,*/}*.svg',
-            dest: '<%= yeoman.dist %>/assets/svg'
+            dest: '<%= yeoman.dist %>/assets/images'
         }]
       }
     },
@@ -393,12 +392,9 @@ module.exports = function (grunt) {
             '.htaccess',
             '*.{ico,png,txt}',
             '*.html',
-            'assets/presentations/{,*/}*.*',
             'assets/fonts/{,*/}*.*',
-            'views/{,*/}*.*',
-            'layouts/{,*/}*.*',
             'assets/images/{,*/}*.{webp}',
-            'assets/svg/{,*/}*.*'
+            'assets/svg/{,*/}*.{svg}'
           ]
         }, {
           expand: true,
@@ -426,7 +422,7 @@ module.exports = function (grunt) {
       dist: [
         'copy:styles',
         'imagemin',
-        //'svgmin'
+        'svgmin'
       ]
     },
 
@@ -475,14 +471,14 @@ module.exports = function (grunt) {
     'useminPrepare',
     'concurrent:dist',
     'postcss',
-    //'ngtemplates',
+    'ngtemplates',
     'concat',
     'ngAnnotate',
     'copy:dist',
-    //'cdnify',
+    'cdnify',
     'cssmin',
     'uglify',
-    'filerev',
+    //'filerev',
     'usemin',
     'htmlmin'
   ]);

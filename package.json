@@ -37,8 +37,6 @@
     "node": ">=0.10.0"
   },
   "dependencies": {
-    "bower": "^1.6.5",
-    "grunt-cli": "^0.1.13",
     "karma": "^0.13.15"
   }
 }

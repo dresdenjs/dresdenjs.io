@@ -30,5 +30,7 @@ angular
             .iconSet('toggle', 'assets/svg/toggle-icons.svg', 24)
             .icon('social:github-alt', 'assets/svg/social-github-alt.svg')
             .icon('social:facebook', 'assets/svg/social-facebook.svg')
-            .icon('social:twitter', 'assets/svg/social-twitter.svg');
+            .icon('social:twitter', 'assets/svg/social-twitter.svg')
+            .icon('social:meetup', 'assets/svg/social-meetup.svg')
+            .icon('social:slack', 'assets/svg/social-slack.svg');
     });

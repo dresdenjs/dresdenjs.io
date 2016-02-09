@@ -40,10 +40,6 @@
         padding: 130px 0;
     }
 
-    nav.social {
-        display: none;
-    }
-
     .columned {
         -webkit-column-count: 2;
         -moz-column-count: 2;
