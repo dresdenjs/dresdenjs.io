@@ -9,12 +9,12 @@
       "angular-sanitize": "1.4.9",
       "angular-messages": "1.4.9",
       "angular-touch": "1.4.9",
-      "ui-router": "^0.2.15",
-    "angular-material": "~0.11.4",
-    "angular-markdown-directive": "~0.3.1",
-    "ngSmoothScroll": "~2.0.0",
-    "angular-google-maps": "~2.2.1",
-    "angular-mailchimp-subscribe": "^0.1.0",
+      "ui-router": "0.2.18",
+    "angular-material": "0.11.4",
+    "angular-markdown-directive": "0.3.1",
+    "ngSmoothScroll": "2.0.0",
+    "angular-google-maps": "2.2.1",
+    "angular-mailchimp-subscribe": "0.1.0",
     "lodash": "3.10.1"
   },
   "devDependencies": {
