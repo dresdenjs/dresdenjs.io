@@ -1,0 +1,52 @@
+/* tiny size (phones) */
+@media only screen and (max-width: 380px) {
+    nav ul li {
+        width: 25%;
+        line-height: 20px;
+    }
+}
+
+/* mid size (tablets, landscapes) */
+@media only screen and (max-width: 679px) {
+    nav {
+        font-size: 11px;
+    }
+
+    nav ul li {
+        min-width: 60px;
+        line-height: 40px;
+    }
+}
+
+/* anything not desktop */
+@media only screen and (max-width: 767px) {
+    .container h1 {
+        font-size: 30px;
+    }
+
+    .container h2 {
+        font-size: 24px;
+    }
+
+    .container h3 {
+        font-size: 20px;
+    }
+
+    .container h4 {
+        font-size: 18px;
+    }
+
+    .section {
+        padding: 130px 0;
+    }
+
+    nav.social {
+        display: none;
+    }
+
+    .columned {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+    }
+}
