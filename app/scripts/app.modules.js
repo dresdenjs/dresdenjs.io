@@ -17,6 +17,5 @@ angular
         'ngResource',
         'smoothScroll',
         'cg.mailchimp',
-        'btford.markdown',
         'uiGmapgoogle-maps'
     ]);

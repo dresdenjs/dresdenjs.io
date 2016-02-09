@@ -21,6 +21,19 @@ angular
             _setStyle(el, 'background-color', config.colors[background], force);
         };
 
+        var _scrollToTarget = function (target) {
+            smoothScroll(target, {
+                offset: 70 + 40 + 75, // nav tabs + social nav + ½ section icon
+                duration: 375,
+                easing: 'easeInOutQuart',
+                callbackAfter: function () {
+                    $timeout(function () {
+                        $rootScope.scrolledByClick = false;
+                    });
+                }
+            });
+        };
+
         var _scrollToSection = function (name, background) {
             // get section by name
             var target = document.querySelector('section > [ui-view="' + name + '"]');
@@ -32,16 +45,42 @@ angular
             _tintInkBarTo(background, true);
 
             // initialize scroll animation
-            smoothScroll(target, {
-                offset: 70,
-                duration: 375,
-                easing: 'easeInOutQuart',
-                callbackAfter: function () {
-                    $timeout(function () {
-                        $rootScope.scrolledByClick = false;
+            _scrollToTarget(target);
+        };
+
+        var _setupInlineAnchors = function () {
+            $timeout(function () {
+                var anchors = document.querySelectorAll('a[href^="#"]');
+                if (anchors.length) {
+                    angular.forEach(anchors, function (anchor) {
+                        var targetId = anchor.hash.replace(/^(\/#|#)/i, ''),
+                            targetElement = document.getElementById(targetId);
+
+                        if (targetElement) {
+                            angular.element(anchor).bind('click', function ($event) {
+                                $event.preventDefault();
+
+                                // initialize scroll animation
+                                _scrollToTarget(targetElement);
+                            });
+                        }
                     });
                 }
+                $log.debug('%O', anchors);
             });
+        };
+
+        var _setupFormModels = function () {
+            $scope.distributionResponses = {
+                'sent': false,
+                'success': false,
+                'error': false
+            };
+            $scope.chimp = {
+                EMAIL: '',
+                FNAME: '',
+                LNAME: ''
+            };
         };
 
         var _resetDistributionResponses = function () {
@@ -62,14 +101,10 @@ angular
             CgMailChimpService
                 .subscribe($scope.chimp)
                 .then(function () {
-                    $scope.distributionResponses.success = true;
-                    $scope.chimp = {
-                        EMAIL: '',
-                        FNAME: '',
-                        LNAME: ''
-                    };
                     $scope.DistributionForm.email.$pristine = true;
                     $scope.DistributionForm.email.$dirty = false;
+                    _setupFormModels();
+                    $scope.distributionResponses.success = true;
                 })
                 .catch(function (error) {
                     if (error.result) {
@@ -88,16 +123,10 @@ angular
             $scope.site = config.site;
             $scope.views = config.views;
             $scope.tabs = {};
-            $scope.distributionResponses = {
-                'sent': false,
-                'success': false,
-                'error': false
-            };
-            $scope.chimp = {
-                EMAIL: '',
-                FNAME: '',
-                LNAME: ''
-            };
+
+            _setupFormModels();
+            _setupInlineAnchors();
+
             $scope.tintInkBarTo = _tintInkBarTo;
             $scope.scrollToSection = _scrollToSection;
             $scope.submitDistribution = _submitDistribution;

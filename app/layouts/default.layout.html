@@ -41,7 +41,7 @@
         <md-icon md-svg-icon="{{view.icon}}" set-style-color="{{colors[view.background]}}"></md-icon>
     </div>
     <div ng-if="view.markdown === undefined || view.markdown === true" ui-view="{{name}}"
-         class="container {{view.alignment}}" btf-markdown></div>
+         class="container {{view.alignment}}" markdown></div>
     <div ng-if="view.markdown === false" ui-view="{{name}}" class="container plain {{view.alignment}}"></div>
 </section>
 
