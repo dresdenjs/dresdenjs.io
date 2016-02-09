@@ -102,19 +102,27 @@ md-ink-bar {
 
 nav.social {
     position: absolute;
-    top: 0;
-    right: 15px;
+    top: 70px;
+    left: 0;
+    right: 0;
+    height: 40px;
     font-size: 0;
+    text-align: center;
+    background-color: #4d4d4d;
+}
+
+nav.social ul {
+    margin-bottom: 0;
 }
 
 nav.social li {
     display: inline-block;
     width: 55px;
-    height: 70px;
+    height: 40px;
     margin: 0;
     padding: 0;
     text-align: center;
-    line-height: 70px;
+    line-height: 40px;
 }
 
 nav.social li a {
@@ -123,6 +131,10 @@ nav.social li a {
 
 nav.social li a md-icon {
     color: #fff;
+}
+
+md-icon[md-svg-icon="social:meetup"] {
+    width: 34px;
 }
 
 /* Content */
@@ -201,6 +213,29 @@ ui-gmap-google-map img {
     margin-bottom: 3px;
 }
 
+md-input-container label:not(.md-no-float):not(.md-container-ignore),
+md-input-container .md-placeholder {
+    color: #f8f8f8;
+}
+md-input-container.md-icon-float.md-input-focused label,
+md-input-container.md-icon-float.md-input-has-value label {
+    color: #f8f8f8;
+}
+md-input-container.md-default-theme .md-input,
+md-input-container .md-input {
+    color: #f8f8f8;
+    border-color: #f8f8f8;
+}
+md-input-container.md-default-theme .md-input:-webkit-autofill,
+md-input-container .md-input:-webkit-autofill {
+    background-color: transparent !important;
+    /*transition: background-color 9999s linear 9999s, color 9999s linear 9999s;*/
+}
+md-input-container.md-default-theme.md-input-invalid .md-input,
+md-input-container.md-input-invalid .md-input {
+    border-color: #fab125;
+}
+
 .timeline,
 .timeline + ul {
     position: relative;
@@ -238,20 +273,6 @@ ui-gmap-google-map img {
 
 .timeline.end + ul:before {
     display: none;
-}
-
-form {
-    margin-bottom: 0;
-}
-input[type="text"],
-input[type="password"],
-input[type="email"],
-textarea,
-select {
-    margin-bottom: 5px;
-}
-button {
-    margin-top: 15px;
 }
 
 /* Footer */
