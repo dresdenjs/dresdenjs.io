@@ -123,6 +123,7 @@ angular
             $scope.site = config.site;
             $scope.views = config.views;
             $scope.tabs = {};
+            $scope.map = config.map;
 
             _setupFormModels();
             _setupInlineAnchors();

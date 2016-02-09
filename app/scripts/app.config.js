@@ -78,6 +78,21 @@ angular
                 alignment: 'left',
                 templateUrl: 'views/info.md'
             }
+        },
+
+        map: {
+            center: {
+                latitude: 51.06879,
+                longitude: 13.74312
+            },
+            zoom: 16,
+            refresh: false,
+            options: {
+                disableDefaultUI: true,
+                disableDoubleClickZoom: true,
+                draggable: false,
+                scrollwheel: false
+            }
         }
 
     });
