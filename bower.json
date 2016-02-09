@@ -12,7 +12,8 @@
     "ngSmoothScroll": "~2.0.0",
     "angular-google-maps": "~2.2.1",
     "angular-messages": "~1.4.7",
-    "angular-touch": "~1.4.7"
+    "angular-touch": "~1.4.7",
+    "angular-mailchimp-subscribe": "^0.1.0"
   },
   "devDependencies": {
     "angular-mocks": "^1.4.0"
