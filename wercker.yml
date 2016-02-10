@@ -31,4 +31,3 @@ deploy:
   #  - hipchat-notify:
   #    token: **YOUR HIPCHAT TOKEN***
   #      room-id: **YOUR HIPCHAT ROOM ID**
- No newline at end of file
