@@ -59,6 +59,7 @@ md-pagination-wrapper {
 
 md-tabs {
     background: #2e2e2e;
+    border-radius: 0;
 }
 
 md-tabs-canvas {
