@@ -66,7 +66,6 @@ angular
                         }
                     });
                 }
-                $log.debug('%O', anchors);
             });
         };
 
