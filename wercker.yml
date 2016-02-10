@@ -17,6 +17,7 @@ build:
     - grunt:
         #tasks: test
         tasks: build
+        fail-on-warnings: true
 
 deploy:
   steps:
