@@ -88,30 +88,37 @@ angular
             $scope.distributionResponses.error = false;
         };
 
-        var _submitDistribution = function (event, isValid) {
+        var _submitDistribution = function (event, DistributionForm) {
+            // prevent default form submit
             event.preventDefault();
 
-            if (!isValid) {
-                return isValid;
+            // return if form has errors
+            if (!DistributionForm.$valid) {
+                return false;
             }
 
+            // mark form as sent
             $scope.distributionResponses.sent = true;
 
+            // call mailchimp via service
             CgMailChimpService
                 .subscribe($scope.chimp)
                 .then(function () {
-                    $scope.DistributionForm.email.$pristine = true;
-                    $scope.DistributionForm.email.$dirty = false;
+                    // mark form as successed and reset
+                    DistributionForm.email.$pristine = true;
+                    DistributionForm.email.$dirty = false;
                     _setupFormModels();
                     $scope.distributionResponses.success = true;
                 })
                 .catch(function (error) {
+                    // show error, if provided
                     if (error.result) {
                         $scope.errorMessage = error.msg;
                     }
                     $scope.distributionResponses.error = true;
                 })
                 .finally(function () {
+                    // remove the sent badge to reset finally
                     $scope.distributionResponses.sent = false;
                 });
         };
