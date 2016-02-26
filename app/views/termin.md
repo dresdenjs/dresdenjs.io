@@ -1,7 +1,7 @@
 #5. Treffen der User Group
-Das nächste Treffen ist am **11. März 2016** um **19:00 Uhr** in der **Nikkifaktur**. Es wird gibt ist super machen die beiden Vorträge:
+Das nächste Treffen ist am Donnerstag dem **10. März 2016** um **19:00 Uhr** in der **Nikkifaktur**. Es wird gibt ist super machen die beiden Vorträge:
 
-* "WebPack" von Andre Leubner (Lovoo)
+* "WebPack" von André Leubner (Lovoo)
 * "AngularJS im Enterprise Part Deux" von Christian Ulbrich (Zalari)
 
 ##Vorträge
