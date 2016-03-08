@@ -5,6 +5,10 @@ body {
     font: 14px/1.5 'Raleway', Helvetica, Arial, sans-serif;
 }
 
+.hide {
+    display: none;
+}
+
 /* browsehappy */
 .browsehappy {
     margin: 0.2em 0;
@@ -148,19 +152,20 @@ section {
     /* generated noise from noisetexturegenerator.com */
 }
 
-section .container {
+section .container,
+section:first-of-type .container.plain {
     width: 100%;
     margin: 0;
     padding: 180px 0;
 }
 
-section .container:first-of-type {
-    padding-top: 140px;
-}
-
 section .container.plain {
     padding: 0;
     width: 100%;
+}
+
+section:first-of-type .container h3 {
+    margin-bottom: 0;
 }
 
 section.p-map {

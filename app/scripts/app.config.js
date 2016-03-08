@@ -35,12 +35,11 @@ angular
 
         views: {
             'home': {
-                title: 'Home',
                 color: 'black',
                 background: 'white',
-                icon: 'maps:place',
                 alignment: 'center',
-                templateUrl: 'views/home.md'
+                templateUrl: 'views/home.html',
+                markdown: false
             },
             'map': {
                 background: 'turquoise',

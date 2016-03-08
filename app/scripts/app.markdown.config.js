@@ -15,7 +15,8 @@ angular
             // getting error when extension name is camel-cased!
             // Extension 'undefined' could not be loaded.
             // It was either not found or is not a valid extension.
-            extensions: ['github', 'table', 'classname'],
-            unsanitized: true
+            extensions: ['github', 'table', 'classname', 'id'],
+            unsanitized: true,
+            simplifiedAutoLink: true
         });
     }]);
