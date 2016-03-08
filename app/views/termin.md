@@ -1,4 +1,4 @@
-#5. Treffen der User Group
+#6. Treffen der User Group
 Das nächste Treffen ist am Donnerstag dem **10. März 2016** um **19:00 Uhr** in der **Nikkifaktur**. Es wird gibt ist super machen die beiden Vorträge:
 
 * "WebPack" von André Leubner (Lovoo)
