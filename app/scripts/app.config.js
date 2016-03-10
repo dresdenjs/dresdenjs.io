@@ -43,7 +43,7 @@ angular
             },
             'map': {
                 background: 'turquoise',
-                icon: 'maps:place',
+                icon: 'action:home',
                 templateUrl: 'views/karte.html',
                 markdown: false
             },
@@ -91,6 +91,11 @@ angular
                 disableDoubleClickZoom: true,
                 draggable: false,
                 scrollwheel: false
+            },
+            marker: {
+                icon: {
+                    url: 'data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" enable-background="new 0 0 50 50"><path fill="#0FBFCF" d="M25 0c-9.7 0-17.5 7.8-17.5 17.5 0 13.1 17.5 32.5 17.5 32.5s17.5-19.4 17.5-32.5c0-9.7-7.8-17.5-17.5-17.5zm0 23.8c-3.5 0-6.2-2.8-6.2-6.2s2.8-6.2 6.2-6.2 6.2 2.8 6.2 6.2-2.7 6.2-6.2 6.2z" id="place"/></svg>'
+                }
             }
         }
 
