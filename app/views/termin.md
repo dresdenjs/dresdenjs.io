@@ -1,16 +1,25 @@
-#6. Treffen der User Group{: #nextmeetup}
-Das nächste Treffen ist am Donnerstag dem **10. März 2016** um **19:00 Uhr** in der **Nikkifaktur**. Es wird gibt ist super machen die beiden Vorträge:
+#7. Treffen der User Group{: #nextmeetup}
+Das nächste Treffen ist am Donnerstag dem **14. April 2016** um **19:00 Uhr** in der **Nikkifaktur**.
 
-* "WebPack" von André Leubner (Lovoo)
-* "AngularJS im Enterprise Part Deux" von Christian Ulbrich (Zalari)
+* "CSS Modules" von Veit Lehmann (Lovoo)
+tba.
+
+* "I promised myself" von Christian Ulbrich (Zalari)
+
+Dank EcmaScript 6, sind Promises jetzt fester Bestandteil von JavaScript geworden und in modernen Browsern (und NodeJS) auch ohne Transpiler nutzbar. Der Vortrag wird einen kurzen Einblick geben, warum Promises viele Probleme eleganter und strukturiert besser lösen können als Callbacks, anhand einiger ausgewählter Praxisbeispiele. Außerdem werden ein paar Best Practices und AntiPatterns zum Besten gegeben.
 
 ##Vorträge
-Dank unserem Sponsor JetBrains werden wir auch beim nächsten Termin wieder Lizenzen für zwei *beliebige* JetBrains-Produkte unter allen *anwesenden* Leuten verlosen. Wir gratulieren **Simone** und **Veit** die beim letzten Mal zwei Lizenzen abgestaubt haben!
+Dank unserem Sponsor JetBrains werden wir auch beim nächsten Termin wieder Lizenzen für zwei *beliebige* JetBrains-Produkte unter allen *anwesenden* Leuten verlosen. 
 
 Let us hope, that Nemanja spreads the word and that we have more non-German speaking visitors next time, to keep up the good tradition and present in English again. Everyone is welcome!
 
 ##Archiv
 Die Vorträge vom letzten Mal gibt es immer auf unserer [GitHub Seite](https://github.com/dresdenjs/) oder unten direkt verlinkt.
+
+###10. März 2016{: .timeline}
+
+* WebPack von André Leubner (Link kommt noch)
+* AngularJS en Voyge Part Deux von Christian Ulbrich (Link kommt baaaaaald)
 
 ###11. Februar 2016{: .timeline}
 
