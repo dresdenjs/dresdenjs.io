@@ -1,25 +1,29 @@
-#7. Treffen der User Group{: #nextmeetup}
-Das nächste Treffen ist am Donnerstag dem **14. April 2016** um **19:00 Uhr** in der **Nikkifaktur**.
+#8. Treffen der User Group{: #nextmeetup}
+Das nächste Treffen ist am Donnerstag dem **12. Mai 2016** um **19:00 Uhr** in der **Nikkifaktur**.
 
-* "CSS Modules" von Veit Lehmann (Lovoo)
+* "JavaScript Generators" von Erik (Lovoo)
 tba.
 
-* "I promised myself" von Christian Ulbrich (Zalari)
+* "Lodash for President" von Christian Ulbrich (Zalari)
 
-Dank EcmaScript 6, sind Promises jetzt fester Bestandteil von JavaScript geworden und in modernen Browsern (und NodeJS) auch ohne Transpiler nutzbar. Der Vortrag wird einen kurzen Einblick geben, warum Promises viele Probleme eleganter und strukturiert besser lösen können als Callbacks, anhand einiger ausgewählter Praxisbeispiele. Außerdem werden ein paar Best Practices und AntiPatterns zum Besten gegeben.
+Lodash ist der Quasi-Nachfolger zu Underscore und eine hilfreiche Sammlung von *sehr* vielen nützlichen Hilfsfunktionen, die einem das Leben als JavaScript-Programmierer doch massiv vereinfachen. Ich werde ein paar Klassiker von Lodash zeigen und dann natürlich auch ein paar kreative Anwendungen...
 
 ##Vorträge
-Dank unserem Sponsor JetBrains werden wir auch beim nächsten Termin wieder Lizenzen für zwei *beliebige* JetBrains-Produkte unter allen *anwesenden* Leuten verlosen. 
-
 Let us hope, that Nemanja spreads the word and that we have more non-German speaking visitors next time, to keep up the good tradition and present in English again. Everyone is welcome!
 
 ##Archiv
-Die Vorträge vom letzten Mal gibt es immer auf unserer [GitHub Seite](https://github.com/dresdenjs/) oder unten direkt verlinkt.
+Die Vorträge vom letzten Mal gibt es immer auf unserer [GitHub Seite](https://github.com/dresdenjs/) oder unten direkt verlinkt, einfach auf den Vortrag klicken. Wenn ein Link nicht mehr klappt, dann saget Bescheid!
+
+###14. April 2016{: .timeline}
+
+* ["CSS Modules"](https://github.com/levito/slides-css-modules) von Veit Lehmann (Lovoo) mit [Demo](https://github.com/levito/css-modules-demo)
+* ["I promised myself"](https://raw.githubusercontent.com/dresdenjs/dresdenjs.io/master/app/assets/presentations/presentation_I_promised_myself.pdf) von Christian Ulbrich (Zalari) - JavaScript Promises - wie was weshalb warum?
+
 
 ###10. März 2016{: .timeline}
 
-* WebPack von André Leubner (Link kommt noch)
-* AngularJS en Voyge Part Deux von Christian Ulbrich (Link kommt baaaaaald)
+* WebPack von André Leubner (Link kommt noch, oder André?)
+* ["AngularJS en Voyage Part Deux"](https://github.com/dresdenjs/dresdenjs.io/raw/master/app/assets/presentations/presentation_angularjs_enterprise_part_deux.pdf) von Christian Ulbrich
 
 ###11. Februar 2016{: .timeline}
 
