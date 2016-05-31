@@ -1,7 +1,10 @@
 #9. Treffen der User Group{: #nextmeetup}
 Das nächste Treffen ist am Donnerstag dem **12. Juni 2016** um **19:00 Uhr** in der **Nikkifaktur**.
 
-* "JavaScript Generators - Part 2 - What can they be used for?" - Erik (Lovoo)
+* "JavaScript Generators - Part 2 - Better than promises!" - Erik Söhnel (Lovoo)
+
+Endlich gibt es mit der neuen ES6 Generatorensyntax einen Weg asynchrones Javascript ohne Callbacks und ohne Promises zu schreiben. Wie das funktioniert und warum das besser als jemals zuvor ist, erfahrt ihr hier.
+
 * TBA!
 
 Du willst etwas präsentieren, hast eine Idee eine Wunsch? Trau dich, ewiger Ruhm ist dir sicher! Schreib uns an: <info@dresdenjs.io>!
@@ -13,7 +16,7 @@ Let us hope, that Nemanja spreads the word and that we have more non-German spea
 Die Vorträge vom letzten Mal gibt es immer auf unserer [GitHub Seite](https://github.com/dresdenjs/) oder unten direkt verlinkt, einfach auf den Vortrag klicken. Wenn ein Link nicht mehr klappt, dann saget Bescheid!
 
 ###12. Mai 2016{: .timeline}
-* "JavaScript Generators" von Erik (Lovoo) (Folien im Äther...)
+* ["JavaScript Generators"](https://hoeck.github.io/dresdenjs-generators) von Erik Söhnel (Lovoo)
 * ["Lodash for President"](https://raw.githubusercontent.com/dresdenjs/dresdenjs.io/master/app/assets/presentations/presentation_lodash_for_president.pdf) von Christian Ulbrich (Zalari)
 
 Lodash ist der Quasi-Nachfolger zu Underscore und eine hilfreiche Sammlung von *sehr* vielen nützlichen Hilfsfunktionen, die einem das Leben als JavaScript-Programmierer doch massiv vereinfachen. Ich werde ein paar Klassiker von Lodash zeigen und dann natürlich auch ein paar kreative Anwendungen...
