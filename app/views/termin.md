@@ -1,25 +1,29 @@
-#9. Treffen der User Group{: #nextmeetup}
-Das nächste Treffen ist am Donnerstag dem **12. Juni 2016** um **19:00 Uhr** in der **Nikkifaktur**.
+#10. Treffen der User Group{: #nextmeetup}
+Das nächste Treffen ist am Donnerstag dem **14. Juli 2016** um **19:00 Uhr** in der **Nikkifaktur**.
 
-* "JavaScript Generators - Part 2 - Better than promises!" - Erik Söhnel (Lovoo)
+* "Angular 2 - the king is dead, long live the king!" - Christian Ulbrich (Zalari)
 
-Endlich gibt es mit der neuen ES6 Generatorensyntax einen Weg asynchrones Javascript ohne Callbacks und ohne Promises zu schreiben. Wie das funktioniert und warum das besser als jemals zuvor ist, erfahrt ihr hier.
+Wer hätte gedacht, dass Portugal die EM gewinnt? Vielleicht all diejenigen, die an eine Veröffentlichung von Angular 2 im Juli glauben! :) - Jedenfalls das drohende Release der völlig neuen Version 2 - ist für uns Grund genug einen pragmatischen Blick auf das tollste neuste Framework aus dem Hause Google zu werfen:
 
-* TBA!
+* Warum ist Angular 2 das tollste seit der Erfindung von geschnittenem Brot?
+* Wie verhält es sich zu AngularJS 1?
+* Kann ich es jetzt schon produktiv nutzen? Und wenn ja, wie geht das am schnellsten?
 
-Du willst etwas präsentieren, hast eine Idee eine Wunsch? Trau dich, ewiger Ruhm ist dir sicher! Schreib uns an: <info@dresdenjs.io>!
+Du willst etwas präsentieren, hast eine Idee eine Wunsch? Trau dich, ewiger Ruhm (das Netz vergisst nie) ist dir sicher! Schreib uns an: <info@dresdenjs.io>!
 
 ##Vorträge
-Let us hope, that Nemanja spreads the word and that we have more non-German speaking visitors next time, to keep up the good tradition and present in English again. Everyone is welcome!
+Presentation slides are usually in English anyway and thus we can hold the presentations in English on demand. We'll ask before presenting and thus don't be afraid, if you have not mastered _Elbdampfschifffahrtsfahrkarte_ yet!  Everyone is welcome!
 
 ##Archiv
 Die Vorträge vom letzten Mal gibt es immer auf unserer [GitHub Seite](https://github.com/dresdenjs/) oder unten direkt verlinkt, einfach auf den Vortrag klicken. Wenn ein Link nicht mehr klappt, dann saget Bescheid!
 
+###9. Juni 2016{: .timeline}
+* ["JavaScript Generators - Part 2"](https://hoeck.github.io/dresdenjs-generators-part-two) von Erik Söhnel (Lovoo)
+
+
 ###12. Mai 2016{: .timeline}
 * ["JavaScript Generators"](https://hoeck.github.io/dresdenjs-generators) von Erik Söhnel (Lovoo)
 * ["Lodash for President"](https://raw.githubusercontent.com/dresdenjs/dresdenjs.io/master/app/assets/presentations/presentation_lodash_for_president.pdf) von Christian Ulbrich (Zalari)
-
-Lodash ist der Quasi-Nachfolger zu Underscore und eine hilfreiche Sammlung von *sehr* vielen nützlichen Hilfsfunktionen, die einem das Leben als JavaScript-Programmierer doch massiv vereinfachen. Ich werde ein paar Klassiker von Lodash zeigen und dann natürlich auch ein paar kreative Anwendungen...
 
 ###14. April 2016{: .timeline}
 
