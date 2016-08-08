@@ -3,10 +3,12 @@ Das nächste Treffen ist am Donnerstag dem **11. August** um **19:00 Uhr** in de
 
 Mit gleich zwei tollen Themen:
 
-* "reactive programming with observable" von Lars Wiedemann (Chemmedia)
+* "reactive programming with observable" von Lars Wiedemann (chemmedia)
+
 Zuletzt noch frech nachgefragt und schon beglückt uns Lars mit einem Vortrag zum Thema Observables!
 
 * "Docker 101 für JS Afficionados" von Christian Ulbrich (Zalari)
+
 Docker geht an keinem spurlos vorbei und wenn erst einmal die 10-seitige Anleitung im Wiki durch ein paar Dockerbefehle ersetzt sind, dann will man gar nicht mehr aufhören. Wir nähern uns gewohnt pragmatisch, undogmatisch dem Thema, und zeigen ein paar einfache Dinge, mit denen auch der gemeine JS-Entwickler sein Leben mit Docker leichter gestalten kann.
 
 Du willst etwas präsentieren, hast eine Idee eine Wunsch? Trau dich, ewiger Ruhm (das Netz vergisst nie) ist dir sicher! Schreib uns an: <info@dresdenjs.io>!
