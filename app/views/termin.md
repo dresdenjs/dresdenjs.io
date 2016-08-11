@@ -20,6 +20,9 @@ Presentation slides are usually in English anyway and thus we can hold the prese
 ##Archiv
 Die Vorträge vom letzten Mal gibt es immer auf unserer [GitHub Seite](https://github.com/dresdenjs/) oder unten direkt verlinkt, einfach auf den Vortrag klicken. Wenn ein Link nicht mehr klappt, dann saget Bescheid!
 
+###11.August 2016{: .timeline}
+* ["reactive programming with observable"](https://github.com/gernsdorfer/observer) - Lars Wiedemann (Chemmedia)
+
 ###14. Juli 2016{: .timeline}
 * ["Angular 2 - the king is dead, long live the king!"](https://raw.githubusercontent.com/dresdenjs/dresdenjs.io/master/app/assets/presentations/presentation_angular2_the_king_is_dead.pdf) - Christian Ulbrich (Zalari)
 * ["AngularJS 1 MailBox Demo"](https://github.com/dresdenjs/mailbox-demo-angularjs)
