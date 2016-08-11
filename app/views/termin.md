@@ -3,7 +3,8 @@ Das nächste Treffen ist am Donnerstag dem **11. August** um **19:00 Uhr** in de
 
 Mit gleich zwei tollen Themen:
 
-* "reactive programming with observable" von Lars Wiedemann (chemmedia)
+* ["reactive programming with observable"](https://github.com/gernsdorfer/observer) - Lars Wiedemann (Chemmedia)
+  
 
 Zuletzt noch frech nachgefragt und schon beglückt uns Lars mit einem Vortrag zum Thema Observables!
 
