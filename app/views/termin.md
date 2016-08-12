@@ -1,16 +1,10 @@
-#11. Treffen der User Group{: #nextmeetup}
-Das nächste Treffen ist am Donnerstag dem **11. August** um **19:00 Uhr** in der **Nikkifaktur**.
+#12. Treffen der User Group{: #nextmeetup}
+Das nächste Treffen ist am Donnerstag dem **15. September** um **19:00 Uhr** in der **Nikkifaktur**.
 
 Mit gleich zwei tollen Themen:
 
-* ["reactive programming with observable"](https://github.com/gernsdorfer/observer) - Lars Wiedemann (Chemmedia)
-  
-
-Zuletzt noch frech nachgefragt und schon beglückt uns Lars mit einem Vortrag zum Thema Observables!
-
-* "Docker 101 für JS Afficionados" von Christian Ulbrich (Zalari)
-
-Docker geht an keinem spurlos vorbei und wenn erst einmal die 10-seitige Anleitung im Wiki durch ein paar Dockerbefehle ersetzt sind, dann will man gar nicht mehr aufhören. Wir nähern uns gewohnt pragmatisch, undogmatisch dem Thema, und zeigen ein paar einfache Dinge, mit denen auch der gemeine JS-Entwickler sein Leben mit Docker leichter gestalten kann.
+* "better performance with WebWorkers" - Richard Burkhardt (Konsultaner)
+* Der großartigen Band: TBA! (stay tuned!)  
 
 Du willst etwas präsentieren, hast eine Idee eine Wunsch? Trau dich, ewiger Ruhm (das Netz vergisst nie) ist dir sicher! Schreib uns an: <info@dresdenjs.io>!
 
@@ -22,6 +16,7 @@ Die Vorträge vom letzten Mal gibt es immer auf unserer [GitHub Seite](https://g
 
 ###11.August 2016{: .timeline}
 * ["reactive programming with observable"](https://github.com/gernsdorfer/observer) - Lars Wiedemann (Chemmedia)
+* ["Docker 101 für JS Afficionados"](https://raw.githubusercontent.com/dresdenjs/dresdenjs.io/master/app/assets/presentations/presentation_Docker_101_for_JS_Afficionados.pdf) - Christian Ulbrich (Zalari)
 
 ###14. Juli 2016{: .timeline}
 * ["Angular 2 - the king is dead, long live the king!"](https://raw.githubusercontent.com/dresdenjs/dresdenjs.io/master/app/assets/presentations/presentation_angular2_the_king_is_dead.pdf) - Christian Ulbrich (Zalari)
