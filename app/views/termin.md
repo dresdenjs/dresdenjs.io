@@ -1,10 +1,12 @@
 #12. Treffen der User Group{: #nextmeetup}
-Das nächste Treffen ist am Donnerstag dem **15. September** um **19:00 Uhr** in der **Nikkifaktur**.
+Das nächste Treffen ist am Mittwoch dem **14. September** um **19:00 Uhr** in der **Nikkifaktur**. **ACHTUNG BABY!** **Terminverschiebung** 
+
+Ab Oktober dann wieder im üblichen Rhythmus - jeder 2. Donnerstag im Monat außer in durch 4 teilbaren Nicht-Schaltjahren!
 
 Mit gleich zwei tollen Themen:
 
 * "better performance with WebWorkers" - Richard Burkhardt (Konsultaner)
-* Der großartigen Band: TBA! (stay tuned!)  
+* Eine pragmatische Einführung in Meteor - Nick Lehmann  
 
 Du willst etwas präsentieren, hast eine Idee eine Wunsch? Trau dich, ewiger Ruhm (das Netz vergisst nie) ist dir sicher! Schreib uns an: <info@dresdenjs.io>!
 
@@ -69,14 +71,10 @@ Die Vorträge vom letzten Mal gibt es immer auf unserer [GitHub Seite](https://g
 &#160;
 
 ###Vorschläge
-Wir suchen nach ein paar tollen Themen, bis jetzt haben wir folgende Vorschläge:
+Wir suchen nach ein paar tollen Themen, mögliche Ideen für folgende Vorträge:
 
-* **"Erstellung von Grunt-Plugins"**
-* **"LoDash for President"** (praktische Hinweise, wie man mit LoDash Zeit und Fehler spart bei der Entwicklung)
 * **"Advanced Angular UI Router"** (typische Probleme lösen mit Angular-UI-Router)
 * **"Deklaratives JavaScript: oder wie verstehe ich meinen Code noch übermorgen"** (ein Plädoyer für lesbaren Code durch geschickte JS-Programmierung)
-* **"Enterprise AngularJS : Teil 1"** (AngularJS-Erfahrungen aus dem Enterprise-Umfeld)
-
-Die Würfel sind gefallen; es wird mit überwältigender Mehrheit: **AngularJS - a love and hate story**!
+* **"Advanced WebPack"** (WebPack für den harten Produktionseinsatz)
 
 Hier könnte auch dein Thema stehen; schreib' einfach eine Mail an <info@dresdenjs.io>
