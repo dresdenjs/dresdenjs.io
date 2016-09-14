@@ -6,7 +6,8 @@ Ab Oktober dann wieder im üblichen Rhythmus - jeder 2. Donnerstag im Monat auß
 Mit gleich zwei tollen Themen:
 
 * "better performance with WebWorkers" - Richard Burkhardt (Konsultaner)
-* Eine pragmatische Einführung in Meteor - Nick Lehmann  
+
+*Achtung*, aufgrund von Krankheit muss Nick seinen Vortrag leider (hoffentlich aufs nächste Mal) verschieben!  
 
 Du willst etwas präsentieren, hast eine Idee eine Wunsch? Trau dich, ewiger Ruhm (das Netz vergisst nie) ist dir sicher! Schreib uns an: <info@dresdenjs.io>!
 
