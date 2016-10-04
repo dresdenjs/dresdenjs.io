@@ -1,13 +1,10 @@
-#12. Treffen der User Group{: #nextmeetup}
-Das nächste Treffen ist am Mittwoch dem **14. September** um **19:00 Uhr** in der **Nikkifaktur**. **ACHTUNG BABY!** **Terminverschiebung** 
-
-Ab Oktober dann wieder im üblichen Rhythmus - jeder 2. Donnerstag im Monat außer in durch 4 teilbaren Nicht-Schaltjahren!
+#13. Treffen der User Group{: #nextmeetup}
+Das nächste Treffen ist am Donnerstag dem **13. Oktober** um **19:00 Uhr** in der **Nikkifaktur**. 
 
 Mit gleich zwei tollen Themen:
 
-* "better performance with WebWorkers" - Richard Burkhardt (Konsultaner)
-
-*Achtung*, aufgrund von Krankheit muss Nick seinen Vortrag leider (hoffentlich aufs nächste Mal) verschieben!  
+* "Zurück in die Zukunft mit Redux" - Lars Wiedemann (chemmedia)
+* "A pragmatic intro to Meteor" - Nick Lehmann
 
 Du willst etwas präsentieren, hast eine Idee eine Wunsch? Trau dich, ewiger Ruhm (das Netz vergisst nie) ist dir sicher! Schreib uns an: <info@dresdenjs.io>!
 
@@ -16,6 +13,9 @@ Presentation slides are usually in English anyway and thus we can hold the prese
 
 ##Archiv
 Die Vorträge vom letzten Mal gibt es immer auf unserer [GitHub Seite](https://github.com/dresdenjs/) oder unten direkt verlinkt, einfach auf den Vortrag klicken. Wenn ein Link nicht mehr klappt, dann saget Bescheid!
+
+###14. September 2016{: .timeline}
+* ["better performance with WebWorkers"](https://raw.githubusercontent.com/dresdenjs/dresdenjs.io/master/app/assets/presentations/presentation_webworker.pdf) - Richard Burkhardt (Konsultaner)
 
 ###11.August 2016{: .timeline}
 * ["reactive programming with observable"](https://github.com/gernsdorfer/observer) - Lars Wiedemann (Chemmedia)
