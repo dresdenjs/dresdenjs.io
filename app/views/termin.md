@@ -1,10 +1,32 @@
 #13. Treffen der User Group{: #nextmeetup}
-Das nächste Treffen ist am Donnerstag dem **13. Oktober** um **19:00 Uhr** in der **Nikkifaktur**. 
+Das nächste Treffen ist am Donnerstag dem **10. November** um **19:00 Uhr** in der **Nikkifaktur**. 
 
 Mit gleich zwei tollen Themen:
 
-* "Zurück in die Zukunft mit Redux" - Lars Wiedemann (chemmedia)
-* "A pragmatic intro to Meteor" - Nick Lehmann
+* "koa!" - Erik Söhnel (Lovoo)
+
+TBA soon!
+
+* "ng-europe - roundup" - Christian Ulbrich (Zalari) 
+
+Wir berichten von den neusten Erkenntnissen von der ng-europe in Paris!
+
+## Vorschau
+
+
+### 8. Dezember 2016
+* "Reach to the stars" - Christian Ulbrich (Zalari)
+
+Bei Glühwein werden wir es weihnachtlich angehen lassen und mit d3.js live coden und dabei einen kleinen launischen Rückblick auf das Jahr 2016 werfen und einen Azusblick auf 2017 werfen
+
+### 12. Januar 2017
+* "Client-side model layers" - Christian Ulbrich (Zalari)
+
+Heutige Single-Page-Apps (SPAs) werden immer größer und arbeiten oft als Client für reiche Business-Apps. Durch einen client-seitigen Model Layer können auch SPAs elegant und effizient implementiert werden. Wir berichten von unseren Erfahrungen mit Model-Layer für Enterprise Apps. 
+
+* "API Specification Languages" - Daniel Schröder
+
+TBA soon!
 
 Du willst etwas präsentieren, hast eine Idee eine Wunsch? Trau dich, ewiger Ruhm (das Netz vergisst nie) ist dir sicher! Schreib uns an: <info@dresdenjs.io>!
 
@@ -14,11 +36,17 @@ Presentation slides are usually in English anyway and thus we can hold the prese
 ##Archiv
 Die Vorträge vom letzten Mal gibt es immer auf unserer [GitHub Seite](https://github.com/dresdenjs/) oder unten direkt verlinkt, einfach auf den Vortrag klicken. Wenn ein Link nicht mehr klappt, dann saget Bescheid!
 
+###13. Oktober 2016{: .timeline}
+* ["Zurück in die Zukunft mit Redux"](https://github.com/gernsdorfer/redux)
+Lars Wiedemann (chemmedia AG)
+* ["A pragmatic intro to Meteor"](https://raw.githubusercontent.com/dresdenjs/dresdenjs.io/master/app/assets/presentations/presentation_webworker.pdf) - Nick Lehmann
+
+
 ###14. September 2016{: .timeline}
 * ["better performance with WebWorkers"](https://raw.githubusercontent.com/dresdenjs/dresdenjs.io/master/app/assets/presentations/presentation_webworker.pdf) - Richard Burkhardt (Konsultaner)
 
 ###11.August 2016{: .timeline}
-* ["reactive programming with observable"](https://github.com/gernsdorfer/observer) - Lars Wiedemann (Chemmedia)
+* ["reactive programming with observable"](https://github.com/gernsdorfer/observer) - Lars Wiedemann (chemmedia AG)
 * ["Docker 101 für JS Afficionados"](https://raw.githubusercontent.com/dresdenjs/dresdenjs.io/master/app/assets/presentations/presentation_Docker_101_for_JS_Afficionados.pdf) - Christian Ulbrich (Zalari)
 
 ###14. Juli 2016{: .timeline}
