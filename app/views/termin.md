@@ -3,9 +3,12 @@ Das nächste Treffen ist am Donnerstag dem **10. November** um **19:00 Uhr** in 
 
 Mit gleich zwei tollen Themen:
 
-* "koa!" - Erik Söhnel (Lovoo)
+* "koajs - yielden statt callbacks" - Erik Söhnel (Lovoo)
 
-TBA soon!
+[Koa](http://koajs.com/) ist ein kompaktes Web/HTTP-Framework für nodejs.
+Es verzichtet komplett auf Callbacks und nutzt stattdessen [Generatoren](https://github.com/tj/co) um asnychrone Abläufe zu beschreiben.
+
+Was den Express-Nachfolger sonst noch ausmacht und wie gut Koa in der Praxis funktioniert erfahrt ihr hier.
 
 * "ng-europe - roundup" - Christian Ulbrich (Zalari) 
 
