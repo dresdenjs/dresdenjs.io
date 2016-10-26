@@ -20,7 +20,7 @@ Wir berichten von den neusten Erkenntnissen von der ng-europe in Paris!
 ### 8. Dezember 2016
 * "Reach to the stars" - Christian Ulbrich (Zalari)
 
-Bei Glühwein werden wir es weihnachtlich angehen lassen und mit d3.js live coden und dabei einen kleinen launischen Rückblick auf das Jahr 2016 werfen und einen Azusblick auf 2017 werfen
+Bei Glühwein werden wir es weihnachtlich angehen lassen und mit d3.js live coden und dabei einen kleinen launischen Rückblick auf das Jahr 2016 und einen Ausblick auf 2017 werfen.
 
 ### 12. Januar 2017
 * "Client-side model layers" - Christian Ulbrich (Zalari)
