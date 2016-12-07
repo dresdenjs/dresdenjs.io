@@ -1,4 +1,4 @@
-#14. Treffen der User Group{: #nextmeetup}
+#15. Treffen der User Group{: #nextmeetup}
 Das nächste Treffen ist am Donnerstag dem **8. Dezember** um **19:02 Uhr** in der **Nikkifaktur**. 
 
 * "Arzgebirg wie bist du schie" - Christian Ulbrich (Zalari)
