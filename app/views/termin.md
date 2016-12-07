@@ -1,35 +1,25 @@
-#13. Treffen der User Group{: #nextmeetup}
-Das nächste Treffen ist am Donnerstag dem **10. November** um **19:00 Uhr** in der **Nikkifaktur**. 
+#14. Treffen der User Group{: #nextmeetup}
+Das nächste Treffen ist am Donnerstag dem **8. Dezember** um **19:02 Uhr** in der **Nikkifaktur**. 
 
-Mit gleich zwei tollen Themen:
+* "Arzgebirg wie bist du schie" - Christian Ulbrich (Zalari)
 
-* "koajs - yielden statt callbacks" - Erik Söhnel (Lovoo)
-
-[Koa](http://koajs.com/) ist ein kompaktes Web/HTTP-Framework für nodejs.
-Es verzichtet komplett auf Callbacks und nutzt stattdessen [Generatoren](https://github.com/tj/co) um asnychrone Abläufe zu beschreiben.
-
-Was den Express-Nachfolger sonst noch ausmacht und wie gut Koa in der Praxis funktioniert erfahrt ihr hier.
-
-* "ng-europe - roundup" - Christian Ulbrich (Zalari) 
-
-Wir berichten von den neusten Erkenntnissen von der ng-europe in Paris!
+Bei Glühwein werden wir es weihnachtlich angehen lassen und ~mit d3.js live coden~ und dabei einen kleinen launischen Rückblick auf das Jahr 2016 und einen Ausblick auf 2017 werfen. Außerdem quizzen wir vielleicht und machen noch etwas code golfing...
 
 ## Vorschau
 
 
-### 8. Dezember 2016
-* "Reach to the stars" - Christian Ulbrich (Zalari)
-
-Bei Glühwein werden wir es weihnachtlich angehen lassen und mit d3.js live coden und dabei einen kleinen launischen Rückblick auf das Jahr 2016 und einen Ausblick auf 2017 werfen.
-
 ### 12. Januar 2017
+* "React native" - Ronny
+
+Ronny hat sich intensiv mit React Native beschäftigt und wird uns first-hand experience in einem diesmal wieder etwas längerem Vortrag liefern!
+
+### 9. Februar 2017
 * "Client-side model layers" - Christian Ulbrich (Zalari)
 
-Heutige Single-Page-Apps (SPAs) werden immer größer und arbeiten oft als Client für reiche Business-Apps. Durch einen client-seitigen Model Layer können auch SPAs elegant und effizient implementiert werden. Wir berichten von unseren Erfahrungen mit Model-Layer für Enterprise Apps. 
+Heutige Single-Page-Apps (SPAs) werden immer größer und arbeiten oft als Client für reiche Business-Apps. Durch einen client-seitigen Model Layer können auch SPAs elegant und effizient implementiert werden. Wir berichten von unseren Erfahrungen mit Model-Layer für Enterprise Anwendungen und warum man mit einem echten Model Layer agil entwickeln kann.
 
 * "API Specification Languages" - Daniel Schröder
 
-TBA soon!
 
 Du willst etwas präsentieren, hast eine Idee eine Wunsch? Trau dich, ewiger Ruhm (das Netz vergisst nie) ist dir sicher! Schreib uns an: <info@dresdenjs.io>!
 
@@ -38,6 +28,10 @@ Presentation slides are usually in English anyway and thus we can hold the prese
 
 ##Archiv
 Die Vorträge vom letzten Mal gibt es immer auf unserer [GitHub Seite](https://github.com/dresdenjs/) oder unten direkt verlinkt, einfach auf den Vortrag klicken. Wenn ein Link nicht mehr klappt, dann saget Bescheid!
+
+###10. November 2016{: .timeline}
+* ["koajs - yielden statt callbacks"](https://github.com/hoeck/dresdenjs-koa) - Erik Söhnel (Lovoo) vertreten durch André (Lovoo)
+* ["ng-europe - roundup"](https://raw.githubusercontent.com/dresdenjs/dresdenjs.io/master/app/assets/presentations/presentation_ng_europe_roundup.pdf) - Christian Ulbrich (Zalari) 
 
 ###13. Oktober 2016{: .timeline}
 * ["Zurück in die Zukunft mit Redux"](https://github.com/gernsdorfer/redux)
