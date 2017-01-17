@@ -18,8 +18,9 @@ Ronny hat sich intensiv mit React Native beschäftigt und wird uns first-hand ex
 
 Heutige Single-Page-Apps (SPAs) werden immer größer und arbeiten oft als Client für reiche Business-Apps. Durch einen client-seitigen Model Layer können auch SPAs elegant und effizient implementiert werden. Wir berichten von unseren Erfahrungen mit Model-Layer für Enterprise Anwendungen und warum man mit einem echten Model Layer agil entwickeln kann.
 
-* "API Specification Languages" - Daniel Schröder
+* "API Specification Languages" - Daniel Schröder (Freiberufler)
 
+Gute API - schlechte API - Warum es sich lohnt beim Entwurf einer API vorher zu klotzen anstatt hinterher zu kleckern und was man sonst noch mit einer guten API Spezifikation anfangen kann.
 
 Du willst etwas präsentieren, hast eine Idee eine Wunsch? Trau dich, ewiger Ruhm (das Netz vergisst nie) ist dir sicher! Schreib uns an: <info@dresdenjs.io>!
 
