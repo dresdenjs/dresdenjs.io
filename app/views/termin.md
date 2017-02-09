@@ -1,19 +1,6 @@
-#15. Treffen der User Group{: #nextmeetup}
-Das nächste Treffen ist am Donnerstag dem **8. Dezember** um **19:02 Uhr** in der **Nikkifaktur**. 
+#17. Treffen der User Group{: #nextmeetup}
+Das nächste Treffen ist am Donnerstag dem **16. Februar** um **19:00 Uhr** in der **Nikkifaktur**. 
 
-* "Arzgebirg wie bist du schie" - Christian Ulbrich (Zalari)
-
-Bei Glühwein werden wir es weihnachtlich angehen lassen und ~mit d3.js live coden~ und dabei einen kleinen launischen Rückblick auf das Jahr 2016 und einen Ausblick auf 2017 werfen. Außerdem quizzen wir vielleicht und machen noch etwas code golfing...
-
-## Vorschau
-
-
-### 12. Januar 2017
-* "React native" - Ronny
-
-Ronny hat sich intensiv mit React Native beschäftigt und wird uns first-hand experience in einem diesmal wieder etwas längerem Vortrag liefern!
-
-### 9. Februar 2017
 * "Client-side model layers" - Christian Ulbrich (Zalari)
 
 Heutige Single-Page-Apps (SPAs) werden immer größer und arbeiten oft als Client für reiche Business-Apps. Durch einen client-seitigen Model Layer können auch SPAs elegant und effizient implementiert werden. Wir berichten von unseren Erfahrungen mit Model-Layer für Enterprise Anwendungen und warum man mit einem echten Model Layer agil entwickeln kann.
@@ -22,7 +9,11 @@ Heutige Single-Page-Apps (SPAs) werden immer größer und arbeiten oft als Clien
 
 Gute API - schlechte API - Warum es sich lohnt beim Entwurf einer API vorher zu klotzen anstatt hinterher zu kleckern und was man sonst noch mit einer guten API Spezifikation anfangen kann.
 
+## Vorschau
 Du willst etwas präsentieren, hast eine Idee eine Wunsch? Trau dich, ewiger Ruhm (das Netz vergisst nie) ist dir sicher! Schreib uns an: <info@dresdenjs.io>!
+
+###9. März 2017
+TBA
 
 ##Vorträge
 Presentation slides are usually in English anyway and thus we can hold the presentations in English on demand. We'll ask before presenting and thus don't be afraid, if you have not mastered _Elbdampfschifffahrtsfahrkarte_ yet!  Everyone is welcome!
@@ -30,15 +21,19 @@ Presentation slides are usually in English anyway and thus we can hold the prese
 ##Archiv
 Die Vorträge vom letzten Mal gibt es immer auf unserer [GitHub Seite](https://github.com/dresdenjs/) oder unten direkt verlinkt, einfach auf den Vortrag klicken. Wenn ein Link nicht mehr klappt, dann saget Bescheid!
 
+###12. Januar 2017{: .timeline}
+* "React native" - Ronny Hartenstein (axilaris)
+
+###8. Dezember 2016{: .timeline}
+* "Arzgebirg wie bist du schie" - Christian Ulbrich (Zalari)
+
 ###10. November 2016{: .timeline}
 * ["koajs - yielden statt callbacks"](https://github.com/hoeck/dresdenjs-koa) - Erik Söhnel (Lovoo) vertreten durch André (Lovoo)
 * ["ng-europe - roundup"](https://raw.githubusercontent.com/dresdenjs/dresdenjs.io/master/app/assets/presentations/presentation_ng_europe_roundup.pdf) - Christian Ulbrich (Zalari) 
 
 ###13. Oktober 2016{: .timeline}
-* ["Zurück in die Zukunft mit Redux"](https://github.com/gernsdorfer/redux)
-Lars Wiedemann (chemmedia AG)
+* ["Zurück in die Zukunft mit Redux"](https://github.com/gernsdorfer/redux) - Lars Wiedemann (chemmedia AG)
 * ["A pragmatic intro to Meteor"](https://raw.githubusercontent.com/dresdenjs/dresdenjs.io/master/app/assets/presentations/presentation_webworker.pdf) - Nick Lehmann
-
 
 ###14. September 2016{: .timeline}
 * ["better performance with WebWorkers"](https://raw.githubusercontent.com/dresdenjs/dresdenjs.io/master/app/assets/presentations/presentation_webworker.pdf) - Richard Burkhardt (Konsultaner)
@@ -55,7 +50,6 @@ Lars Wiedemann (chemmedia AG)
 ###9. Juni 2016{: .timeline}
 * ["JavaScript Generators - Part 2"](https://hoeck.github.io/dresdenjs-generators-part-two) von Erik Söhnel (Lovoo)
 
-
 ###12. Mai 2016{: .timeline}
 * ["JavaScript Generators"](https://hoeck.github.io/dresdenjs-generators) von Erik Söhnel (Lovoo)
 * ["Lodash for President"](https://raw.githubusercontent.com/dresdenjs/dresdenjs.io/master/app/assets/presentations/presentation_lodash_for_president.pdf) von Christian Ulbrich (Zalari)
@@ -64,7 +58,6 @@ Lars Wiedemann (chemmedia AG)
 
 * ["CSS Modules"](https://github.com/levito/slides-css-modules) von Veit Lehmann (Lovoo) mit [Demo](https://github.com/levito/css-modules-demo)
 * ["I promised myself"](https://raw.githubusercontent.com/dresdenjs/dresdenjs.io/master/app/assets/presentations/presentation_I_promised_myself.pdf) von Christian Ulbrich (Zalari) - JavaScript Promises - wie was weshalb warum?
-
 
 ###10. März 2016{: .timeline}
 
@@ -82,7 +75,6 @@ Lars Wiedemann (chemmedia AG)
 ###10. Dezember 2015{: .timeline}
 
 * **["Funktional Weihnachtssterne zeichnen mit Twitter"](https://github.com/dresdenjs/xmas-star-twitterizer)** von [Christian Ulbrich](mailto:christian@dresdenjs.io)
-
 * **[Boosting web productivity with Web Storm](https://github.com/dresdenjs/boosting-productivity-with-webstorm)** von Thomas Moritz
 
 ###12. November 2015{: .timeline}
