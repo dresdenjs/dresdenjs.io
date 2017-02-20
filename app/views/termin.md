@@ -5,7 +5,7 @@ Das nächste Treffen ist am Donnerstag dem **16. Februar** um **19:00 Uhr** in d
 
 Heutige Single-Page-Apps (SPAs) werden immer größer und arbeiten oft als Client für reiche Business-Apps. Durch einen client-seitigen Model Layer können auch SPAs elegant und effizient implementiert werden. Wir berichten von unseren Erfahrungen mit Model-Layer für Enterprise Anwendungen und warum man mit einem echten Model Layer agil entwickeln kann.
 
-* "API Specification Languages" - Daniel Schröder (Freiberufler)
+* ["API Specification Languages"](https://github.com/schroedan/api-spec-lang-talk) ([PDF](https://github.com/schroedan/api-spec-lang-talk/releases/download/2017-02-16/api-spec-lang-talk-2016-02-16.pdf)) - Daniel Schröder (Freiberufler)
 
 Gute API - schlechte API - Warum es sich lohnt beim Entwurf einer API vorher zu klotzen anstatt hinterher zu kleckern und was man sonst noch mit einer guten API Spezifikation anfangen kann.
 
