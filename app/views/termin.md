@@ -37,7 +37,7 @@ Die Vorträge vom letzten Mal gibt es immer auf unserer [GitHub Seite](https://g
 * ["API Specification Languages"](https://github.com/schroedan/api-spec-lang-talk) ([PDF](https://github.com/schroedan/api-spec-lang-talk/releases/download/2017-02-16/api-spec-lang-talk-2016-02-16.pdf)) - Daniel Schröder (Freiberufler)
 
 ###12. Januar 2017{: .timeline}
-* "React native" - Ronny Hartenstein (axilaris) [Repo der Demo](https://github.com/ronnyhartenstein/pilzliste-react-native-redux)
+* ["React native im Praxistest"](https://github.com/ronnyhartenstein/pilzliste-react-native-redux/blob/gh-pages/Talk%20React%20Native.pdf) - Ronny Hartenstein (axilaris) [Repo der Demo](https://github.com/ronnyhartenstein/pilzliste-react-native-redux)
 
 ###8. Dezember 2016{: .timeline}
 * "Arzgebirg wie bist du schie" - Christian Ulbrich (Zalari)
