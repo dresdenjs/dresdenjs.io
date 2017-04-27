@@ -1,19 +1,26 @@
-#17. Treffen der User Group{: #nextmeetup}
-Das nächste Treffen ist am Donnerstag dem **16. Februar** um **19:00 Uhr** in der **Nikkifaktur**. 
+#20. Treffen der User Group{: #nextmeetup}
+Das nächste Treffen ist am Donnerstag dem **11. Mai** um **18:45 Uhr** bei Saxonia Systems (Fritz-Förster-Platz 2). 
 
-* "Client-side model layers" - Christian Ulbrich (Zalari)
+Saxonia Systems hat uns eingeladen mal mit DresdenJS etwas Schwung in die herschaftliche Villa zu bringen und damit der nicht zu doll wird, gibt es auch netterweise Snacks und Getränke!
 
-Heutige Single-Page-Apps (SPAs) werden immer größer und arbeiten oft als Client für reiche Business-Apps. Durch einen client-seitigen Model Layer können auch SPAs elegant und effizient implementiert werden. Wir berichten von unseren Erfahrungen mit Model-Layer für Enterprise Anwendungen und warum man mit einem echten Model Layer agil entwickeln kann.
+* "D3 – Basics, v4 & SPA integration" - Lucas Recknagel
+* "Implementing client-side model layers" - Christian Ulbrich (Zalari)
 
-* ["API Specification Languages"](https://github.com/schroedan/api-spec-lang-talk) ([PDF](https://github.com/schroedan/api-spec-lang-talk/releases/download/2017-02-16/api-spec-lang-talk-2016-02-16.pdf)) - Daniel Schröder (Freiberufler)
-
-Gute API - schlechte API - Warum es sich lohnt beim Entwurf einer API vorher zu klotzen anstatt hinterher zu kleckern und was man sonst noch mit einer guten API Spezifikation anfangen kann.
+Ja wie baut man denn nun einen tollen Model Layer? Vorschläge, wie man die theoretischen Konzepte vom 1. Teil des Vortrags in die Praxis umsetzen kann und wie das mit TypeScript auch alles elegant und effizient gelöst werden kann.
 
 ## Vorschau
 Du willst etwas präsentieren, hast eine Idee eine Wunsch? Trau dich, ewiger Ruhm (das Netz vergisst nie) ist dir sicher! Schreib uns an: <info@dresdenjs.io>!
 
-###9. März 2017
-TBA
+Was geht ab demnächst (ohne Gewehr!)?
+
+###15. Juni 2017
+* "Dynamische statische Webseiten mit Angular 2" - David Enke (Zalari)
+
+Weitere mögliche Themen:
+
+* "TypeScript migration learnings"
+* "GraphQL" 
+
 
 ##Vorträge
 Presentation slides are usually in English anyway and thus we can hold the presentations in English on demand. We'll ask before presenting and thus don't be afraid, if you have not mastered _Elbdampfschifffahrtsfahrkarte_ yet!  Everyone is welcome!
@@ -21,8 +28,16 @@ Presentation slides are usually in English anyway and thus we can hold the prese
 ##Archiv
 Die Vorträge vom letzten Mal gibt es immer auf unserer [GitHub Seite](https://github.com/dresdenjs/) oder unten direkt verlinkt, einfach auf den Vortrag klicken. Wenn ein Link nicht mehr klappt, dann saget Bescheid!
 
+###9. März 2017{: .timeline}
+* "TypeScript - the good parts" - Christian Ulbrich (Zalari)
+* ["Going Desktop with Electron"](https://www.slideshare.net/LeoLindhorst/going-desktop-with-electron?qid=b8a1bb07-8c14-4b04-a66c-9ea27a406eba&v=&b=&from_search=1) - Leo Lindhorst (Saxonia Systems)
+
+###16. Februar 2017{: .timeline}
+* "Client-side model layers" - Christian Ulbrich (Zalari)
+* ["API Specification Languages"](https://github.com/schroedan/api-spec-lang-talk) ([PDF](https://github.com/schroedan/api-spec-lang-talk/releases/download/2017-02-16/api-spec-lang-talk-2016-02-16.pdf)) - Daniel Schröder (Freiberufler)
+
 ###12. Januar 2017{: .timeline}
-* "React native" - Ronny Hartenstein (axilaris)
+* "React native" - Ronny Hartenstein (axilaris) [Repo der Demo](https://github.com/ronnyhartenstein/pilzliste-react-native-redux)
 
 ###8. Dezember 2016{: .timeline}
 * "Arzgebirg wie bist du schie" - Christian Ulbrich (Zalari)
