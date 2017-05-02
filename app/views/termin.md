@@ -1,7 +1,7 @@
 #20. Treffen der User Group{: #nextmeetup}
 Das nächste Treffen ist am Donnerstag dem **11. Mai** um **18:45 Uhr** bei Saxonia Systems (Fritz-Förster-Platz 2). 
 
-Saxonia Systems hat uns eingeladen mal mit DresdenJS etwas Schwung in die herschaftliche Villa zu bringen und damit der nicht zu doll wird, gibt es auch netterweise Snacks und Getränke!
+Saxonia Systems hat uns eingeladen mal mit DresdenJS etwas Schwung in die herrschaftliche Villa zu bringen und damit der nicht zu doll wird, gibt es auch netterweise Snacks und Getränke!
 
 * "D3 – Basics, v4 & SPA integration" - Lucas Recknagel
 * "Implementing client-side model layers" - Christian Ulbrich (Zalari)
