@@ -11,5 +11,6 @@ deploy:
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
   local_dir: dist
+  fqdn: dresdenjs.io
   on:
     branch: master
