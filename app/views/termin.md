@@ -1,32 +1,43 @@
-#20. Treffen der User Group{: #nextmeetup}
-Das nächste Treffen ist am Donnerstag dem **11. Mai** um **18:45 Uhr** bei Saxonia Systems (Fritz-Förster-Platz 2). 
+#21. Treffen der User Group{: #nextmeetup}
+Das nächste Treffen ist am Donnerstag dem **15. Juni** um **19:00 Uhr** an alter Wirkungsstätte - der Nikkifaktur, Lößnitzstraße 14 (Drewag-Gelände). 
 
-Saxonia Systems hat uns eingeladen mal mit DresdenJS etwas Schwung in die herrschaftliche Villa zu bringen und damit der nicht zu doll wird, gibt es auch netterweise Snacks und Getränke!
+Mit den spannendsten Themen:
 
-* "D3 – Basics, v4 & SPA integration" - Lucas Recknagel
-* "Implementing client-side model layers" - Christian Ulbrich (Zalari)
+* "Einführung in WebAssembly" - Christian Ulbrich (Zalari)
 
-Ja wie baut man denn nun einen tollen Model Layer? Vorschläge, wie man die theoretischen Konzepte vom 1. Teil des Vortrags in die Praxis umsetzen kann und wie das mit TypeScript auch alles elegant und effizient gelöst werden kann.
+WebAssembly is the _new shit on the horizon_ - oder warum nicht die UnrealEngine im Browser laufen lassen? Was ist WebAssembly und wofür kann man es überhaupt gebrauchen? Eine kleine Einführung in das brand-aktuelle Thema WebAssembly, welches sicherlich in den nächsten Jahren an Traction gewinnen wird.
+
+* "CSS Shapes & Drawing vs. SVG" - Martin Kutter (chemmedia AG)
+
+Martin Kutter (Softwaredesigner – chemmedia AG) gibt uns einen Einblick in CSS Shapes und in die damit verbundene Vielzahl an Möglichkeiten komplexe Formen abzubilden. Vergleichsweise werden die Vor- und Nachteile von SVG beleuchtet. 
+
+Als CSS Shapes bezeichnet man alle geometrischen Formen, die sich mit CSS abbilden lassen. Die Menge wird für Staunen sorgen.
 
 ## Vorschau
 Du willst etwas präsentieren, hast eine Idee eine Wunsch? Trau dich, ewiger Ruhm (das Netz vergisst nie) ist dir sicher! Schreib uns an: <info@dresdenjs.io>!
 
 Was geht ab demnächst (ohne Gewehr!)?
 
-###15. Juni 2017
+###13. Juli 2017
+* "GraphQL!" - Toni Möckel
 * "Dynamische statische Webseiten mit Angular 2" - David Enke (Zalari)
 
 Weitere mögliche Themen:
 
 * "TypeScript migration learnings"
-* "GraphQL" 
-
 
 ##Vorträge
 Presentation slides are usually in English anyway and thus we can hold the presentations in English on demand. We'll ask before presenting and thus don't be afraid, if you have not mastered _Elbdampfschifffahrtsfahrkarte_ yet!  Everyone is welcome!
 
 ##Archiv
 Die Vorträge vom letzten Mal gibt es immer auf unserer [GitHub Seite](https://github.com/dresdenjs/) oder unten direkt verlinkt, einfach auf den Vortrag klicken. Wenn ein Link nicht mehr klappt, dann saget Bescheid!
+
+###11. Mai 2017{: .timeline}
+* "D3 – Basics, v4 & SPA integration" - Lucas Recknagel
+* "Implementing client-side model layers" - Christian Ulbrich (Zalari)
+
+###19. April 2017{: .timeline}
+* ... SOON
 
 ###9. März 2017{: .timeline}
 * "TypeScript - the good parts" - Christian Ulbrich (Zalari)
