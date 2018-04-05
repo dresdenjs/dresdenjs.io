@@ -1,0 +1,17 @@
+<!doctype html> <html lang="de" ng-app="dresdenjsApp"> <head> <base href="/"> <title ng-bind="site.title"></title> <meta charset="utf-8"> <meta name="keywords" content="{{site.keywords}}"> <meta name="description" content="{{site.description}}"> <meta name="viewport" content="width=device-width,initial-scale=1"> <!-- Place favicon.ico and apple-touch-icon.png in the root directory --> <link href="http://fonts.googleapis.com/css?family=Raleway:400,300,700" rel="stylesheet" type="text/css"> <link rel="stylesheet" href="assets/styles/vendor.43edff5f.css"> <link rel="stylesheet" href="assets/styles/main.a4464f8a.css"> <link ng-if="site.favicon" rel="shortcut icon" href="{{site.favicon}}" type="image/x-icon"> <link ng-if="site.touch_icon" rel="apple-touch-icon" href="{{site.touch_icon}}"> <style type="text/css">/**
+         * Hide when Angular is not yet loaded and initialized
+         */
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+            display: none !important;
+        }</style> </head> <body ng-cloak> <!--[if lte IE 8]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]--> <!-- Add your site or application content here --> <div id="wrapper" ui-view></div> <!-- External resources --> <script src="//maps.googleapis.com/maps/api/js"></script> <!-- <script src="//slackin-dresdenjs.herokuapp.com/slackin.js"></script> --> <!-- Google Analytics: change UA-XXXXX-X to be your sites ID --> <script>!function (A, n, g, u, l, a, r) {
+        A.GoogleAnalyticsObject = l, A[l] = A[l] || function () {
+                (A[l].q = A[l].q || []).push(arguments)
+            }, A[l].l = +new Date, a = n.createElement(g),
+            r = n.getElementsByTagName(g)[0], a.src = u, r.parentNode.insertBefore(a, r)
+    }(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', '{{site.google_analytics_key}}');
+    ga('send', 'pageview');</script> <script src="scripts/vendor.4de0e5d8.js"></script> <script src="scripts/vendor_additional.60f32bd1.js"></script> <script src="scripts/scripts.8342e91a.js"></script> </body> </html>
