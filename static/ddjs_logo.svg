@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="86.421" height="28" viewBox="0 0 86.421 28">
+  <g id="Gruppe_2" data-name="Gruppe 2" transform="translate(-125 -7)">
+    <g id="Gruppe_1" data-name="Gruppe 1" transform="translate(125 7)">
+      <path id="Pfad_1" data-name="Pfad 1" d="M55.553,15.654H58.64v3.087H55.553Zm-24.69,6.173h3.085V9.482h6.173V24.913H30.863ZM61.726,9.482H67.9v9.259H61.726ZM43.208,15.654h3.087V6.4h9.259V9.482H52.467v9.259h-9.26ZM70.987,6.4H83.332V18.741H70.987Zm-67.9,0H9.259V3.309h6.173V18.741H3.087Zm15.431,0h6.173V3.309h6.172V18.741H18.518ZM33.949,3.309h6.173V6.4H33.949Zm27.779,0H67.9V6.4H61.728ZM58.641,0V3.309H43.208V.223H21.6V3.309H18.518V.223H6.173V3.309H0V21.828H27.777V28H43.208V21.828H86.421V3.309H70.987V0Z" fill="#cb3837"/>
+      <rect id="Rechteck_1" data-name="Rechteck 1" width="3.086" height="6.173" transform="translate(6.173 9.482)" fill="#cb3837"/>
+      <rect id="Rechteck_2" data-name="Rechteck 2" width="3.086" height="6.173" transform="translate(21.605 9.482)" fill="#cb3837"/>
+      <rect id="Rechteck_3" data-name="Rechteck 3" width="3.086" height="6.173" transform="translate(74.069 9.482)" fill="#cb3837"/>
+      <path id="Pfad_2" data-name="Pfad 2" d="M73.542,35.181H64.284V32.095h3.085V19.749h6.173Z" transform="translate(-33.42 -10.267)" fill="#fff"/>
+      <rect id="Rechteck_4" data-name="Rechteck 4" width="6.173" height="3.086" transform="translate(33.949 3.309)" fill="#fff"/>
+      <path id="Pfad_3" data-name="Pfad 3" d="M99.254,25.666H89.995V22.58h3.086V13.321h9.259v3.086H99.254Z" transform="translate(-46.787 -6.925)" fill="#fff"/>
+      <rect id="Rechteck_5" data-name="Rechteck 5" width="3.086" height="3.086" transform="translate(55.554 15.655)" fill="#fff"/>
+      <rect id="Rechteck_6" data-name="Rechteck 6" width="6.173" height="9.259" transform="translate(61.726 9.482)" fill="#fff"/>
+      <rect id="Rechteck_7" data-name="Rechteck 7" width="6.173" height="3.086" transform="translate(61.727 3.309)" fill="#fff"/>
+      <path id="Pfad_4" data-name="Pfad 4" d="M12.6,6.892V9.978H6.428V22.324H18.774V6.892Zm0,12.345H9.514V13.064H12.6Z" transform="translate(-3.342 -3.583)" fill="#fff"/>
+      <path id="Pfad_5" data-name="Pfad 5" d="M44.743,6.892V9.978H38.57V22.324H50.916V6.892Zm0,12.345H41.657V13.064h3.086Z" transform="translate(-20.052 -3.583)" fill="#fff"/>
+      <path id="Pfad_6" data-name="Pfad 6" d="M147.853,25.666H160.2V13.32H147.853Zm6.169-3.087h-3.086V16.406h3.086Z" transform="translate(-76.866 -6.925)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

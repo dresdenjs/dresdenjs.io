@@ -1,4 +1,16 @@
+:root {
+
+/* Colors: */
+--primary: #CB3837;
+--primary-faded: #E09797;
+--primary-typo: #BE4A4A;
+--grey-dark: #4E4E4E;
+--grey-medium: #C7C7C7;
+--grey-light: #F6F7F8;
+}
+
 body {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
+  background: var(--grey-light);
 }
