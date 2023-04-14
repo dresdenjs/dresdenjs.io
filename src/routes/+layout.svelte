@@ -1,12 +1,16 @@
 <script lang="ts">
-  import Header from '$lib/components/Header.svelte'
-  import '$lib/styles/style.css'
+	import Header from '$lib/components/Header.svelte';
+	import '$lib/styles/style.css';
 </script>
 
-<Header/>
+<Header />
 
 <main>
-  <slot/>
+	<slot />
 </main>
 
-<footer>All right reserved</footer>
+<style>
+  main {
+    padding: 2rem;
+  }
+</style>

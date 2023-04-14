@@ -1,4 +1,4 @@
-import type { MeetupMetadata } from "$lib/types/MeetupMetadata";
+import type { MeetupMetadata } from '$lib/types/MeetupMetadata';
 
 export const fetchMarkdownMeetups = async () => {
 	const allMeetupFiles = import.meta.glob('/src/routes/meetups/*.md');
@@ -6,7 +6,7 @@ export const fetchMarkdownMeetups = async () => {
 
 	const allMeetups = await Promise.all(
 		iterablePostFiles.map(async ([path, resolver]) => {
-			const { metadata } = await resolver() as MeetupMetadata;
+			const { metadata } = (await resolver()) as MeetupMetadata;
 			const postPath = path.slice(11, -3);
 
 			return {
