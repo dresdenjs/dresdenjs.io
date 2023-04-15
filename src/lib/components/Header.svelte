@@ -7,7 +7,7 @@
   <button>
     <SlackIcon />
   </button>
-  <img src="./ddjs_logo.svg" />
+  <img src="./ddjs_logo.svg" alt="Logo" />
   <button>
     <InfoIcon />
   </button>
