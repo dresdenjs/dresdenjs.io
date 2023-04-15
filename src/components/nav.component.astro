@@ -1,0 +1,53 @@
+---
+import Logo from './ddjs-logo.astro';
+import Slack from './slack-logo.astro';
+---
+
+<style lang="scss">
+  nav {
+    display: flex;
+    flex-direction: row;
+
+    box-sizing: border-box;
+    padding: 18px;
+    height: 60px;
+
+    align-items: flex-start;
+    justify-content: space-between;
+
+    background: var(--ddjs-color-white);
+  }
+
+  div {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+
+    &.left {
+      align-items: flex-start;
+    }
+
+    &.right {
+      align-items: flex-end;
+    }
+  }
+</style>
+
+<nav>
+  <div class="left">
+    <slot name="left">
+      <a href=""><Slack size={24} /></a>
+      <a href=""><Slack size={24} /></a>
+    </slot>
+  </div>
+
+  <a href="/">
+    <Logo size={28} />
+  </a>
+
+  <div class="right">
+    <slot name="right">
+      <a href=""><Slack size={24} /></a>
+    </slot>
+  </div>
+</nav>

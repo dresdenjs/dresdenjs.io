@@ -1,0 +1,20 @@
+:root {
+  --ddjs-color-primary: #cb3837;
+  --ddjs-color-primary-faded: #e09797;
+  --ddjs-color-primary-typo: #be4a4a;
+
+  --ddjs-color-grey-dark: #4e4e4e;
+  --ddjs-color-grey-medium: #c7c7c7;
+  --ddjs-color-grey-light: #f6f7f8;
+
+  --ddjs-color-white: #fff;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+body {
+  background-color: var(--ddjs-color-grey-light);
+}
