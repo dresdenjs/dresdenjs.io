@@ -1,0 +1,3 @@
+@function size($factor: 1) {
+  @return calc(var(--ddjs-base-size) * $factor);
+}

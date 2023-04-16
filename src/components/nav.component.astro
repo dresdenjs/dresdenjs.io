@@ -4,13 +4,15 @@ import Slack from './slack-logo.astro';
 ---
 
 <style lang="scss">
+  @use '../styles/utils';
+
   nav {
     display: flex;
     flex-direction: row;
 
     box-sizing: border-box;
-    padding: 18px;
-    height: 60px;
+    padding: utils.size(2);
+    height: utils.size(7.5);
 
     align-items: flex-start;
     justify-content: space-between;

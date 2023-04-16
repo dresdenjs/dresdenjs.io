@@ -1,4 +1,10 @@
+@use '~/@fontsource/source-sans-pro/scss/mixins' as sourceSans;
+
+@include sourceSans.fontFace($weight: 400, $fontDir: '~/@fontsource/source-sans-pro/files');
+@include sourceSans.fontFace($weight: 600, $fontDir: '~/@fontsource/source-sans-pro/files');
+
 :root {
+  /* Colors */
   --ddjs-color-primary: #cb3837;
   --ddjs-color-primary-faded: #e09797;
   --ddjs-color-primary-typo: #be4a4a;
@@ -6,8 +12,14 @@
   --ddjs-color-grey-dark: #4e4e4e;
   --ddjs-color-grey-medium: #c7c7c7;
   --ddjs-color-grey-light: #f6f7f8;
-
   --ddjs-color-white: #fff;
+
+  /* Spacing */
+  // to be used with the appropriate function `size()`
+  --ddjs-base-size: 8px;
+
+  /* Fonts */
+  --ddjs-font-default: 'Source Sans Pro';
 }
 
 html,
@@ -17,4 +29,5 @@ body {
 
 body {
   background-color: var(--ddjs-color-grey-light);
+  font-family: var(--ddjs-font-default);
 }
