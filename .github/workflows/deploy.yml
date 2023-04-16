@@ -32,7 +32,7 @@ jobs:
           cache: "npm"
           node-version: 18.16.0
       - run: npm ci
-      - run: npm run build
+      - run: npm run build -- --base /dresdenjs.io
       - uses: actions/upload-artifact@v3
         if: success()
         with:
