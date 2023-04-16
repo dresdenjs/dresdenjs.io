@@ -16,6 +16,6 @@
   },
   "dependencies": {
     "@fontsource/source-sans-pro": "4.5.11",
-    "@webcomponents/template-shadowroot": "0.2.1"
+    "dayjs": "1.11.7"
   }
 }
