@@ -1,7 +1,14 @@
 @use '~/@fontsource/source-sans-pro/scss/mixins' as sourceSans;
+@use '../styles/utils';
 
-@include sourceSans.fontFace($weight: 400, $fontDir: '~/@fontsource/source-sans-pro/files');
-@include sourceSans.fontFace($weight: 600, $fontDir: '~/@fontsource/source-sans-pro/files');
+@include sourceSans.fontFace(
+  $weight: 400,
+  $fontDir: '~/@fontsource/source-sans-pro/files'
+);
+@include sourceSans.fontFace(
+  $weight: 600,
+  $fontDir: '~/@fontsource/source-sans-pro/files'
+);
 
 :root {
   /* Colors */
@@ -13,6 +20,9 @@
   --ddjs-color-grey-medium: #c7c7c7;
   --ddjs-color-grey-light: #f6f7f8;
   --ddjs-color-white: #fff;
+
+  /* Shadows */
+  --ddjs-shadow-large: 0 0 #{utils.size(2)} 0 rgba(0, 0, 0, 0.08);
 
   /* Spacing */
   // to be used with the appropriate function `size()`

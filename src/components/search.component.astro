@@ -1,17 +1,63 @@
+---
+import SearchIcon from './icons/search.icon.astro';
+---
+
 <style lang="scss">
-  input {
+  @use '../styles/utils';
+
+  label {
     box-sizing: border-box;
-    display: inline-block;
-    margin: 16px;
-    padding: 8px;
-    width: calc(100% - 32px);
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin: utils.size(2) utils.size(1);
+    width: calc(100% - #{utils.size(2)});
 
     background: var(--ddjs-color-white);
-    border: none;
-    border-radius: 18px;
+    border-radius: 18px; // (line-height + vertical padding) / 2
+    box-shadow: var(--ddjs-shadow-large);
+    color: var(--ddjs-color-grey-medium);
+  }
+
+  input[type='search'] {
+    all: unset;
+    box-sizing: border-box;
+
+    display: inline-block;
+    flex: 1 0 auto;
+    padding: utils.size(1) utils.size(2) utils.size(1) 0;
+    width: auto;
+
     font-size: 16px;
     line-height: 20px;
+
+    &:focus {
+      outline: none;
+      color: var(--ddjs-color-grey-dark);
+    }
+
+    &::-webkit-search-decoration,
+    &::-webkit-search-cancel-button,
+    &::-webkit-search-results-button,
+    &::-webkit-search-results-decoration {
+      -webkit-appearance: none;
+    }
+  }
+
+  .icon {
+    display: inline-flex;
+    align-items: center;
+    margin: 0 6px 0 14px;
+
+    input[type='search']:focus ~ & {
+      color: var(--ddjs-color-primary-typo);
+    }
   }
 </style>
 
-<input type="search" />
+<label>
+  <input type="search" />
+  <span class="icon">
+    <SearchIcon size={20} />
+  </span>
+</label>

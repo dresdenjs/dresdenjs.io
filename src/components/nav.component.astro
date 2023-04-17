@@ -1,8 +1,8 @@
 ---
-import Info from './icons/info.icon.astro';
-import Logo from './icons/ddjs-logo.icon.astro';
-import Meetup from './icons/meetup-logo.icon.astro';
-import Slack from './icons/slack-logo.icon.astro';
+import InfoIcon from './icons/info.icon.astro';
+import DdjsLogo from './icons/ddjs-logo.icon.astro';
+import MeetupLogo from './icons/meetup-logo.icon.astro';
+import SlackLogo from './icons/slack-logo.icon.astro';
 ---
 
 <style lang="scss">
@@ -44,18 +44,18 @@ import Slack from './icons/slack-logo.icon.astro';
 <nav>
   <div class="left">
     <slot name="left">
-      <a href=""><Meetup size={24} /></a>
-      <a href=""><Slack size={24} /></a>
+      <a href=""><MeetupLogo size={24} /></a>
+      <a href=""><SlackLogo size={24} /></a>
     </slot>
   </div>
 
   <a href="/">
-    <Logo size={28} />
+    <DdjsLogo size={28} />
   </a>
 
   <div class="right">
     <slot name="right">
-      <a href=""><Info size={24} /></a>
+      <a href=""><InfoIcon size={24} /></a>
     </slot>
   </div>
 </nav>
