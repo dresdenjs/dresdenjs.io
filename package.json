@@ -1,7 +1,9 @@
 {
   "name": "@dresdenjs/website",
+  "description": "Website of the DresdenJS Meetup Group",
   "type": "module",
   "version": "0.0.1",
+  "license": "MIT",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
