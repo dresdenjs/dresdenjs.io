@@ -1,5 +1,5 @@
 ---
-import type { MarkdownInstance } from 'astro';
+import type { MeetupEvent } from '../types';
 import EventListItemHeader from './event-list-item-header.component.astro';
 import EventListItemContent from './event-list-item-content.component.astro';
 
@@ -8,7 +8,7 @@ type Props = {
   hidden?: boolean;
 } & (
   | {
-      event: MarkdownInstance<Record<string, any>>;
+      event: MeetupEvent;
       now?: false;
     }
   | {

@@ -1,12 +1,10 @@
 ---
-import type { MarkdownInstance } from 'astro';
+import type { MeetupEvent } from '../types';
 import Search from '../components/search.component.astro';
 import EventListItem from '../components/event-list-item.component.astro';
 
-export type Event = MarkdownInstance<Record<string, any>>;
-
 export interface Props {
-  events: Event[];
+  events: MeetupEvent[];
   query?: string;
 }
 const { events = [] } = Astro.props;
@@ -20,7 +18,7 @@ const [upcoming, past] = events
       else acc[0].push(event);
       return acc;
     },
-    [[], []] as [Event[], Event[]]
+    [[], []] as [MeetupEvent[], MeetupEvent[]]
   );
 ---
 
