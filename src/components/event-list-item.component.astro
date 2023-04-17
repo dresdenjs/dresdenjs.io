@@ -3,13 +3,20 @@ import type { MarkdownInstance } from 'astro';
 import EventListItemHeader from './event-list-item-header.component.astro';
 import EventListItemContent from './event-list-item-content.component.astro';
 
-export interface Props {
-  event: MarkdownInstance<Record<string, any>>;
-  faded: boolean;
-}
-const { event, faded, hidden } = Astro.props;
-const { frontmatter, compiledContent } = event;
-const { date, location, title } = frontmatter;
+type Props = {
+  faded?: boolean;
+  hidden?: boolean;
+} & (
+  | {
+      event: MarkdownInstance<Record<string, any>>;
+      now?: false;
+    }
+  | {
+      now: true;
+    }
+);
+const { event = {}, faded = false, hidden = false, now = false } = Astro.props;
+const { date, location, title } = event.frontmatter ?? {};
 ---
 
 <style lang="scss">
@@ -45,9 +52,7 @@ const { date, location, title } = frontmatter;
     }
   }
 
-  a {
-    padding: utils.size(1);
-    background-color: var(--ddjs-color-white);
+  .content {
     text-decoration: none;
     color: inherit;
 
@@ -100,11 +105,33 @@ const { date, location, title } = frontmatter;
       }
     }
   }
+
+  .balloon {
+    padding: utils.size(1);
+    background-color: var(--ddjs-color-white);
+  }
+
+  .now {
+    color: var(--ddjs-color-primary-typo);
+    font-size: 20px;
+    line-height: 1;
+    font-weight: 600;
+  }
 </style>
 
-<article data-faded={faded} hidden={hidden}>
-  <a href="">
-    <EventListItemHeader {...{date, location}} />
-    <EventListItemContent {...{title, content: compiledContent()}} />
-  </a>
-</article>
+{
+  !now ? (
+    <article data-faded={faded} hidden={hidden}>
+      <a class="content balloon" href="">
+        <EventListItemHeader {...{ date, location }} />
+        <EventListItemContent
+          {...{ title, content: event.compiledContent() }}
+        />
+      </a>
+    </article>
+  ) : (
+    <article>
+      <span class="content now">Date.now()</span>
+    </article>
+  )
+}

@@ -3,12 +3,25 @@ import type { MarkdownInstance } from 'astro';
 import Search from '../components/search.component.astro';
 import EventListItem from '../components/event-list-item.component.astro';
 
+export type Event = MarkdownInstance<Record<string, any>>;
+
 export interface Props {
-  events: MarkdownInstance<Record<string, any>>[];
+  events: Event[];
   query?: string;
 }
 const { events = [] } = Astro.props;
 const isInPast = (date: string): boolean => +new Date(date) < +new Date();
+const [upcoming, past] = events
+  .sort((a, b) => b.frontmatter.date.localeCompare(a.frontmatter.date))
+  .reduce(
+    (acc, event) => {
+      const { date } = event.frontmatter;
+      if (isInPast(date)) acc[1].push(event);
+      else acc[0].push(event);
+      return acc;
+    },
+    [[], []] as [Event[], Event[]]
+  );
 ---
 
 <style lang="scss">
@@ -40,11 +53,7 @@ const isInPast = (date: string): boolean => +new Date(date) < +new Date();
 
 <Search />
 <nav data-event-list>
-  {
-    events
-      .sort((a, b) => b.frontmatter.date.localeCompare(a.frontmatter.date))
-      .map((event) => (
-        <EventListItem event={event} faded={isInPast(event.frontmatter.date)} />
-      ))
-  }
+  {upcoming.map((event) => <EventListItem event={event} />)}
+  <EventListItem now />
+  {past.map((event) => <EventListItem event={event} faded />)}
 </nav>
