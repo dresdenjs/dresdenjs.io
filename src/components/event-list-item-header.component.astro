@@ -22,6 +22,11 @@ const formatted = dayjs(date).format('L');
 
     color: var(--ddjs-color-primary-typo);
 
+    :global(article[data-faded]) & {
+      color: var(--ddjs-color-primary-faded);
+      opacity: 0.5;
+    }
+
     address {
       font-style: normal;
     }

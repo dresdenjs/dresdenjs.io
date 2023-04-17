@@ -23,10 +23,6 @@ const { date, location, title } = frontmatter;
     flex-direction: row;
     align-items: center;
 
-    &.faded {
-      opacity: 0.5;
-    }
-
     &[hidden] {
       display: none;
     }
@@ -43,6 +39,10 @@ const { date, location, title } = frontmatter;
       border: var(--ddjs-event-list-item-border-size) solid
         var(--ddjs-color-primary);
     }
+
+    &[data-faded]::before {
+      border-color: var(--ddjs-color-primary-faded);
+    }
   }
 
   a {
@@ -50,6 +50,10 @@ const { date, location, title } = frontmatter;
     background-color: var(--ddjs-color-white);
     text-decoration: none;
     color: inherit;
+
+    article[data-faded] & {
+      color: var(--ddjs-color-grey-medium);
+    }
 
     &::before,
     &::after {
@@ -59,27 +63,46 @@ const { date, location, title } = frontmatter;
       height: calc(50% + 1px);
       width: var(--ddjs-event-list-item-border-size);
       background-color: var(--ddjs-color-primary);
+
+      article[data-faded] & {
+        background-color: var(--ddjs-color-primary-faded);
+      }
     }
 
     &::before {
       bottom: calc(50% + #{utils.size(1)} - 1px);
 
-      article:first-of-type & {
+      article:not([hidden]):first-of-type & {
         height: calc(50% + #{utils.size(1)} + 1px);
+      }
+
+      // smooth gradient for all faded items
+      article[data-faded]:not([hidden]) & {
+        background: linear-gradient(
+          to bottom,
+          var(--ddjs-color-primary) 0%,
+          var(--ddjs-color-primary-faded) 100%
+        );
+      }
+
+      // reset smooth gradient of all follow up faded items
+      // to limit the transition to the first matching one
+      article[data-faded]:not([hidden]) ~ article[data-faded]:not([hidden]) & {
+        background: var(--ddjs-color-primary-faded);
       }
     }
 
     &::after {
       top: calc(50% + #{utils.size(1)});
 
-      article:last-of-type & {
+      article:not([hidden]):last-of-type & {
         display: none;
       }
     }
   }
 </style>
 
-<article class:list={{ faded }} hidden={hidden}>
+<article data-faded={faded} hidden={hidden}>
   <a href="">
     <EventListItemHeader {...{date, location}} />
     <EventListItemContent {...{title, content: compiledContent()}} />
