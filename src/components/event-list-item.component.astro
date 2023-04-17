@@ -1,0 +1,78 @@
+---
+import type { MarkdownInstance } from 'astro';
+import EventListItemHeader from './event-list-item-header.component.astro';
+import EventListItemContent from './event-list-item-content.component.astro';
+
+export interface Props {
+  event: MarkdownInstance<Record<string, any>>;
+}
+const { event } = Astro.props;
+const { frontmatter, compiledContent } = event;
+const { date, location, title } = frontmatter;
+---
+
+<style lang="scss">
+  @use '../styles/utils';
+
+  article {
+    --ddjs-event-list-item-border-size: 3px;
+
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    &::before {
+      flex: 0 0 auto;
+      content: '';
+      display: block;
+      height: var(--ddjs-event-list-item-border-size);
+      width: var(--ddjs-event-list-item-border-size);
+      margin-right: calc(
+        #{utils.size(2)} - var(--ddjs-event-list-item-border-size)
+      );
+      border: var(--ddjs-event-list-item-border-size) solid
+        var(--ddjs-color-primary);
+    }
+  }
+
+  a {
+    padding: utils.size(1);
+    background-color: var(--ddjs-color-white);
+    text-decoration: none;
+    color: inherit;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: var(--ddjs-event-list-item-border-size);
+      height: calc(50% + 1px);
+      width: var(--ddjs-event-list-item-border-size);
+      background-color: var(--ddjs-color-primary);
+    }
+
+    &::before {
+      bottom: calc(50% + #{utils.size(1)} - 1px);
+
+      article:first-of-type & {
+        height: calc(50% + #{utils.size(1)} + 1px);
+      }
+    }
+
+    &::after {
+      top: calc(50% + #{utils.size(1)});
+
+      article:last-of-type & {
+        display: none;
+      }
+    }
+  }
+</style>
+
+<article>
+  <a href="">
+    <EventListItemHeader {...{date, location}} />
+    <EventListItemContent {...{title, content: compiledContent()}} />
+  </a>
+</article>

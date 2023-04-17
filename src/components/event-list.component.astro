@@ -1,0 +1,28 @@
+---
+import type { MarkdownInstance } from 'astro';
+import EventListItem from '../components/event-list-item.component.astro';
+
+export interface Props {
+  events: MarkdownInstance<Record<string, any>>[];
+}
+const { events = [] } = Astro.props;
+---
+
+<style lang="scss">
+  @use '../styles/utils';
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px 16px 0 24px;
+  }
+</style>
+
+<nav>
+  {
+    events
+      .sort((a, b) => b.frontmatter.date.localeCompare(a.frontmatter.date))
+      .map((event) => <EventListItem event={event} />)
+  }
+</nav>
