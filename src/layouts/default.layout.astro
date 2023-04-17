@@ -3,6 +3,13 @@ import './default.layout.scss';
 
 const { lang = 'en', title } = Astro.props;
 ---
+<style lang="scss">
+  header {
+    position: sticky;
+    inset: 0 0 auto;
+    z-index: 2;
+  }
+</style>
 
 <html lang={lang}>
   <head>
