@@ -5,8 +5,9 @@ import EventListItemContent from './event-list-item-content.component.astro';
 
 export interface Props {
   event: MarkdownInstance<Record<string, any>>;
+  faded: boolean;
 }
-const { event } = Astro.props;
+const { event, faded } = Astro.props;
 const { frontmatter, compiledContent } = event;
 const { date, location, title } = frontmatter;
 ---
@@ -21,6 +22,10 @@ const { date, location, title } = frontmatter;
     display: flex;
     flex-direction: row;
     align-items: center;
+
+    &.faded {
+      opacity: 0.5;
+    }
 
     &::before {
       flex: 0 0 auto;
@@ -70,7 +75,7 @@ const { date, location, title } = frontmatter;
   }
 </style>
 
-<article>
+<article class:list={{ faded }}>
   <a href="">
     <EventListItemHeader {...{date, location}} />
     <EventListItemContent {...{title, content: compiledContent()}} />

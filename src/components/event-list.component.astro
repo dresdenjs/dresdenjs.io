@@ -6,6 +6,8 @@ export interface Props {
   events: MarkdownInstance<Record<string, any>>[];
 }
 const { events = [] } = Astro.props;
+const now = +new Date();
+const isInPast = (date: string): boolean => +new Date(date) < now;
 ---
 
 <style lang="scss">
@@ -23,6 +25,8 @@ const { events = [] } = Astro.props;
   {
     events
       .sort((a, b) => b.frontmatter.date.localeCompare(a.frontmatter.date))
-      .map((event) => <EventListItem event={event} />)
+      .map((event) => (
+        <EventListItem event={event} faded={isInPast(event.frontmatter.date)} />
+      ))
   }
 </nav>
