@@ -32,6 +32,15 @@ const [upcoming, past] = events
     flex-direction: column;
     gap: 16px;
     padding: 16px 16px 0 24px;
+
+    :global(article:not([hidden]):first-of-type .content::before) {
+      height: calc(50% + #{utils.size(10)});
+    }
+  }
+
+  :global(label):has(~ nav) {
+    position: relative;
+    z-index: 1;
   }
 </style>
 
