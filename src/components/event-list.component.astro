@@ -1,13 +1,14 @@
 ---
 import type { MarkdownInstance } from 'astro';
+import Search from '../components/search.component.astro';
 import EventListItem from '../components/event-list-item.component.astro';
 
 export interface Props {
   events: MarkdownInstance<Record<string, any>>[];
+  query?: string;
 }
 const { events = [] } = Astro.props;
-const now = +new Date();
-const isInPast = (date: string): boolean => +new Date(date) < now;
+const isInPast = (date: string): boolean => +new Date(date) < +new Date();
 ---
 
 <style lang="scss">
@@ -21,7 +22,24 @@ const isInPast = (date: string): boolean => +new Date(date) < now;
   }
 </style>
 
-<nav>
+<script>
+  const input = document.querySelector('input[type="search"]');
+  const events = document.querySelectorAll('nav[data-event-list] > *');
+
+  input!.addEventListener('input', (event) => {
+    const { value: query } = event.target as HTMLInputElement;
+    if (['', null].includes(query)) {
+      events.forEach((event) => event.removeAttribute('hidden'));
+    } else {
+      // @TODO: search event titles, time[datetime], location and description
+      console.log(query, events.length);
+      events.forEach((event) => event.setAttribute('hidden', 'hidden'));
+    }
+  });
+</script>
+
+<Search />
+<nav data-event-list>
   {
     events
       .sort((a, b) => b.frontmatter.date.localeCompare(a.frontmatter.date))

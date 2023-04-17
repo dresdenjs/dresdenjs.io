@@ -15,8 +15,5 @@ const meetups = await Astro.glob('./events/*-meetup.md');
 
 <Layout lang="de" title="Veranstaltungen">
   <Nav slot="header" />
-
-  <input type="search" />
-
   <EventList events={meetups} />
 </Layout>

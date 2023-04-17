@@ -7,7 +7,7 @@ export interface Props {
   event: MarkdownInstance<Record<string, any>>;
   faded: boolean;
 }
-const { event, faded } = Astro.props;
+const { event, faded, hidden } = Astro.props;
 const { frontmatter, compiledContent } = event;
 const { date, location, title } = frontmatter;
 ---
@@ -25,6 +25,10 @@ const { date, location, title } = frontmatter;
 
     &.faded {
       opacity: 0.5;
+    }
+
+    &[hidden] {
+      display: none;
     }
 
     &::before {
@@ -75,7 +79,7 @@ const { date, location, title } = frontmatter;
   }
 </style>
 
-<article class:list={{ faded }}>
+<article class:list={{ faded }} hidden={hidden}>
   <a href="">
     <EventListItemHeader {...{date, location}} />
     <EventListItemContent {...{title, content: compiledContent()}} />
