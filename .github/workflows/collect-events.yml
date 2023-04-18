@@ -38,6 +38,7 @@ jobs:
 
   persist:
     name: Persist events
+    needs: collect
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -52,8 +53,9 @@ jobs:
       - run: |
           git config user.name "${GITHUB_ACTOR}"
           git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+      - run: |
           git add .
-          git commit -m "updated events"
+          git commit -m --allow-empty "updated events"
           git push origin
         env:
           GH_TOKEN: ${{github.token}}
