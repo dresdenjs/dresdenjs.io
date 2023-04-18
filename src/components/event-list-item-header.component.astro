@@ -1,0 +1,39 @@
+---
+import dayjs from 'dayjs';
+
+export interface Props {
+  date: string;
+  location: string;
+}
+const { date, location } = Astro.props;
+const formatted = dayjs(date).format('L');
+---
+
+<style lang="scss">
+  @use '../styles/utils';
+
+  div {
+    display: flex;
+    flex-direction: row;
+    gap: utils.size(0.5);
+
+    font-size: 13px;
+    font-weight: 600;
+
+    color: var(--ddjs-color-primary-typo);
+
+    :global(article[data-faded]) & {
+      color: var(--ddjs-color-primary-faded);
+      opacity: 0.5;
+    }
+
+    address {
+      font-style: normal;
+    }
+  }
+</style>
+
+<div>
+  <time datetime={date}>{formatted}</time>
+  <address>{location}</address>
+</div>

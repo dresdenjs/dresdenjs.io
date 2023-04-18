@@ -1,0 +1,9 @@
+{
+  "extends": "astro/tsconfigs/strictest",
+  "compilerOptions": {
+    "paths": {
+      "~/*": ["./node_modules"],
+      "@/*": ["./src"]
+    }
+  }
+}

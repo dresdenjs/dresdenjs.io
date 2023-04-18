@@ -1,0 +1,61 @@
+---
+import InfoIcon from './icons/info.icon.astro';
+import DdjsLogo from './icons/ddjs-logo.icon.astro';
+import MeetupLogo from './icons/meetup-logo.icon.astro';
+import SlackLogo from './icons/slack-logo.icon.astro';
+---
+
+<style lang="scss">
+  @use '../styles/utils';
+
+  nav {
+    display: flex;
+    flex-direction: row;
+
+    box-sizing: border-box;
+    padding: utils.size(2);
+    height: utils.size(7.5);
+
+    align-items: flex-start;
+    justify-content: space-between;
+
+    background: var(--ddjs-color-white);
+  }
+
+  div {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+
+    &.left {
+      align-items: flex-start;
+    }
+
+    &.right {
+      align-items: flex-end;
+    }
+
+    a {
+      color: var(--ddjs-color-grey-medium);
+    }
+  }
+</style>
+
+<nav>
+  <div class="left">
+    <slot name="left">
+      <a href=""><MeetupLogo size={24} /></a>
+      <a href=""><SlackLogo size={24} /></a>
+    </slot>
+  </div>
+
+  <a href="/">
+    <DdjsLogo size={28} />
+  </a>
+
+  <div class="right">
+    <slot name="right">
+      <a href=""><InfoIcon size={24} /></a>
+    </slot>
+  </div>
+</nav>

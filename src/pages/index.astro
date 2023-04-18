@@ -1,0 +1,19 @@
+---
+import 'dayjs/locale/de';
+import dayjs from 'dayjs';
+import localizedFormat from 'dayjs/plugin/localizedFormat';
+
+dayjs.locale('de-DE');
+dayjs.extend(localizedFormat);
+
+import Layout from '../layouts/default.layout.astro';
+import EventList from '../components/event-list.component.astro';
+import Nav from '../components/nav.component.astro';
+
+const meetups = await Astro.glob('./events/*-meetup.md');
+---
+
+<Layout lang="de" title="Veranstaltungen">
+  <Nav slot="header" />
+  <EventList events={meetups} />
+</Layout>

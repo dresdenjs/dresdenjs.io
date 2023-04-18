@@ -1,0 +1,138 @@
+---
+import type { MeetupEvent } from '../types';
+import EventListItemHeader from './event-list-item-header.component.astro';
+import EventListItemContent from './event-list-item-content.component.astro';
+
+type Props = {
+  faded?: boolean;
+  hidden?: boolean;
+} & (
+  | {
+      event: MeetupEvent;
+      now?: false;
+    }
+  | {
+      now: true;
+    }
+);
+const { event = {}, faded = false, hidden = false, now = false } = Astro.props;
+const { date, location, title } = event.frontmatter ?? {};
+---
+
+<style lang="scss">
+  @use '../styles/utils';
+
+  article {
+    --ddjs-event-list-item-border-size: 3px;
+
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    &[hidden] {
+      display: none;
+    }
+
+    &::before {
+      flex: 0 0 auto;
+      content: '';
+      display: block;
+      height: var(--ddjs-event-list-item-border-size);
+      width: var(--ddjs-event-list-item-border-size);
+      margin-right: calc(
+        #{utils.size(2)} - var(--ddjs-event-list-item-border-size)
+      );
+      border: var(--ddjs-event-list-item-border-size) solid
+        var(--ddjs-color-primary);
+    }
+
+    &[data-faded]::before {
+      border-color: var(--ddjs-color-primary-faded);
+    }
+  }
+
+  .content {
+    text-decoration: none;
+    color: inherit;
+
+    article[data-faded] & {
+      color: var(--ddjs-color-grey-medium);
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: var(--ddjs-event-list-item-border-size);
+      height: calc(50% + 1px);
+      width: var(--ddjs-event-list-item-border-size);
+      background-color: var(--ddjs-color-primary);
+
+      article[data-faded] & {
+        background-color: var(--ddjs-color-primary-faded);
+      }
+    }
+
+    &::before {
+      bottom: calc(50% + #{utils.size(1)} - 1px);
+
+      article:not([hidden]):first-of-type & {
+        height: calc(50% + #{utils.size(1)} + 1px);
+      }
+
+      // smooth gradient for all faded items
+      article[data-faded]:not([hidden]) & {
+        background: linear-gradient(
+          to bottom,
+          var(--ddjs-color-primary) 0%,
+          var(--ddjs-color-primary-faded) 100%
+        );
+      }
+
+      // reset smooth gradient of all follow up faded items
+      // to limit the transition to the first matching one
+      article[data-faded]:not([hidden]) ~ article[data-faded]:not([hidden]) & {
+        background: var(--ddjs-color-primary-faded);
+      }
+    }
+
+    &::after {
+      top: calc(50% + #{utils.size(1)});
+
+      article:not([hidden]):last-of-type & {
+        display: none;
+      }
+    }
+  }
+
+  .balloon {
+    padding: utils.size(1);
+    background-color: var(--ddjs-color-white);
+  }
+
+  .now {
+    padding: utils.size(1) 0;
+    color: var(--ddjs-color-primary-typo);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1;
+  }
+</style>
+
+{
+  !now ? (
+    <article data-faded={faded} hidden={hidden}>
+      <a class="content balloon" href="">
+        <EventListItemHeader {...{ date, location }} />
+        <EventListItemContent
+          {...{ title, content: event.compiledContent() }}
+        />
+      </a>
+    </article>
+  ) : (
+    <article>
+      <span class="content now">Date.now()</span>
+    </article>
+  )
+}
