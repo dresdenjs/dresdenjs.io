@@ -44,3 +44,8 @@ body {
   background-color: var(--ddjs-color-grey-light);
   font-family: var(--ddjs-font-default);
 }
+
+mark {
+  background-color: var(--ddjs-color-primary);
+  color: var(--ddjs-color-grey-light);
+}

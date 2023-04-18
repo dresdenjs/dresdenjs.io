@@ -39,6 +39,6 @@ const formatted = dayjs(date).format('L');
 </style>
 
 <div>
-  <time datetime={date}>{formatted}</time>
-  <address>{location}</address>
+  <time datetime={date} data-search>{formatted}</time>
+  <address data-search>{location}</address>
 </div>
