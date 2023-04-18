@@ -25,20 +25,22 @@ const [upcoming, past] = events
 <style lang="scss">
   @use '../styles/utils';
 
+  :global(label):has(~ nav) {
+    position: fixed;
+    inset: var(--ddjs-header-height) 0 auto;
+    z-index: 1;
+  }
+
   nav {
     display: flex;
     flex-direction: column;
-    gap: 16px;
-    padding: 16px 16px 0 24px;
+    gap: utils.size(2);
+    padding: utils.size(4) utils.size(2) 0 utils.size(3);
+    margin-top: calc(var(--ddjs-header-height) + var(--ddjs-search-height));
 
     :global(article:not([hidden]):first-of-type .content::before) {
-      height: calc(50% + #{utils.size(10)});
+      height: calc(50% + #{utils.size(100)});
     }
-  }
-
-  :global(label):has(~ nav) {
-    position: relative;
-    z-index: 1;
   }
 </style>
 

@@ -1,14 +1,8 @@
 @use '~/@fontsource/source-sans-pro/scss/mixins' as sourceSans;
 @use '../styles/utils';
 
-@include sourceSans.fontFace(
-  $weight: 400,
-  $fontDir: '~/@fontsource/source-sans-pro/files'
-);
-@include sourceSans.fontFace(
-  $weight: 600,
-  $fontDir: '~/@fontsource/source-sans-pro/files'
-);
+@include sourceSans.fontFace($weight: 400, $fontDir: '~/@fontsource/source-sans-pro/files');
+@include sourceSans.fontFace($weight: 600, $fontDir: '~/@fontsource/source-sans-pro/files');
 
 :root {
   /* Colors */
@@ -30,6 +24,10 @@
 
   /* Fonts */
   --ddjs-font-default: 'Source Sans Pro';
+
+  /* Layout */
+  --ddjs-header-height: #{utils.size(7.5)};
+  --ddjs-search-height: #{utils.size(4.5)};
 }
 
 html,

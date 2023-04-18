@@ -10,7 +10,7 @@ import SearchIcon from './icons/search.icon.astro';
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
-    margin: utils.size(2) utils.size(1);
+    margin: utils.size(2) utils.size(1) 0;
     width: calc(100% - #{utils.size(2)});
 
     background: var(--ddjs-color-white);
@@ -26,6 +26,7 @@ import SearchIcon from './icons/search.icon.astro';
     display: inline-block;
     flex: 1 0 auto;
     padding: utils.size(1) utils.size(2) utils.size(1) 0;
+    height: var(--ddjs-search-height);
     width: auto;
 
     font-size: 16px;
@@ -47,7 +48,7 @@ import SearchIcon from './icons/search.icon.astro';
   .icon {
     display: inline-flex;
     align-items: center;
-    margin: 0 6px 0 14px;
+    margin: 0 utils.size(0.75) 0 utils.size(1.5);
 
     input[type='search']:focus ~ & {
       color: var(--ddjs-color-primary-typo);
