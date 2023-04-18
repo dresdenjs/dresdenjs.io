@@ -15,8 +15,13 @@ import SearchIcon from './icons/search.icon.astro';
 
     background: var(--ddjs-color-white);
     border-radius: 18px; // (line-height + vertical padding) / 2
-    box-shadow: var(--ddjs-shadow-large);
+    box-shadow: var(--ddjs-shadow-large-passive);
     color: var(--ddjs-color-grey-medium);
+    transition: box-shadow var(--ddjs-fx-duration) var(--ddjs-fx-easing);
+
+    &:focus-within {
+      box-shadow: var(--ddjs-shadow-large-active);
+    }
   }
 
   input[type='search'] {
@@ -49,6 +54,7 @@ import SearchIcon from './icons/search.icon.astro';
     display: inline-flex;
     align-items: center;
     margin: 0 utils.size(0.75) 0 utils.size(1.5);
+    transition: color var(--ddjs-fx-duration) var(--ddjs-fx-easing);
 
     input[type='search']:focus ~ & {
       color: var(--ddjs-color-primary-typo);

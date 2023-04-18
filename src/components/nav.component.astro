@@ -20,22 +20,29 @@ import SlackLogo from './icons/slack-logo.icon.astro';
     justify-content: space-between;
 
     background: var(--ddjs-color-white);
+
+    > a {
+      margin-top: 3px;
+    }
   }
 
   div {
     display: flex;
     flex-direction: row;
+    align-self: center;
     gap: 8px;
+    width: 50%;
 
     &.left {
-      align-items: flex-start;
+      justify-content: start;
     }
 
     &.right {
-      align-items: flex-end;
+      justify-content: end;
     }
 
     a {
+      display: inline-flex;
       color: var(--ddjs-color-grey-medium);
     }
   }
@@ -50,7 +57,7 @@ import SlackLogo from './icons/slack-logo.icon.astro';
   </div>
 
   <a href="/">
-    <DdjsLogo size={28} />
+    <DdjsLogo size={29} />
   </a>
 
   <div class="right">
