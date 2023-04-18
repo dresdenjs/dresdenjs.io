@@ -26,11 +26,15 @@ jobs:
           cache: "npm"
           node-version: 18.16.0
       - run: npx playwright@1.32.3 install chromium
-      - run: npx @dresdenjs/meetup-collector@0.0.12
+      - run: npx @dresdenjs/meetup-collector@0.1.1
         env:
           USERNAME: ${{secrets.MEETUP_USERNAME}}
           PASSWORD: ${{secrets.MEETUP_PASSWORD}}
+          BASE_URL: https://www.meetup.com/
+          GROUP_SLUG: dresdenjs-io-javascript-user-group
+          GROUP_NAME: DresdenJS.io JavaScript User Group
           TARGET: src/pages/events
+          LIMIT_UPCOMING: 2
       - uses: actions/upload-artifact@v3
         if: success()
         with:
