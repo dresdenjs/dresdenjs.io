@@ -1,0 +1,59 @@
+name: Collect events
+
+on:
+  # Run event collection at the end of the day
+  # https://jasonet.co/posts/scheduled-actions/#some-helpful-patterns
+  schedule:
+    - cron: "0 0 * * *"
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: "collect-events"
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    name: Collect events
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          cache: "npm"
+          node-version: 18.16.0
+      - run: npx @dresdenjs/meetup-collector
+        env:
+          USERNAME: ${{secrets.MEETUP_USERNAME}}
+          PASSWORD: ${{secrets.MEETUP_PASSWORD}}
+          TARGET: src/pages/events
+      - uses: actions/upload-artifact@v3
+        if: success()
+        with:
+          name: events
+          path: src/pages/events
+
+  persist:
+    name: Persist events
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          cache: "npm"
+          node-version: 18.16.0
+      - uses: actions/download-artifact@v3
+        with:
+          name: events
+          path: src/pages/events
+      - run: |
+          git config user.name "${GITHUB_ACTOR}"
+          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+          git add .
+          git commit -m "updated events"
+          git push origin
+        env:
+          GH_TOKEN: ${{github.token}}

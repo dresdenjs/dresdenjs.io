@@ -41,6 +41,7 @@ jobs:
 
   # Single deploy job since we're just deploying
   deploy:
+    name: Deploy
     needs: build
     environment:
       name: github-pages
