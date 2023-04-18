@@ -3,6 +3,7 @@ import './default.layout.scss';
 
 const { lang = 'en', title } = Astro.props;
 ---
+
 <style lang="scss">
   header {
     position: sticky;
@@ -15,9 +16,9 @@ const { lang = 'en', title } = Astro.props;
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="text/html; charset=utf-8" http-equiv="content-type">
-    <meta content="IE=Edge" http-equiv="x-ua-compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta content="IE=Edge" http-equiv="x-ua-compatible" />
 
     <title>{title} - DresdenJS</title>
   </head>
