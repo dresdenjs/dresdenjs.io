@@ -40,11 +40,8 @@ const { date, location, title } = event.frontmatter ?? {};
       display: block;
       height: var(--ddjs-event-list-item-border-size);
       width: var(--ddjs-event-list-item-border-size);
-      margin-right: calc(
-        #{utils.size(2)} - var(--ddjs-event-list-item-border-size)
-      );
-      border: var(--ddjs-event-list-item-border-size) solid
-        var(--ddjs-color-primary);
+      margin-right: calc(#{utils.size(2)} - var(--ddjs-event-list-item-border-size));
+      border: var(--ddjs-event-list-item-border-size) solid var(--ddjs-color-primary);
     }
 
     &[data-faded]::before {
@@ -53,6 +50,8 @@ const { date, location, title } = event.frontmatter ?? {};
   }
 
   .content {
+    min-width: 0;
+
     text-decoration: none;
     color: inherit;
 
@@ -83,11 +82,7 @@ const { date, location, title } = event.frontmatter ?? {};
 
       // smooth gradient for all faded items
       article[data-faded]:not([hidden]) & {
-        background: linear-gradient(
-          to bottom,
-          var(--ddjs-color-primary) 0%,
-          var(--ddjs-color-primary-faded) 100%
-        );
+        background: linear-gradient(to bottom, var(--ddjs-color-primary) 0%, var(--ddjs-color-primary-faded) 100%);
       }
 
       // reset smooth gradient of all follow up faded items
@@ -125,9 +120,7 @@ const { date, location, title } = event.frontmatter ?? {};
     <article data-faded={faded} hidden={hidden}>
       <a class="content balloon" href="">
         <EventListItemHeader {...{ date, location }} />
-        <EventListItemContent
-          {...{ title, content: event.compiledContent() }}
-        />
+        <EventListItemContent {...{ title, content: event.compiledContent() }} />
       </a>
     </article>
   ) : (
