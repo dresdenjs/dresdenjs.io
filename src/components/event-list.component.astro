@@ -46,10 +46,27 @@ const [upcoming, past] = events
 
 <script>
   import { highlightMatches } from '../utils/highlight.utils';
-  import { SEARCH_ATTR, doSearch, prepareQueries } from '../utils/search.utils';
+  import { SEARCH_ATTR, doSearch, prepareQueries, resetSearch } from '../utils/search.utils';
 
   const input = document.querySelector('input[type="search"]');
-  const events = document.querySelectorAll<Element>('nav[data-event-list] > article');
+  const events = Array.from(document.querySelectorAll<Element>('nav[data-event-list] > article'));
+
+  function showAll() {
+    events.forEach((event) => event.removeAttribute('hidden'));
+  }
+
+  function setFirstLast() {
+    events
+      .map((event) => {
+        event.classList.remove('first', 'last');
+        return event;
+      })
+      .filter((event) => !event.hasAttribute('hidden'))
+      .forEach((event, i, arr) => {
+        if (i === 0) event.classList.add('first');
+        if (i === arr.length - 1) event.classList.add('last');
+      });
+  }
 
   // derive initial state
   events.forEach((event) => {
@@ -63,20 +80,30 @@ const [upcoming, past] = events
     const { value } = event.target as HTMLInputElement;
     const queries = prepareQueries(value);
 
-    events.forEach((event) => {
-      const result = doSearch(event, queries);
+    if (queries.length < 1) {
+      events.forEach((event) => resetSearch(event));
+      showAll();
+      setFirstLast();
+      return;
+    }
 
-      // did we find anything?
-      if (result.hasResult) {
-        // show the whole element
-        event.removeAttribute('hidden');
-        // highlight the findings
-        highlightMatches(result.combined, (text, query) => `<mark data-query="${query}">${text}</mark>`);
-      } else {
-        // hide the element
-        event.setAttribute('hidden', '');
-      }
-    });
+    events
+      .filter((event) => !event.classList.contains('now'))
+      .forEach((event) => {
+        const result = doSearch(event, queries);
+
+        // did we find anything?
+        if (result.hasResult) {
+          // show the whole element
+          event.removeAttribute('hidden');
+          // highlight the findings
+          highlightMatches(result.combined, (text, query) => `<mark data-query="${query}">${text}</mark>`);
+        } else {
+          // hide the element
+          event.setAttribute('hidden', '');
+        }
+        setFirstLast();
+      });
   });
 </script>
 

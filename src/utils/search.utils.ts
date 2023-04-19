@@ -5,10 +5,10 @@ export type SearchResult = { hasResult: false } | { hasResult: true; combined: S
 export const SEARCH_ATTR = 'data-search';
 export const SEARCH_TRIM_ATTR = 'data-search-trim';
 
-export function doSearch(event: Element, queries: Query[]): SearchResult {
+export function doSearch(within: Element, queries: Query[]): SearchResult {
   const hasResult = new Set<Query>();
   const combined: SearchResults = new Map();
-  const searchables = event.querySelectorAll(`[${SEARCH_ATTR}]`);
+  const searchables = within.querySelectorAll(`[${SEARCH_ATTR}]`);
 
   // no searchable elements found
   if (searchables.length === 0) return { hasResult: false };
@@ -19,7 +19,6 @@ export function doSearch(event: Element, queries: Query[]): SearchResult {
     searchables.forEach((searchable) => {
       searchable.innerHTML = searchable.getAttribute(SEARCH_ATTR) ?? '';
     });
-    event.removeAttribute('hidden');
     return { hasResult: false };
   }
 

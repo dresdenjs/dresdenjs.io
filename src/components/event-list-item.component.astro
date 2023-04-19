@@ -59,6 +59,14 @@ const { date, location, title } = event.frontmatter ?? {};
       color: var(--ddjs-color-grey-medium);
     }
 
+    .now & {
+      padding: utils.size(1) 0;
+      color: var(--ddjs-color-primary-typo);
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1;
+    }
+
     &::before,
     &::after {
       content: '';
@@ -105,14 +113,6 @@ const { date, location, title } = event.frontmatter ?? {};
     padding: utils.size(1);
     background-color: var(--ddjs-color-white);
   }
-
-  .now {
-    padding: utils.size(1) 0;
-    color: var(--ddjs-color-primary-typo);
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 1;
-  }
 </style>
 
 {
@@ -124,8 +124,8 @@ const { date, location, title } = event.frontmatter ?? {};
       </a>
     </article>
   ) : (
-    <article>
-      <span class="content now">Date.now()</span>
+    <article class="now">
+      <span class="content">Date.now()</span>
     </article>
   )
 }
