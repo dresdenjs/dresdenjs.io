@@ -45,104 +45,38 @@ const [upcoming, past] = events
 </style>
 
 <script>
+  import { highlightMatches } from '../utils/highlight.utils';
+  import { SEARCH_ATTR, doSearch, prepareQueries } from '../utils/search.utils';
+
   const input = document.querySelector('input[type="search"]');
   const events = document.querySelectorAll<Element>('nav[data-event-list] > article');
-  const searchAttr = 'data-search';
-  const searchTrimAttr = 'data-search-trim';
-
-  type Query = string & {};
-  type SearchResults = Map<Element, [RegExpMatchArray, Query][]>;
-
-  function highlightMatches(results: SearchResults) {
-    results.forEach((result, searchable) => {
-      // sort the combined result by match indices ascending
-      const highlights = result.sort(([a], [b]) => a.index! - b.index!);
-
-      // highlight all matches, but from the end
-      let highlighted = highlights.reduceRight((acc, [{ 0: text, index = 0 }, query]) => {
-        const before = acc.slice(0, index);
-        const after = acc.slice(index + text.length);
-        return `${before}<mark data-query="${query}">${text}</mark>${after}`;
-      }, searchable.getAttribute(searchAttr) ?? '');
-
-      // remove the leading contents before the first match
-      if (searchable.hasAttribute(searchTrimAttr)) {
-        // optionally, the leading trim can be adjusted
-        const offset = Number(searchable.getAttribute(searchTrimAttr) ?? 0);
-        // get the first match
-        let [{ index: firstResult = 0 }] = highlights[0]!;
-        // make sure we don't trim too much
-        firstResult = Math.max(0, firstResult - offset);
-        // add a leading ellipsis if we trimmed something
-        highlighted = `${firstResult > 0 ? '...' : ''}${highlighted.slice(firstResult)}`;
-      }
-
-      // set the highlighted content
-      searchable.innerHTML = highlighted;
-    });
-  }
-
-  function doSearch(event: Element, queries: Query[]) {
-    const searchables = event.querySelectorAll(`[${searchAttr}]`);
-    if (searchables.length === 0) return;
-
-    // empty queries will lead to a reset
-    if (queries.length < 1 || (queries.length === 1 && queries[0] === '')) {
-      // reset to inital state
-      searchables.forEach((searchable) => {
-        searchable.innerHTML = searchable.getAttribute(searchAttr) ?? '';
-      });
-      event.removeAttribute('hidden');
-      return;
-    }
-
-    // match searchables against queries
-    const hasResult = new Set<Query>();
-    const combined: SearchResults = new Map();
-    searchables.forEach((searchable) => {
-      // read the content to search in
-      const haystack = searchable.getAttribute(searchAttr) ?? '';
-      searchable.innerHTML = haystack ?? '';
-      queries.forEach((query) => {
-        // find all matches for each query and store the results
-        const matches = [...haystack.matchAll(new RegExp(query, 'gi'))];
-        if (matches.length > 0) {
-          // remember that we found something
-          hasResult.add(query);
-          // store the combined results
-          const combinedResult = combined.get(searchable) ?? [];
-          combined.set(searchable, [
-            ...combinedResult,
-            ...matches.map((match) => [match, query] as [RegExpMatchArray, Query]),
-          ]);
-        }
-      });
-    });
-
-    // did we find anything?
-    if (hasResult.size >= queries.length) {
-      // show the whole element
-      event.removeAttribute('hidden');
-      // highlight matches
-      highlightMatches(combined);
-    } else {
-      // hide the element
-      event.setAttribute('hidden', '');
-    }
-  }
 
   // derive initial state
   events.forEach((event) => {
-    event.querySelectorAll(`[${searchAttr}]`).forEach((searchable) => {
-      searchable.setAttribute(searchAttr, searchable.innerHTML);
+    event.querySelectorAll(`[${SEARCH_ATTR}]`).forEach((searchable) => {
+      searchable.setAttribute(SEARCH_ATTR, searchable.innerHTML);
     });
   });
 
   // search
   input!.addEventListener('input', (event) => {
     const { value } = event.target as HTMLInputElement;
-    const queries = value.trim().split(/\s+/);
-    events.forEach((event) => doSearch(event, queries));
+    const queries = prepareQueries(value);
+
+    events.forEach((event) => {
+      const result = doSearch(event, queries);
+
+      // did we find anything?
+      if (result.hasResult) {
+        // show the whole element
+        event.removeAttribute('hidden');
+        // highlight the findings
+        highlightMatches(result.combined, (text, query) => `<mark data-query="${query}">${text}</mark>`);
+      } else {
+        // hide the element
+        event.setAttribute('hidden', '');
+      }
+    });
   });
 </script>
 
