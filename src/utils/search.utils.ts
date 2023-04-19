@@ -5,6 +5,12 @@ export type SearchResult = { hasResult: false } | { hasResult: true; combined: S
 export const SEARCH_ATTR = 'data-search';
 export const SEARCH_TRIM_ATTR = 'data-search-trim';
 
+export function resetSearch(within: Element): void {
+  within.querySelectorAll(`[${SEARCH_ATTR}]`).forEach((searchable) => {
+    searchable.innerHTML = searchable.getAttribute(SEARCH_ATTR) ?? '';
+  });
+}
+
 export function doSearch(within: Element, queries: Query[]): SearchResult {
   const hasResult = new Set<Query>();
   const combined: SearchResults = new Map();
@@ -16,9 +22,7 @@ export function doSearch(within: Element, queries: Query[]): SearchResult {
   // empty queries will lead to a reset
   if (queries.length < 1 || (queries.length === 1 && queries[0] === '')) {
     // reset to inital state
-    searchables.forEach((searchable) => {
-      searchable.innerHTML = searchable.getAttribute(SEARCH_ATTR) ?? '';
-    });
+    resetSearch(within);
     return { hasResult: false };
   }
 

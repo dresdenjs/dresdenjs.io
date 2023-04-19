@@ -5,6 +5,8 @@ import EventListItemContent from './event-list-item-content.component.astro';
 
 type Props = {
   faded?: boolean;
+  first?: boolean;
+  last?: boolean;
   hidden?: boolean;
 } & (
   | {
@@ -15,7 +17,7 @@ type Props = {
       now: true;
     }
 );
-const { event = {}, faded = false, hidden = false, now = false } = Astro.props;
+const { event = {}, faded = false, first = false, last = false, hidden = false, now = false } = Astro.props;
 const { date, location, title } = event.frontmatter ?? {};
 ---
 
@@ -44,7 +46,7 @@ const { date, location, title } = event.frontmatter ?? {};
       border: var(--ddjs-event-list-item-border-size) solid var(--ddjs-color-primary);
     }
 
-    &[data-faded]::before {
+    &.faded::before {
       border-color: var(--ddjs-color-primary-faded);
     }
   }
@@ -55,7 +57,7 @@ const { date, location, title } = event.frontmatter ?? {};
     text-decoration: none;
     color: inherit;
 
-    article[data-faded] & {
+    article.faded & {
       color: var(--ddjs-color-grey-medium);
     }
 
@@ -76,7 +78,7 @@ const { date, location, title } = event.frontmatter ?? {};
       width: var(--ddjs-event-list-item-border-size);
       background-color: var(--ddjs-color-primary);
 
-      article[data-faded] & {
+      article.faded & {
         background-color: var(--ddjs-color-primary-faded);
       }
     }
@@ -84,18 +86,14 @@ const { date, location, title } = event.frontmatter ?? {};
     &::before {
       bottom: calc(50% + #{utils.size(1)} - 1px);
 
-      article:not([hidden]):first-of-type & {
-        height: calc(50% + #{utils.size(1)} + 1px);
-      }
-
       // smooth gradient for all faded items
-      article[data-faded]:not([hidden]) & {
+      article.faded:not([hidden]) & {
         background: linear-gradient(to bottom, var(--ddjs-color-primary) 0%, var(--ddjs-color-primary-faded) 100%);
       }
 
       // reset smooth gradient of all follow up faded items
       // to limit the transition to the first matching one
-      article[data-faded]:not([hidden]) ~ article[data-faded]:not([hidden]) & {
+      article.faded:not([hidden]) ~ article.faded:not([hidden]) & {
         background: var(--ddjs-color-primary-faded);
       }
     }
@@ -103,8 +101,18 @@ const { date, location, title } = event.frontmatter ?? {};
     &::after {
       top: calc(50% + #{utils.size(1)});
 
-      article:not([hidden]):last-of-type & {
+      // the last item should not have a line at all
+      article:last-of-type & {
         display: none;
+      }
+
+      // the last visible item (followed only by hidden items) should have a gradient
+      article.last:not(.faded):not(:last-of-type) & {
+        background: linear-gradient(to bottom, var(--ddjs-color-primary) 0%, transparent 100%);
+      }
+
+      article.last.faded:not(:last-of-type) & {
+        background: linear-gradient(to bottom, var(--ddjs-color-primary-faded) 0%, transparent 100%);
       }
     }
   }
@@ -117,15 +125,17 @@ const { date, location, title } = event.frontmatter ?? {};
 
 {
   !now ? (
-    <article data-faded={faded} hidden={hidden}>
+    <article class:list={{ faded, first, last }} hidden={hidden}>
       <a class="content balloon" href="">
         <EventListItemHeader {...{ date, location }} />
         <EventListItemContent {...{ title, content: event.compiledContent() }} />
       </a>
     </article>
   ) : (
-    <article class="now">
-      <span class="content">Date.now()</span>
+    <article class:list={{ first, last, now: true }}>
+      <span class="content">
+        <slot />
+      </span>
     </article>
   )
 }

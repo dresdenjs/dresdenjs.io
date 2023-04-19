@@ -7,6 +7,12 @@ export interface Props {
   events: MeetupEvent[];
   query?: string;
 }
+
+type UpcomingEvent = { event: MeetupEvent; faded: false };
+type PastEvent = { event: MeetupEvent; faded: true };
+type NowEvent = { now: true };
+type Events = (UpcomingEvent | PastEvent | NowEvent)[];
+
 const { events = [] } = Astro.props;
 const isInPast = (date: string): boolean => +new Date(date) < +new Date();
 const [upcoming, past] = events
@@ -14,18 +20,19 @@ const [upcoming, past] = events
   .reduce(
     (acc, event) => {
       const { date } = event.frontmatter;
-      if (isInPast(date)) acc[1].push(event);
-      else acc[0].push(event);
+      if (isInPast(date)) acc[1].push({ event, faded: true });
+      else acc[0].push({ event, faded: false });
       return acc;
     },
-    [[], []] as [MeetupEvent[], MeetupEvent[]]
+    [[], []] as [UpcomingEvent[], PastEvent[]]
   );
+const combined: Events = [...upcoming, { now: true }, ...past];
 ---
 
 <style lang="scss">
   @use '../styles/utils';
 
-  :global(label):has(~ nav) {
+  :global(label[for='search']) {
     position: fixed;
     inset: var(--ddjs-header-height) 0 auto;
     z-index: 1;
@@ -38,7 +45,8 @@ const [upcoming, past] = events
     padding: utils.size(4) utils.size(2) utils.size(2) utils.size(3);
     margin-top: calc(var(--ddjs-header-height) + var(--ddjs-search-height));
 
-    :global(article:not([hidden]):first-of-type .content::before) {
+    // extend first line to the top of the viewport
+    :global(article.first .content::before) {
       height: calc(50% + #{utils.size(100)});
     }
   }
@@ -109,7 +117,17 @@ const [upcoming, past] = events
 
 <Search />
 <nav data-event-list>
-  {upcoming.map((event) => <EventListItem event={event} />)}
-  <EventListItem now />
-  {past.map((event) => <EventListItem event={event} faded />)}
+  {
+    combined.map((event, i) => {
+      const first = i === 0;
+      const last = i === combined.length - 1;
+      if ('now' in event)
+        return (
+          <EventListItem now first={first} last={last}>
+            Date.now()
+          </EventListItem>
+        );
+      return <EventListItem event={event.event} faded={event.faded} first={first} last={last} />;
+    })
+  }
 </nav>
