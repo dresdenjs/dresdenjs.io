@@ -1,5 +1,6 @@
 export type Query = string & {};
-export type SearchResults = Map<Element, [RegExpMatchArray, Query][]>;
+export type QueryMatches = [RegExpMatchArray, Query];
+export type SearchResults = Map<Element, QueryMatches[]>;
 export type SearchResult = { hasResult: false } | { hasResult: true; combined: SearchResults };
 
 export const SEARCH_ATTR = 'data-search';
