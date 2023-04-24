@@ -1,0 +1,22 @@
+---
+import Layout from '../../layouts/default.layout.astro';
+import Nav from '../../components/nav.component.astro';
+import { getEventSlug } from '../../utils/event.utils';
+
+export async function getStaticPaths() {
+  const events = await Astro.glob('../events/*-meetup.md');
+  return events.map((event) => ({
+    params: { event: getEventSlug(event.url!) },
+    props: event,
+  }));
+}
+
+const { frontmatter, Content } = Astro.props;
+---
+
+<Layout lang="de" title={frontmatter.title}>
+  <Nav slot="header" />
+
+  <h1>{frontmatter.title}</h1>
+  <Content />
+</Layout>

@@ -1,5 +1,7 @@
 ---
 import type { MeetupEvent } from '../types';
+import { getEventSlug } from '../utils/event.utils';
+
 import EventListItemHeader from './event-list-item-header.component.astro';
 import EventListItemContent from './event-list-item-content.component.astro';
 
@@ -126,7 +128,7 @@ const { date, location, title } = event.frontmatter ?? {};
 {
   !now ? (
     <article class:list={{ faded, first, last }} hidden={hidden}>
-      <a class="content balloon" href="">
+      <a class="content balloon" href={`/event/${getEventSlug(event.url!)}`}>
         <EventListItemHeader {...{ date, location }} />
         <EventListItemContent {...{ title, content: event.compiledContent() }} />
       </a>
