@@ -5,6 +5,8 @@ const { lang = 'en', title } = Astro.props;
 ---
 
 <style lang="scss">
+  @use '../styles/utils';
+  
   header {
     position: fixed;
     inset: 0 0 auto;
@@ -13,6 +15,7 @@ const { lang = 'en', title } = Astro.props;
 
   main {
     margin-top: var(--ddjs-header-height);
+    padding: utils.size(2);
   }
 </style>
 
