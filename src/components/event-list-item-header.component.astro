@@ -22,7 +22,7 @@ const formatted = dayjs(date).format('L');
 
     color: var(--ddjs-color-primary-typo);
 
-    :global(article[data-faded]) & {
+    :global(article.faded) & {
       color: var(--ddjs-color-primary-faded);
       opacity: 0.5;
     }
