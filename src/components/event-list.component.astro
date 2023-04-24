@@ -35,6 +35,8 @@ const combined: Events = [...upcoming, { now: true }, ...past];
   :global(label[for='search']) {
     position: fixed;
     inset: var(--ddjs-header-height) 0 auto;
+    margin: utils.size(2) auto 0;
+    max-width: calc(var(--ddjs-event-list-width) + #{utils.size(4)});
     z-index: 1;
   }
 
@@ -42,8 +44,10 @@ const combined: Events = [...upcoming, { now: true }, ...past];
     display: flex;
     flex-direction: column;
     gap: utils.size(2);
-    padding: utils.size(4) utils.size(2) utils.size(2) utils.size(3);
-    margin-top: calc(var(--ddjs-header-height) + var(--ddjs-search-height));
+
+    padding: utils.size(8.5) utils.size(2) utils.size(2) utils.size(3);
+    margin: var(--ddjs-search-height) auto 0;
+    max-width: var(--ddjs-event-list-width);
 
     // extend first line to the top of the viewport
     :global(article.first .content::before) {
