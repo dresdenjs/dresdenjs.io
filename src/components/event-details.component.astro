@@ -1,0 +1,13 @@
+---
+import { formatDate } from '../utils/date.utils';
+
+const { event } = Astro.props;
+const { Content, frontmatter } = event;
+const { date } = frontmatter;
+---
+
+<style lang="scss"></style>
+
+<time datetime={date}>{formatDate(date)}</time>
+<h1>{frontmatter.title}</h1>
+<Content />
