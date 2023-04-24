@@ -56,13 +56,13 @@ import SlackLogo from './icons/slack-logo.icon.astro';
     </slot>
   </div>
 
-  <a href="/">
+  <a href={import.meta.env.BASE_URL}>
     <DdjsLogo size={29} />
   </a>
 
   <div class="right">
     <slot name="right">
-      <a href="/imprint"><InfoIcon size={24} /></a>
+      <a href={`${import.meta.env.BASE_URL}imprint`}><InfoIcon size={24} /></a>
     </slot>
   </div>
 </nav>
