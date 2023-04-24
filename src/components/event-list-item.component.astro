@@ -128,7 +128,7 @@ const { date, location, title } = event.frontmatter ?? {};
 {
   !now ? (
     <article class:list={{ faded, first, last }} hidden={hidden}>
-      <a class="content balloon" href={`/event/${getEventSlug(event.url!)}`}>
+      <a class="content balloon" href={`event/${getEventSlug(event.url!)}`}>
         <EventListItemHeader {...{ date, location }} />
         <EventListItemContent {...{ title, content: event.compiledContent() }} />
       </a>
