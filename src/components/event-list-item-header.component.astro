@@ -1,12 +1,11 @@
 ---
-import dayjs from 'dayjs';
+import { formatDate } from '../utils/date.utils';
 
 export interface Props {
   date: string;
   location: string;
 }
 const { date, location } = Astro.props;
-const formatted = dayjs(date).format('L');
 ---
 
 <style lang="scss">
@@ -39,6 +38,6 @@ const formatted = dayjs(date).format('L');
 </style>
 
 <div>
-  <time datetime={date} data-search>{formatted}</time>
+  <time datetime={date} data-search>{formatDate(date)}</time>
   <address data-search>{location}</address>
 </div>
