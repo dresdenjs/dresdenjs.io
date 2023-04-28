@@ -1,0 +1,35 @@
+/*
+Base Theme
+
+Shared variables between light and dark theme.
+*/
+@use '../utils';
+
+@mixin theme {
+  /* Colors */
+  --ddjs-color-primary: #cb3837;
+  --ddjs-color-primary-faded: #e09797;
+  --ddjs-color-primary-typo: #be4a4a;
+
+  --ddjs-color-1: #4e4e4e;
+  --ddjs-color-2: #c7c7c7;
+
+  /* Shadows */
+  --ddjs-shadow-large-passive: 0 0 #{utils.size(2)} 0 rgba(0, 0, 0, 0.08);
+  --ddjs-shadow-large-active: 0 0 #{utils.size(2)} 0 rgba(0, 0, 0, 0.24);
+
+  /* Spacing */
+  --ddjs-base-size: 8px;
+
+  /* Fonts */
+  --ddjs-font-default: 'Source Sans Pro';
+
+  /* Layout */
+  --ddjs-header-height: #{utils.size(7.5)};
+  --ddjs-search-height: #{utils.size(4.5)};
+  --ddjs-event-list-width: 600px;
+ 
+  /* FX */
+  --ddjs-fx-duration: 0.15s;
+  --ddjs-fx-easing: ease-in-out;
+}

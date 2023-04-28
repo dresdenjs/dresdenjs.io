@@ -1,39 +1,22 @@
 @use '~/@fontsource/source-sans-pro/scss/mixins' as sourceSans;
 @use '../styles/utils';
 
+@use '../styles/themes/base';
+@use '../styles/themes/light';
+@use '../styles/themes/dark';
+
 @include sourceSans.fontFace($weight: 400, $fontDir: '~/@fontsource/source-sans-pro/files');
 @include sourceSans.fontFace($weight: 600, $fontDir: '~/@fontsource/source-sans-pro/files');
 
 :root {
-  /* Colors */
-  --ddjs-color-primary: #cb3837;
-  --ddjs-color-primary-faded: #e09797;
-  --ddjs-color-primary-typo: #be4a4a;
+  @include base.theme;
+  
+  // default theme
+  @include light.theme;
 
-  --ddjs-color-grey-dark: #4e4e4e;
-  --ddjs-color-grey-medium: #c7c7c7;
-  --ddjs-color-grey-light: #f6f7f8;
-  --ddjs-color-white: #fff;
-
-  /* Shadows */
-  --ddjs-shadow-large-passive: 0 0 #{utils.size(2)} 0 rgba(0, 0, 0, 0.08);
-  --ddjs-shadow-large-active: 0 0 #{utils.size(2)} 0 rgba(0, 0, 0, 0.24);
-
-  /* Spacing */
-  // to be used with the appropriate function `size()`
-  --ddjs-base-size: 8px;
-
-  /* Fonts */
-  --ddjs-font-default: 'Source Sans Pro';
-
-  /* Layout */
-  --ddjs-header-height: #{utils.size(7.5)};
-  --ddjs-search-height: #{utils.size(4.5)};
-  --ddjs-event-list-width: 600px;
-
-  /* FX */
-  --ddjs-fx-duration: 0.15s;
-  --ddjs-fx-easing: ease-in-out;
+  @media(prefers-color-scheme: dark) {
+    @include dark.theme;
+  }
 }
 
 html,
@@ -42,11 +25,11 @@ body {
 }
 
 body {
-  background-color: var(--ddjs-color-grey-light);
+  background-color: var(--ddjs-color-3);
   font-family: var(--ddjs-font-default);
 }
 
 mark {
   background-color: var(--ddjs-color-primary);
-  color: var(--ddjs-color-grey-light);
+  color: var(--ddjs-color-3);
 }

@@ -60,7 +60,7 @@ const { date, location, title } = event.frontmatter ?? {};
     color: inherit;
 
     article.faded & {
-      color: var(--ddjs-color-grey-medium);
+      color: var(--ddjs-color-2);
     }
 
     .now & {
@@ -69,6 +69,7 @@ const { date, location, title } = event.frontmatter ?? {};
       font-size: 20px;
       font-weight: 600;
       line-height: 1;
+      text-shadow: var(--ddjs-shadow-text);
     }
 
     &::before,
@@ -121,7 +122,8 @@ const { date, location, title } = event.frontmatter ?? {};
 
   .balloon {
     padding: utils.size(1);
-    background-color: var(--ddjs-color-white);
+    background-color: var(--ddjs-color-4);
+    color: var(--ddjs-color-0)
   }
 </style>
 
