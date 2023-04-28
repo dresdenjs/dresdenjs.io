@@ -17,4 +17,6 @@ If you have any ideas for DresdenJS, don't hesitate to contact us at [info@dresd
 ## Sponsors
 Currently, we have no real sponsors - do not leave the @[Zalari](https://github.com/zalari) code monkeys alone! Contact us to be the first one!
 
-(c) 202{0-9} DresdenJS members and collaborators
+---
+
+Powered with ❤️ and 🍺 by [<img src="https://www.zalari.de/assets/icons/icon.png" width="15" />](https://www.zalari.de)
