@@ -61,7 +61,8 @@ const combined: Events = [...upcoming, { now: true }, ...past];
   import { SEARCH_ATTR, doSearch, prepareQueries, resetSearch } from '../utils/search.utils';
 
   const input = document.querySelector('input[type="search"]');
-  const events = Array.from(document.querySelectorAll<Element>('nav[data-event-list] > article'));
+  const list = document.querySelector('nav[data-event-list]');
+  const events = Array.from(list.querySelectorAll<Element>(':scope > article'));
 
   function showAll() {
     events.forEach((event) => event.removeAttribute('hidden'));
@@ -77,6 +78,20 @@ const combined: Events = [...upcoming, { now: true }, ...past];
       .forEach((event, i, arr) => {
         if (i === 0) event.classList.add('first');
         if (i === arr.length - 1) event.classList.add('last');
+      });
+  }
+
+  function newOrder() {
+    const now = events.find((event) => event.classList.contains('now'))!;
+    events
+      .filter((event) => !event.classList.contains('now'))
+      .reduce((previous, current) => {
+        const date = new Date(current.querySelector('time').getAttribute('datetime')!);
+        current.classList.toggle('faded', date < new Date());
+        if (!previous.classList.contains('faded') && current.classList.contains('faded')) {
+          list.insertBefore(now, current);
+        }
+        return current;
       });
   }
 
@@ -117,6 +132,9 @@ const combined: Events = [...upcoming, { now: true }, ...past];
         setFirstLast();
       });
   });
+
+  // runtime sorting of events
+  newOrder();
 </script>
 
 <Search />
