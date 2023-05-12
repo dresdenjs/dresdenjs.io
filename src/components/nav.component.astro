@@ -3,6 +3,9 @@ import InfoIcon from './icons/info.icon.astro';
 import DdjsLogo from './icons/ddjs-logo.icon.astro';
 import MeetupLogo from './icons/meetup-logo.icon.astro';
 import SlackLogo from './icons/slack-logo.icon.astro';
+
+const { pathname } = Astro.url;
+const imprintLink = `${import.meta.env.BASE_URL}imprint`;
 ---
 
 <style lang="scss">
@@ -44,6 +47,10 @@ import SlackLogo from './icons/slack-logo.icon.astro';
     a {
       display: inline-flex;
       color: var(--ddjs-color-grey-medium);
+
+      // @todo: implement me!
+      &:hover {}
+      &.active {}
     }
   }
 </style>
@@ -62,7 +69,7 @@ import SlackLogo from './icons/slack-logo.icon.astro';
 
   <div class="right">
     <slot name="right">
-      <a href={`${import.meta.env.BASE_URL}imprint`}><InfoIcon size={24} /></a>
+      <a class:list={{ active: pathname === imprintLink }} href={imprintLink}><InfoIcon size={24} /></a>
     </slot>
   </div>
 </nav>
