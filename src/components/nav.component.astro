@@ -3,6 +3,7 @@ import InfoIcon from './icons/info.icon.astro';
 import DdjsLogo from './icons/ddjs-logo.icon.astro';
 import MeetupLogo from './icons/meetup-logo.icon.astro';
 import SlackLogo from './icons/slack-logo.icon.astro';
+import ThemeSwitch from './theme-switch.component.astro';
 
 const { pathname } = Astro.url;
 const imprintLink = `${import.meta.env.BASE_URL}imprint`;
@@ -10,44 +11,44 @@ const imprintLink = `${import.meta.env.BASE_URL}imprint`;
 
 <style lang="scss">
   @use '../styles/utils';
-
+  
   nav {
     display: flex;
     flex-direction: row;
-
+    
     box-sizing: border-box;
     padding: utils.size(2);
     height: var(--ddjs-header-height);
-
+    
     align-items: flex-start;
     justify-content: space-between;
-
+    
     background: var(--ddjs-color-4);
-
+    
     > a {
       margin-top: 3px;
     }
   }
-
+  
   div {
     display: flex;
     flex-direction: row;
     align-self: center;
     gap: 8px;
     width: 50%;
-
+    
     &.left {
       justify-content: start;
     }
-
+    
     &.right {
       justify-content: end;
     }
-
+    
     a {
       display: inline-flex;
       color: var(--ddjs-color-header-icon);
-
+      
       // @todo: implement me!
       &:hover {}
       &.active {}
@@ -69,7 +70,17 @@ const imprintLink = `${import.meta.env.BASE_URL}imprint`;
 
   <div class="right">
     <slot name="right">
+      <ThemeSwitch />
       <a class:list={{ active: pathname === imprintLink }} href={imprintLink}><InfoIcon size={24} /></a>
     </slot>
   </div>
 </nav>
+
+  <script>
+  
+    document.querySelector('html').setAttribute('theme', 'dark')
+  
+    const darkTheme = document.querySelector('html')!.getAttribute('theme') === 'dark'
+  
+    console.log(darkTheme)
+  </script>

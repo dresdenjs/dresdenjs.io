@@ -5,18 +5,23 @@
 @use '../styles/themes/light';
 @use '../styles/themes/dark';
 
+@use '../styles/colors';
+
 @include sourceSans.fontFace($weight: 400, $fontDir: '~/@fontsource/source-sans-pro/files');
 @include sourceSans.fontFace($weight: 600, $fontDir: '~/@fontsource/source-sans-pro/files');
 
 :root {
-  @include base.theme;
-  
-  // default theme
-  @include light.theme;
+  @include colors.colors;
 
-  @media(prefers-color-scheme: dark) {
-    @include dark.theme;
-  }
+  @include base.theme;  
+}
+
+:root[theme="light"] {
+  @include light.theme;
+}
+
+:root[theme="dark"] {
+  @include dark.theme;
 }
 
 html,

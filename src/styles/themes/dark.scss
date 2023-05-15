@@ -1,13 +1,13 @@
 @mixin theme {
   /* Colors */
-  --ddjs-color-0: #ffffff;
-  --ddjs-color-3: #4e4e4e;
-  --ddjs-color-4: #5a5a5a;
+  --ddjs-color-0: var(--ddjs-color-mono-100);
+  --ddjs-color-3: var(--ddjs-color-mono-31);
+  --ddjs-color-4: var(--ddjs-color-mono-35);
 
-  --ddjs-color-search-bar-background: var(--ddjs-color-2);
-  --ddjs-color-search-bar-color: var(--ddjs-color-3);
+  --ddjs-color-search-bar-background: var(--ddjs-color-mono-78);
+  --ddjs-color-search-bar-color: var(--ddjs-color-mono-31);
 
-  --ddjs-color-header-icon: var(--ddjs-color-0);
+  --ddjs-color-header-icon: var(--ddjs-color-mono-100);
 
   /* Shadows */
   --ddjs-shadow-text: 0 0 8px rgba(0, 0, 0, 0.48);

@@ -1,0 +1,64 @@
+---
+import LightIcon from './icons/light.icon.astro';
+import DarkIcon from './icons/dark.icon.astro';
+
+---
+<style lang="scss">
+  .light, .dark {
+    cursor: pointer;
+    display: none;
+
+    &.show {
+      display: block;
+    }
+  }
+</style>
+
+<theme-switch>
+  <span class="light">
+    <LightIcon />
+  </span>
+  <span class="dark">
+    <DarkIcon />
+  </span>
+</theme-switch>
+
+<script>
+  class ThemeSwitch extends HTMLElement {
+    isSelectedThemeDark;
+    lightIcon;
+    darkIcon;
+
+    constructor() {
+      super();
+
+      this.lightIcon = this.querySelector(".light");
+      this.darkIcon = this.querySelector('.dark');
+      this.isSelectedThemeDark = document.querySelector('html')!.getAttribute('theme');
+      this.initializeSwitch()
+
+     this.addEventListener('click', this.changeTheme) 
+    }
+
+    initializeSwitch() {
+      if (this.isSelectedThemeDark) {
+       this.darkIcon!.classList.add('show');
+       return;
+      }
+
+      this.lightIcon!.classList.add('show')
+    }
+
+    changeTheme() {
+      this.darkIcon!.classList.toggle('show');
+      this.lightIcon!.classList.toggle('show');
+      
+      const theme = (document.querySelector('html')!.getAttribute('theme') === 'dark') ? 'light' : 'dark'
+      console.log(`change theme, now is ${theme}`)
+
+      document.querySelector('html')!.setAttribute('theme', theme)
+    }
+  }
+
+  customElements.define('theme-switch', ThemeSwitch);
+</script>
