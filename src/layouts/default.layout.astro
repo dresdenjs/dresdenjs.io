@@ -39,3 +39,11 @@ const { lang = 'en', title } = Astro.props;
     </main>
   </body>
 </html>
+
+<script>
+  const savedTheme = localStorage.getItem('theme');
+
+  if (savedTheme) {
+    document.documentElement.setAttribute('theme', savedTheme);
+  }
+</script>

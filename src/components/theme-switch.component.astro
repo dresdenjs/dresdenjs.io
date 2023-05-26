@@ -31,22 +31,35 @@ import DarkIcon from './icons/dark.icon.astro';
   const lightIcon = document.querySelector('.theme-switch.light');
   const darkIcon = document.querySelector('.theme-switch.dark');
   const root = document.documentElement;
-  let selectedTheme = root!.getAttribute('theme');
 
-  // set switch at first load
-  themeSwitch!.querySelector(`.${selectedTheme}`)!.classList.add('show');
+  const selectedTheme = (): string | 'dark' | 'light' => {
+    const theme = root!.getAttribute('theme');
+    const savedTheme = localStorage.getItem('theme');
+
+    if (savedTheme) {
+      return savedTheme;
+    }
+
+    if (!theme) {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    return theme;
+  };
+
+  themeSwitch!.querySelector(`.${selectedTheme()}`)!.classList.add('show');
 
   const changeTheme = () => {
-    selectedTheme = root!.getAttribute('theme');
     lightIcon!.classList.toggle('show');
     darkIcon!.classList.toggle('show');
 
-    if (selectedTheme === 'dark') {
+    if (selectedTheme() === 'dark') {
       root!.setAttribute('theme', 'light');
+      localStorage.setItem('theme', 'light');
       return;
     }
 
     root!.setAttribute('theme', 'dark');
+    localStorage.setItem('theme', 'dark');
   };
 
   themeSwitch!.addEventListener('click', changeTheme);

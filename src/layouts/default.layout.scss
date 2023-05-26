@@ -13,14 +13,19 @@
 :root {
   @include colors.colors;
 
-  @include base.theme;  
+  @include base.theme;
+  @include light.theme;
+
+  @media (prefers-color-scheme: dark) {
+    @include dark.theme;
+  }
 }
 
-:root[theme="light"] {
+:root[theme='light'] {
   @include light.theme;
 }
 
-:root[theme="dark"] {
+:root[theme='dark'] {
   @include dark.theme;
 }
 
