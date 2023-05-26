@@ -11,14 +11,14 @@
     "astro": "astro"
   },
   "devDependencies": {
-    "@astrojs/mdx": "0.19.0",
-    "astro": "2.3.0",
+    "@astrojs/mdx": "0.19.4",
+    "astro": "2.5.5",
     "autoprefixer": "10.4.14",
     "dotenv-cli": "7.2.1",
-    "sass": "1.62.0"
+    "sass": "1.62.1"
   },
   "dependencies": {
-    "@fontsource/source-sans-pro": "4.5.11",
+    "@fontsource/source-sans-pro": "5.0.1",
     "dayjs": "1.11.7"
   }
 }

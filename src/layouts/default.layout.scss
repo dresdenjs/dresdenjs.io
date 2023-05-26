@@ -1,4 +1,10 @@
-@use '~/@fontsource/source-sans-pro/scss/mixins' as sourceSans;
+@use '~/@fontsource/source-sans-pro/scss/mixins' as sourceSans with (
+  $directory: '~/@fontsource/source-sans-pro/files',
+  $weights: (
+    400,
+    600,
+  )
+);
 @use '../styles/utils';
 
 @use '../styles/themes/base';
@@ -7,8 +13,7 @@
 
 @use '../styles/colors';
 
-@include sourceSans.fontFace($weight: 400, $fontDir: '~/@fontsource/source-sans-pro/files');
-@include sourceSans.fontFace($weight: 600, $fontDir: '~/@fontsource/source-sans-pro/files');
+@include sourceSans.faces();
 
 :root {
   @include colors.colors;
