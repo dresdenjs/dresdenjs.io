@@ -11,25 +11,25 @@ const imprintLink = `${import.meta.env.BASE_URL}imprint`;
 
 <style lang="scss">
   @use '../styles/utils';
-  
+
   nav {
     display: flex;
     flex-direction: row;
-    
+
     box-sizing: border-box;
     padding: utils.size(2);
     height: var(--ddjs-header-height);
-    
+
     align-items: flex-start;
     justify-content: space-between;
-    
+
     background: var(--ddjs-color-4);
-    
+
     > a {
       margin-top: 3px;
     }
   }
-  
+
   div {
     display: flex;
     flex-direction: row;
@@ -37,22 +37,24 @@ const imprintLink = `${import.meta.env.BASE_URL}imprint`;
     gap: 8px;
     width: 50%;
     color: var(--ddjs-color-header-icon);
-    
+
     &.left {
       justify-content: start;
     }
-    
+
     &.right {
       justify-content: end;
     }
-    
+
     a {
       display: inline-flex;
       color: var(--ddjs-color-header-icon);
-      
+
       // @todo: implement me!
-      &:hover {}
-      &.active {}
+      &:hover {
+      }
+      &.active {
+      }
     }
   }
 </style>
@@ -77,11 +79,10 @@ const imprintLink = `${import.meta.env.BASE_URL}imprint`;
   </div>
 </nav>
 
-  <script>
-  
-    document.querySelector('html').setAttribute('theme', 'dark')
-  
-    const darkTheme = document.querySelector('html')!.getAttribute('theme') === 'dark'
-  
-    console.log(darkTheme)
-  </script>
+<script>
+  document.querySelector('html').setAttribute('theme', 'dark');
+
+  const darkTheme = document.querySelector('html')!.getAttribute('theme') === 'dark';
+
+  console.log(darkTheme);
+</script>
