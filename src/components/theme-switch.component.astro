@@ -1,64 +1,53 @@
 ---
 import LightIcon from './icons/light.icon.astro';
 import DarkIcon from './icons/dark.icon.astro';
-
 ---
-<style lang="scss">
-  .light, .dark {
-    cursor: pointer;
-    display: none;
 
-    &.show {
-      display: block;
+<style lang="scss">
+  .theme-switch {
+    &.light,
+    &.dark {
+      cursor: pointer;
+      display: none;
+
+      &.show {
+        display: block;
+      }
     }
   }
 </style>
 
-<theme-switch>
-  <span class="light">
+<div theme-switch>
+  <span class="theme-switch light">
     <LightIcon />
   </span>
-  <span class="dark">
+  <span class="theme-switch dark">
     <DarkIcon />
   </span>
-</theme-switch>
+</div>
 
 <script>
-  class ThemeSwitch extends HTMLElement {
-    isSelectedThemeDark;
-    lightIcon;
-    darkIcon;
+  const themeSwitch = document.querySelector('div[theme-switch]');
+  const lightIcon = document.querySelector('.theme-switch.light');
+  const darkIcon = document.querySelector('.theme-switch.dark');
+  const root = document.documentElement;
+  let selectedTheme = root!.getAttribute('theme');
 
-    constructor() {
-      super();
+  // set switch at first load
+  themeSwitch!.querySelector(`.${selectedTheme}`)!.classList.add('show');
 
-      this.lightIcon = this.querySelector(".light");
-      this.darkIcon = this.querySelector('.dark');
-      this.isSelectedThemeDark = document.querySelector('html')!.getAttribute('theme');
-      this.initializeSwitch()
+  const changeTheme = () => {
+    selectedTheme = root!.getAttribute('theme');
+    lightIcon!.classList.toggle('show');
+    darkIcon!.classList.toggle('show');
 
-     this.addEventListener('click', this.changeTheme) 
+    if (selectedTheme === 'dark') {
+      root!.setAttribute('theme', 'light');
+      return;
     }
 
-    initializeSwitch() {
-      if (this.isSelectedThemeDark) {
-       this.darkIcon!.classList.add('show');
-       return;
-      }
+    root!.setAttribute('theme', 'dark');
+  };
 
-      this.lightIcon!.classList.add('show')
-    }
-
-    changeTheme() {
-      this.darkIcon!.classList.toggle('show');
-      this.lightIcon!.classList.toggle('show');
-      
-      const theme = (document.querySelector('html')!.getAttribute('theme') === 'dark') ? 'light' : 'dark'
-      console.log(`change theme, now is ${theme}`)
-
-      document.querySelector('html')!.setAttribute('theme', theme)
-    }
-  }
-
-  customElements.define('theme-switch', ThemeSwitch);
+  themeSwitch!.addEventListener('click', changeTheme);
 </script>
