@@ -18,6 +18,7 @@
     "sass": "1.62.1"
   },
   "dependencies": {
+    "@astrojs/lit": "2.1.0",
     "@fontsource/source-sans-pro": "5.0.1",
     "dayjs": "1.11.7"
   }
