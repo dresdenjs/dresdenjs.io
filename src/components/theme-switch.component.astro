@@ -4,32 +4,30 @@ import DarkIcon from './icons/dark.icon.astro';
 ---
 
 <style lang="scss">
-  .theme-switch {
-    &.light,
-    &.dark {
-      cursor: pointer;
-      display: none;
+  .light,
+  .dark {
+    cursor: pointer;
+    display: none;
 
-      &.show {
-        display: block;
-      }
+    &.show {
+      display: block;
     }
   }
 </style>
 
-<div theme-switch>
-  <span class="theme-switch light">
+<div class="theme-switch">
+  <span class="light">
     <LightIcon />
   </span>
-  <span class="theme-switch dark">
+  <span class="dark">
     <DarkIcon />
   </span>
 </div>
 
 <script>
-  const themeSwitch = document.querySelector('div[theme-switch]');
-  const lightIcon = document.querySelector('.theme-switch.light');
-  const darkIcon = document.querySelector('.theme-switch.dark');
+  const themeSwitch = document.querySelector('.theme-switch');
+  const lightIcon = document.querySelector('.light');
+  const darkIcon = document.querySelector('.dark');
   const root = document.documentElement;
 
   const selectedTheme = (): string | 'dark' | 'light' => {
