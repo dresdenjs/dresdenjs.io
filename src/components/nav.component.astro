@@ -6,7 +6,7 @@ import SlackLogo from './icons/slack-logo.icon.astro';
 import ThemeSwitch from './theme-switch.component.astro';
 
 const { pathname } = Astro.url;
-const imprintLink = `${import.meta.env.BASE_URL}imprint`;
+const imprintLink = `${Astro.url}imprint`;
 ---
 
 <style lang="scss">
