@@ -4,6 +4,8 @@
     "paths": {
       "~/*": ["./node_modules"],
       "@/*": ["./src"]
-    }
+    },
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
   }
 }
