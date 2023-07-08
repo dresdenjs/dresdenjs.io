@@ -32,3 +32,9 @@ export class DdjsLogo extends LitElement {
     `;
   }
 }
+
+declare global {
+  interface HTMLElementTagNameMap {
+    'ddjs-logo': DdjsLogo;
+  }
+}
