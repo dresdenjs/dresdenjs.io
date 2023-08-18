@@ -25,6 +25,7 @@ jobs:
         with:
           cache: "npm"
           node-version: 18.16.0
+      - run: rm -rf src/pages/events
       - run: npx playwright@1.32.3 install chromium
       - run: npx @dresdenjs/meetup-collector@latest
         env:
