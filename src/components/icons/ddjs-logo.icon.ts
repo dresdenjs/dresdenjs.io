@@ -4,11 +4,12 @@ import { styleMap } from 'lit/directives/style-map.js';
 
 @customElement('ddjs-logo')
 export class DdjsLogo extends LitElement {
-  @property({ type: Number }) size = 24;
+  @property({ type: Number, reflect: true })
+  size = 24;
+
   override render() {
-    const height = `${this.size}px`;
     return html`
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 86.4 28" style=${styleMap({ height })}>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 86.4 28" style="${styleMap({ height: `${this.size}px` })}">
         <g fill="#cb3837">
           <path
             d="M56 16h3v3h-3Zm-25 6h3V9h6v16h-9ZM62 9h6v10h-6Zm-19 7h3V6h10v3h-4v10h-9ZM71 6h12v13H71ZM3 6h6V3h6v16H3Zm16 0h6V3h6v16H19Zm15-3h6v3h-6Zm28 0h6v3h-6Zm-3-3v3H43V0H22v3h-3V0H6v3H0v19h28v6h15v-6h43V3H71V0Z"
