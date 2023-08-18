@@ -1,9 +1,12 @@
 {
   "extends": "astro/tsconfigs/strictest",
   "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
     "paths": {
       "~/*": ["./node_modules"],
       "@/*": ["./src"]
-    }
+    },
+    "useDefineForClassFields": false
   }
 }

@@ -1,14 +1,15 @@
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import { defineConfig } from 'astro/config';
+import lit from '@astrojs/lit';
 import mdx from '@astrojs/mdx';
+import { defineConfig } from 'astro/config';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [mdx()],
+  integrations: [lit(), mdx()],
   output: 'static',
   vite: {
     resolve: {
