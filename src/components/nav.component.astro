@@ -1,5 +1,5 @@
 ---
-import { DdjsLogo } from './icons/ddjs-logo.icon';
+import DdjsLogo from './icons/ddjs-logo.icon';
 import InfoIcon from './icons/info.icon.astro';
 import MeetupLogo from './icons/meetup-logo.icon.astro';
 import SlackLogo from './icons/slack-logo.icon.astro';
@@ -64,7 +64,7 @@ const imprintLink = `${import.meta.env.BASE_URL}imprint`;
   </div>
 
   <a href={import.meta.env.BASE_URL}>
-    <DdjsLogo size={29} />
+    <DdjsLogo client:load size={29} />
   </a>
 
   <div class="right">

@@ -2,6 +2,8 @@ import { LitElement, html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { styleMap } from 'lit/directives/style-map.js';
 
+import { withAstro } from '../../utils/astro.utils.js';
+
 @customElement('ddjs-logo')
 export class DdjsLogo extends LitElement {
   @property({ type: Number, reflect: true })
@@ -39,3 +41,5 @@ declare global {
     'ddjs-logo': DdjsLogo;
   }
 }
+
+export default withAstro(DdjsLogo);
