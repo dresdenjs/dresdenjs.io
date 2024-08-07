@@ -7,6 +7,9 @@ It gets automatically deployed via GitHub pages - for that to work you *must* co
 
 ## Build & development
 
+Copy the `.env.example` to `.env` and fill in the required values.\
+Run `npx -y -p dotenv -p @dresdenjs/meetup-collector@0.1.7 -c 'dotenv muc'` once to receive past and upcoming meetups.
+
 Made with [Astro](https://github.com/withastro/astro), check it out for the requirements (node version etc.)
 
 Run (good-olde) `npm run build` for building and `npm run dev` for the development environment.
