@@ -5,7 +5,7 @@ import EventDetails from '../../components/event-details.component.astro';
 import Nav from '../../components/nav.component.astro';
 
 export async function getStaticPaths() {
-  const events = await Astro.glob('../events/*-meetup.md');
+  const events = await Astro.glob('../events/*.md');
   return events.map((event) => ({
     params: { event: getEventSlug(event.url!) },
     props: event,

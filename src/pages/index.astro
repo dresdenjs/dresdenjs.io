@@ -10,7 +10,7 @@ import Layout from '../layouts/default.layout.astro';
 import EventList from '../components/event-list.component.astro';
 import Nav from '../components/nav.component.astro';
 
-const meetups = await Astro.glob('./events/*-meetup.md');
+const meetups = await Astro.glob('./events/*.md');
 ---
 
 <Layout lang="de" title="Veranstaltungen">

@@ -35,6 +35,7 @@ jobs:
           GROUP_SLUG: dresdenjs-io-javascript-user-group
           GROUP_NAME: DresdenJS.io JavaScript User Group
           TARGET: src/pages/events
+          FILE_NAME: '%id%.md'
           LIMIT_UPCOMING: 2
       - uses: actions/upload-artifact@v3
         if: success()
