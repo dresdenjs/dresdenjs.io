@@ -27,7 +27,7 @@ jobs:
           node-version: 18.16.0
       - run: rm -rf src/pages/events
       - run: npx playwright@1.32.3 install chromium
-      - run: npx @dresdenjs/meetup-collector@0.1.7
+      - run: npx @dresdenjs/meetup-collector@0.1.8
         env:
           USERNAME: ${{secrets.MEETUP_USERNAME}}
           PASSWORD: ${{secrets.MEETUP_PASSWORD}}
