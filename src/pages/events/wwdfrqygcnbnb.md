@@ -1,8 +1,0 @@
----
-date: '2024-10-10T17:00:00.000Z'
-link: 'https://www.meetup.com/dresdenjs-io-javascript-user-group/events/wwdfrqygcnbnb'
-location: 'Hermann-Mende-Straße 4, Dresden'
-title: 'JavaScript Meetup'
-locked: false
----
-JavaScript ist besser als gar keine Programmiersprache ohne Metaprogrammierung und First-Class-Funktionen. Jeden Monat treffen wir uns zum Besprechen von aktuellen Entwicklungen und lauschen Vorträgen und kickern und quatschen!
