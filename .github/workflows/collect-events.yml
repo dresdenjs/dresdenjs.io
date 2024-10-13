@@ -25,8 +25,8 @@ jobs:
         with:
           cache: 'npm'
           node-version: 18.16.0
-      - run: rm -rf src/pages/events
       - run: npx playwright@1.32.3 install chromium
+      - run: rm -rf src/pages/events
       - run: npx @dresdenjs/meetup-collector@0.1.8
         env:
           USERNAME: ${{secrets.MEETUP_USERNAME}}
@@ -37,30 +37,10 @@ jobs:
           TARGET: src/pages/events
           FILE_NAME: '%id%.md'
           LIMIT_UPCOMING: 2
-      - uses: actions/upload-artifact@v3
-        if: success()
-        with:
-          name: events
-          path: src/pages/events
-
-  persist:
-    name: Persist events
-    needs: collect
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          cache: 'npm'
-          node-version: 18.16.0
-      - uses: actions/download-artifact@v3
-        with:
-          name: events
-          path: src/pages/events
-      - run: |
+      - if: success()
+        run: |
           git config user.name "${GITHUB_ACTOR}"
           git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
-      - run: |
           git add .
           git commit --allow-empty -m "updated events"
           git push origin
