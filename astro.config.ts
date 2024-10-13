@@ -12,6 +12,13 @@ export default defineConfig({
   integrations: [lit(), mdx()],
   output: 'static',
   vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          api: 'modern',
+        },
+      },
+    },
     resolve: {
       alias: {
         '@': resolve(__dirname, './src'),

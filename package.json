@@ -7,19 +7,18 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "preview": "astro preview"
   },
   "devDependencies": {
-    "@astrojs/mdx": "0.19.7",
-    "astro": "2.10.9",
-    "autoprefixer": "10.4.15",
-    "dotenv-cli": "7.3.0",
-    "sass": "1.66.0"
+    "@astrojs/mdx": "3.1.8",
+    "astro": "4.16.2",
+    "autoprefixer": "10.4.20",
+    "dotenv-cli": "7.4.2",
+    "sass": "1.79.5"
   },
   "dependencies": {
-    "@astrojs/lit": "2.1.1",
-    "@fontsource/source-sans-pro": "5.0.8",
-    "dayjs": "1.11.9"
+    "@astrojs/lit": "4.3.0",
+    "@fontsource/source-sans-pro": "5.1.0",
+    "dayjs": "1.11.13"
   }
 }
