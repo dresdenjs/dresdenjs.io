@@ -4,7 +4,7 @@ on:
   # Run event collection at the end of the day
   # https://jasonet.co/posts/scheduled-actions/#some-helpful-patterns
   schedule:
-    - cron: '0 0 * * *'
+    - cron: "0 0 * * *"
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -12,7 +12,7 @@ on:
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
-  group: 'collect-events'
+  group: "collect-events"
   cancel-in-progress: false
 
 jobs:
@@ -20,11 +20,11 @@ jobs:
     name: Collect events
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          cache: 'npm'
-          node-version: 18.16.0
+          node-version-file: ".nvmrc"
+          cache: "npm"
       - run: npx playwright@1.32.3 install chromium
       - run: rm -rf src/pages/events
       - run: npx @dresdenjs/meetup-collector@0.1.8
@@ -35,7 +35,7 @@ jobs:
           GROUP_SLUG: dresdenjs-io-javascript-user-group
           GROUP_NAME: DresdenJS.io JavaScript User Group
           TARGET: src/pages/events
-          FILE_NAME: '%id%.md'
+          FILE_NAME: "%id%.md"
           LIMIT_UPCOMING: 2
       - if: success()
         run: |
