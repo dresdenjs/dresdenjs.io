@@ -60,8 +60,9 @@ const combined: Events = [...upcoming, { now: true }, ...past];
   import { highlightMatches } from '../utils/highlight.utils';
   import { SEARCH_ATTR, doSearch, prepareQueries, resetSearch } from '../utils/search.utils';
 
-  const input = document.querySelector('input[type="search"]');
-  const list = document.querySelector('nav[data-event-list]');
+  const input = document.querySelector('input[type="search"]')!;
+  const count = input.nextElementSibling as HTMLElement;
+  const list = document.querySelector('nav[data-event-list]')!;
   const events = Array.from(list.querySelectorAll<Element>(':scope > article'));
 
   function showAll() {
@@ -86,7 +87,7 @@ const combined: Events = [...upcoming, { now: true }, ...past];
     events
       .filter((event) => !event.classList.contains('now'))
       .reduce((previous, current) => {
-        const date = new Date(current.querySelector('time').getAttribute('datetime')!);
+        const date = new Date(current.querySelector('time')!.getAttribute('datetime')!);
         current.classList.toggle('faded', date < new Date());
         if (!previous.classList.contains('faded') && current.classList.contains('faded')) {
           list.insertBefore(now, current);
@@ -103,7 +104,7 @@ const combined: Events = [...upcoming, { now: true }, ...past];
   });
 
   // search
-  input!.addEventListener('input', (event) => {
+  input.addEventListener('input', (event) => {
     const { value } = event.target as HTMLInputElement;
     const queries = prepareQueries(value);
 
@@ -114,9 +115,9 @@ const combined: Events = [...upcoming, { now: true }, ...past];
       return;
     }
 
-    events
+    const hits = events
       .filter((event) => !event.classList.contains('now'))
-      .forEach((event) => {
+      .reduce((results, event) => {
         const result = doSearch(event, queries);
 
         // did we find anything?
@@ -125,12 +126,17 @@ const combined: Events = [...upcoming, { now: true }, ...past];
           event.removeAttribute('hidden');
           // highlight the findings
           highlightMatches(result.combined, (text, query) => `<mark data-query="${query}">${text}</mark>`);
+          // store the result
+          results.push(event);
         } else {
           // hide the element
           event.setAttribute('hidden', '');
         }
         setFirstLast();
-      });
+        return results;
+      }, [] as Element[]);
+
+    count.innerText = `${hits.length}`;
   });
 
   // runtime sorting of events

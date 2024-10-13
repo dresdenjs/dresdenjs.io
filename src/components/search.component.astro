@@ -2,14 +2,29 @@
 import SearchIcon from './icons/search.icon.astro';
 ---
 
+<script>
+  const input = document.querySelector<HTMLInputElement>('input[type="search"]')!;
+  function toggleSearchCount() {
+    const count = input.nextElementSibling;
+    const visible = input.value.trim().length > 0;
+    count?.toggleAttribute('hidden', !visible);
+  }
+
+  input.addEventListener('input', toggleSearchCount);
+  toggleSearchCount();
+</script>;
+
 <style lang="scss">
   @use '../styles/utils';
 
   label {
     box-sizing: border-box;
     display: flex;
-    flex-direction: row-reverse;
+    flex-flow: row nowrap;
     align-items: center;
+
+    gap: utils.size(0.75);
+    padding: 0 utils.size(1.5);
     width: calc(100% - #{utils.size(2)});
 
     background: var(--ddjs-color-white);
@@ -29,7 +44,7 @@ import SearchIcon from './icons/search.icon.astro';
 
     display: inline-block;
     flex: 1 0 auto;
-    padding: utils.size(1) utils.size(2) utils.size(1) 0;
+    padding: utils.size(1) 0;
     height: var(--ddjs-search-height);
     width: auto;
 
@@ -52,18 +67,24 @@ import SearchIcon from './icons/search.icon.astro';
   .icon {
     display: inline-flex;
     align-items: center;
-    margin: 0 utils.size(0.75) 0 utils.size(1.5);
     transition: color var(--ddjs-fx-duration) var(--ddjs-fx-easing);
 
     input[type='search']:focus ~ & {
       color: var(--ddjs-color-primary-typo);
     }
   }
+
+  .count {
+    display: inline-flex;
+
+    &[hidden] {
+      display: none;
+    }
+  }
 </style>
 
 <label for="search">
+  <span class="icon"><SearchIcon size={20} /></span>
   <input id="search" type="search" />
-  <span class="icon">
-    <SearchIcon size={20} />
-  </span>
+  <span class="count"></span>
 </label>
