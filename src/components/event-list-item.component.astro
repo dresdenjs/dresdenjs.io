@@ -5,22 +5,17 @@ import { getEventSlug } from '../utils/event.utils';
 import EventListItemHeader from './event-list-item-header.component.astro';
 import EventListItemContent from './event-list-item-content.component.astro';
 
-type Props = {
+export interface Props {
   faded?: boolean;
   first?: boolean;
   last?: boolean;
   hidden?: boolean;
-} & (
-  | {
-      event: MeetupEvent;
-      now?: false;
-    }
-  | {
-      now: true;
-    }
-);
-const { event = {}, faded = false, first = false, last = false, hidden = false, now = false } = Astro.props;
-const { date, location, title } = event.frontmatter ?? {};
+  event?: MeetupEvent;
+  now?: boolean;
+}
+
+const { event, faded = false, first = false, last = false, hidden = false, now = false } = Astro.props;
+const { date, location, title } = event?.frontmatter ?? {};
 ---
 
 <style lang="scss">
@@ -128,9 +123,9 @@ const { date, location, title } = event.frontmatter ?? {};
 {
   !now ? (
     <article class:list={{ faded, first, last }} hidden={hidden}>
-      <a class="content balloon" href={`${import.meta.env.BASE_URL}event/${getEventSlug(event.url!)}`}>
+      <a class="content balloon" href={`${import.meta.env.BASE_URL}event/${getEventSlug(event!.url!)}`}>
         <EventListItemHeader {...{ date, location }} />
-        <EventListItemContent {...{ title, content: event.compiledContent() }} />
+        <EventListItemContent {...{ title, content: event!.compiledContent() }} />
       </a>
     </article>
   ) : (
