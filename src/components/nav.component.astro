@@ -3,9 +3,10 @@ import DdjsLogo from './icons/ddjs-logo.icon';
 import InfoIcon from './icons/info.icon.astro';
 import MeetupLogo from './icons/meetup-logo.icon.astro';
 import SlackLogo from './icons/slack-logo.icon.astro';
+import ThemeSwitch from './theme-switch.component.astro';
 
 const { pathname } = Astro.url;
-const imprintLink = `${import.meta.env.BASE_URL}imprint`;
+const imprintLink = `${Astro.url.origin}/imprint`;
 ---
 
 <style lang="scss">
@@ -22,7 +23,7 @@ const imprintLink = `${import.meta.env.BASE_URL}imprint`;
     align-items: flex-start;
     justify-content: space-between;
 
-    background: var(--ddjs-color-white);
+    background: var(--ddjs-color-4);
 
     > a {
       margin-top: 3px;
@@ -35,6 +36,7 @@ const imprintLink = `${import.meta.env.BASE_URL}imprint`;
     align-self: center;
     gap: 8px;
     width: 50%;
+    color: var(--ddjs-color-header-icon);
 
     &.left {
       justify-content: start;
@@ -46,11 +48,13 @@ const imprintLink = `${import.meta.env.BASE_URL}imprint`;
 
     a {
       display: inline-flex;
-      color: var(--ddjs-color-grey-medium);
+      color: var(--ddjs-color-header-icon);
 
       // @todo: implement me!
-      &:hover {}
-      &.active {}
+      &:hover {
+      }
+      &.active {
+      }
     }
   }
 </style>
@@ -69,6 +73,7 @@ const imprintLink = `${import.meta.env.BASE_URL}imprint`;
 
   <div class="right">
     <slot name="right">
+      <ThemeSwitch />
       <a class:list={{ active: pathname === imprintLink }} href={imprintLink}><InfoIcon size={24} /></a>
     </slot>
   </div>
