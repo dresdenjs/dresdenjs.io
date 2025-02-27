@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@astrojs/lit": "4.3.0",
-    "@fontsource/source-sans-pro": "5.1.0",
+    "@fontsource-variable/source-sans-3": "5.1.1",
     "dayjs": "1.11.13"
   }
 }
