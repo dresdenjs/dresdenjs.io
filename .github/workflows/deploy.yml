@@ -32,7 +32,7 @@ jobs:
           node-version-file: ".nvmrc"
           cache: "npm"
       - run: npm ci
-      - run: npm run build -- --base /dresdenjs.io
+      - run: npm run build -- --base /dresdenjs.io/
       - uses: actions/upload-artifact@v4
         if: success()
         with:
