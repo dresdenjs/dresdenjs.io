@@ -125,7 +125,7 @@ const { date, location, title } = event?.frontmatter ?? {};
     <article class:list={{ faded, first, last }} hidden={hidden}>
       <a class="content balloon" href={`${import.meta.env.BASE_URL}event/${getEventSlug(event!.url!)}`}>
         <EventListItemHeader {...{ date, location }} />
-        <EventListItemContent {...{ title, content: event!.compiledContent() }} />
+        <EventListItemContent {...{ title, content: await event!.compiledContent() }} />
       </a>
     </article>
   ) : (

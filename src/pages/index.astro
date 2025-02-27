@@ -2,11 +2,12 @@
 import Layout from '../layouts/default.layout.astro';
 import EventList from '../components/event-list.component.astro';
 import Nav from '../components/nav.component.astro';
+import type { MeetupEvent } from '../types';
 
-const meetups = await Astro.glob('./events/*.md');
+const meetups = import.meta.glob<true, string, MeetupEvent>('./events/*.md', { eager: true });
 ---
 
 <Layout lang="de" title="Veranstaltungen">
   <Nav slot="header" />
-  <EventList events={meetups} />
+  <EventList events={Object.values(meetups)} />
 </Layout>
