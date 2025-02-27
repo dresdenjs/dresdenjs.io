@@ -10,11 +10,11 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "@astrojs/mdx": "3.1.8",
-    "astro": "4.16.2",
+    "@astrojs/mdx": "4.1.0",
+    "astro": "5.4.0",
     "autoprefixer": "10.4.20",
-    "dotenv-cli": "7.4.2",
-    "sass": "1.79.5"
+    "dotenv-cli": "8.0.0",
+    "sass": "1.85.1"
   },
   "dependencies": {
     "@astrojs/lit": "4.3.0",
