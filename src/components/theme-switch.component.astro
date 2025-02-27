@@ -1,0 +1,64 @@
+---
+import LightIcon from './icons/light.icon.astro';
+import DarkIcon from './icons/dark.icon.astro';
+---
+
+<style lang="scss">
+  .light,
+  .dark {
+    cursor: pointer;
+    display: none;
+
+    &.show {
+      display: block;
+    }
+  }
+</style>
+
+<div class="theme-switch">
+  <span class="light">
+    <LightIcon />
+  </span>
+  <span class="dark">
+    <DarkIcon />
+  </span>
+</div>
+
+<script>
+  const themeSwitch = document.querySelector('.theme-switch');
+  const lightIcon = document.querySelector('.light');
+  const darkIcon = document.querySelector('.dark');
+  const root = document.documentElement;
+
+  const selectedTheme = (): string | 'dark' | 'light' => {
+    const theme = root!.getAttribute('theme');
+    const savedTheme = localStorage.getItem('theme');
+
+    if (savedTheme) {
+      return savedTheme;
+    }
+
+    if (!theme) {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    return theme;
+  };
+
+  themeSwitch!.querySelector(`.${selectedTheme()}`)!.classList.add('show');
+
+  const changeTheme = () => {
+    lightIcon!.classList.toggle('show');
+    darkIcon!.classList.toggle('show');
+
+    if (selectedTheme() === 'dark') {
+      root!.setAttribute('theme', 'light');
+      localStorage.setItem('theme', 'light');
+      return;
+    }
+
+    root!.setAttribute('theme', 'dark');
+    localStorage.setItem('theme', 'dark');
+  };
+
+  themeSwitch!.addEventListener('click', changeTheme);
+</script>

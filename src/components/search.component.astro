@@ -27,11 +27,12 @@ import SearchIcon from './icons/search.icon.astro';
     padding: 0 utils.size(1.5);
     width: calc(100% - #{utils.size(2)});
 
-    background: var(--ddjs-color-white);
     border-radius: 18px; // (line-height + vertical padding) / 2
     box-shadow: var(--ddjs-shadow-large-passive);
-    color: var(--ddjs-color-grey-medium);
     transition: box-shadow var(--ddjs-fx-duration) var(--ddjs-fx-easing);
+
+    background: var(--ddjs-color-search-bar-background);
+    color: var(--ddjs-color-search-bar-color);
 
     &:focus-within {
       box-shadow: var(--ddjs-shadow-large-active);
@@ -53,7 +54,7 @@ import SearchIcon from './icons/search.icon.astro';
 
     &:focus {
       outline: none;
-      color: var(--ddjs-color-grey-dark);
+      color: var(--ddjs-color-mono-31);
     }
 
     &::-webkit-search-decoration,

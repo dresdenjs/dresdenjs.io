@@ -1,0 +1,14 @@
+@mixin theme {
+  /* Colors */
+  --ddjs-color-0: #333333;
+  --ddjs-color-3: #f6f7f8;
+  --ddjs-color-4: #ffffff;
+
+  --ddjs-color-search-bar-background: var(--ddjs-color-4);
+  --ddjs-color-search-bar-color: var(--ddjs-color-mono-78);
+
+  --ddjs-color-header-icon: var(--ddjs-color-mono-78);
+
+  /* Shadows */
+  --ddjs-shadow-text: none;
+}
