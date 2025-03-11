@@ -27,7 +27,7 @@ jobs:
           cache: "npm"
       - run: npx playwright@1.51.0 install chromium
       - run: rm -rf src/pages/events
-      - run: npx @dresdenjs/meetup-collector@0.1.11
+      - run: npx @dresdenjs/meetup-collector@0.1.12
         env:
           USERNAME: ${{secrets.MEETUP_USERNAME}}
           PASSWORD: ${{secrets.MEETUP_PASSWORD}}
