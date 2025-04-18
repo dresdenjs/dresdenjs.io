@@ -1,6 +1,6 @@
 ---
-date: '2025-05-08T17:00:00.000Z'
-link: 'https://www.meetup.com/dresdenjs-io-javascript-user-group/events/wwdfrqyhchblb'
+date: '2025-06-12T17:00:00.000Z'
+link: 'https://www.meetup.com/dresdenjs-io-javascript-user-group/events/wwdfrqyhcjbqb'
 location: 'Hermann-Mende-Straße 4, Dresden'
 title: 'JavaScript Meetup'
 locked: false
