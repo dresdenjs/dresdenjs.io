@@ -29,8 +29,6 @@ jobs:
       - run: rm -rf src/pages/events
       - run: npx @dresdenjs/meetup-collector@0.1.14
         env:
-          USERNAME: ${{secrets.MEETUP_USERNAME}}
-          PASSWORD: ${{secrets.MEETUP_PASSWORD}}
           BASE_URL: https://www.meetup.com/
           GROUP_SLUG: dresdenjs-io-javascript-user-group
           GROUP_NAME: DresdenJS.io JavaScript User Group
