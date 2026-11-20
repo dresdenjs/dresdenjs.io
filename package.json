@@ -10,15 +10,19 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "@astrojs/mdx": "4.1.0",
-    "astro": "5.4.0",
-    "autoprefixer": "10.4.20",
-    "dotenv-cli": "8.0.0",
-    "sass": "1.85.1"
+    "@astrojs/mdx": "8.1.6",
+    "astro": "7.4.13",
+    "autoprefixer": "10.7.0",
+    "dotenv-cli": "11.1.0",
+    "sass": "1.108.2"
   },
   "dependencies": {
     "@astrojs/lit": "4.3.0",
-    "@fontsource-variable/source-sans-3": "5.1.1",
-    "dayjs": "1.11.13"
+    "@fontsource-variable/source-sans-3": "5.3.1",
+    "dayjs": "1.11.23"
+  },
+  "allowScripts": {
+    "@parcel/watcher@2.6.0": true,
+    "fsevents@2.3.3": true
   }
 }

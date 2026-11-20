@@ -3,10 +3,12 @@ import { getEventSlug } from '../../utils/event.utils';
 import Layout from '../../layouts/default.layout.astro';
 import EventDetails from '../../components/event-details.component.astro';
 import Nav from '../../components/nav.component.astro';
+import type { MeetupEvent } from '../../types';
 
 export async function getStaticPaths() {
-  const events = await Astro.glob('../events/*.md');
-  return events.map((event) => ({
+  // Astro.glob was removed in Astro 6
+  const events = import.meta.glob<true, string, MeetupEvent>('../events/*.md', { eager: true });
+  return Object.values(events).map((event) => ({
     params: { event: getEventSlug(event.url!) },
     props: event,
   }));
