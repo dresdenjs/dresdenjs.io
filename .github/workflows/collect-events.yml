@@ -27,7 +27,7 @@ jobs:
           cache: "npm"
       - run: npx patchright@1.64.3 install chromium
       - run: rm -rf src/pages/events
-      - run: npx @dresdenjs/meetup-collector@0.1.16
+      - run: npx @dresdenjs/meetup-collector@0.1.17
         env:
           BASE_URL: https://www.meetup.com/
           GROUP_SLUG: dresdenjs-io-javascript-user-group
